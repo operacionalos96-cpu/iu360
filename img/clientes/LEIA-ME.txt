@@ -1,0 +1,7 @@
+Logos dos clientes (faixa "Quem confia na inteligência da IU360").
+
+1. Salve o logo aqui, em SVG (de preferência) ou PNG com fundo transparente. Ex.: vivo.svg
+2. No index.html, ache o nome na faixa e preencha o atributo:
+   <span class="cli" data-logo="img/clientes/vivo.svg">Vivo</span>
+   (a faixa aparece duas vezes: na página do computador e no bloco do celular, que tem a lista duplicada)
+3. O estilo deixa o logo branco e monocromático sobre o fundo escuro. Até o logo chegar, o nome ocupa o lugar.

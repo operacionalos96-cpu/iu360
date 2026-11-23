@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>IU360 — Dados direto da fonte</title>
-<meta name="description" content="IU360 Data Solutions, do 360 Grupo: dados direto da fonte, com mais de 255 milhões de CPFs e 70 milhões de CNPJs, há 12 anos gerando resultados com marketing direcionado por dados para varejo, cobrança, crédito e risco.">
+<meta name="description" content="IU360 Data Solutions, do Grupo 360: dados direto da fonte, com mais de 255 milhões de CPFs e 70 milhões de CNPJs, há 12 anos gerando resultados com marketing direcionado por dados para varejo, cobrança, crédito e risco.">
 <meta name="theme-color" content="#F4F4F4">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23f2941a'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23fff' stroke-width='6'/%3E%3C/svg%3E">
 <meta property="og:type" content="website">
@@ -14,7 +14,11 @@
 <meta property="og:description" content="Mais de 255 milhões de CPFs e 70 milhões de CNPJs mapeados na origem, com inteligência analítica para varejo, cobrança, crédito e risco.">
 <meta name="twitter:card" content="summary">
 <!-- canonical e og:url entram quando a URL definitiva da landing estiver confirmada -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"IU360 Data Solutions","description":"Dados direto da fonte e inteligência analítica para marketing, vendas, expansão, cobrança e risco.","parentOrganization":{"@type":"Organization","name":"360 Grupo"},"sameAs":["https://www.instagram.com/iu360_br/"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"IU360 Data Solutions","description":"Dados direto da fonte e inteligência analítica para marketing, vendas, expansão, cobrança e risco.","parentOrganization":{"@type":"Organization","name":"Grupo 360"},"sameAs":["https://www.instagram.com/iu360_br/"]}</script>
+<!-- VERSÃO DO CELULAR: decidida aqui, antes do primeiro desenho, para a página do computador nunca piscar no telefone.
+     Telefone em pé (até 760 px de largura) ou deitado (toque + até 500 px de altura) recebe a classe "cel" e mostra o bloco #cel;
+     o computador e o tablet seguem exatamente como eram. -->
+<script>(function(){var d=document.documentElement;try{if(matchMedia('(max-width:760px),(pointer:coarse) and (max-height:500px)').matches){d.classList.add('cel');var s=localStorage.getItem('iu360-lens');if(s==='varejo'||s==='financeiro')d.setAttribute('data-lens',s);}}catch(e){}})();</script>
 <link rel="preload" href="vendor/fonts/gantari-latin-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="vendor/lenis.min.js" as="script">
 <style>
@@ -683,7 +687,7 @@ h2{letter-spacing:-.034em;line-height:1.04;text-wrap:balance}
 .stage .dim .fact strong{font-weight:400}
 
 /* =====================================================================
-   DESAFIOS — material da marca (apresentação 360 Grupo): cartão de vidro
+   DESAFIOS — material da marca (apresentação Grupo 360): cartão de vidro
    fosco claro, tinta azul-marinho, objetos em vidro laranja com reflexo
    e os detalhes "•••" da identidade.
    ===================================================================== */
@@ -1343,7 +1347,7 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
 @media(max-width:520px){.ec-node{width:62px;margin:-31px 0 0 -31px}.ec-node span{font-size:12px;padding:5px}}
 @media(prefers-reduced-motion:reduce){.ec-ring,.ec-node{transition:none}}
 
-/* logos oficiais (vetor): a IU360 usa #F29300 com o "IU" em cinza quente; o 360 Grupo usa #F29300 */
+/* logos oficiais (vetor): a IU360 usa #F29300 com o "IU" em cinza quente; o Grupo 360 usa #F29300 */
 .logo{display:inline-flex;align-items:center;line-height:0}
 .logo .lg{display:block;height:1.35em;width:auto;overflow:visible}
 .dark .logo,.scene.dark .logo{--lg-iu:#fff}
@@ -1914,14 +1918,410 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
 /* brilho que segue o mouse: fade neutro (complementa, não tinge de amarelo) */
 .prem::after{background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(63,63,63,.05),transparent 55%)!important}
 .dark .prem::after{background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(244,244,244,.06),transparent 55%)!important}
+
+/* =====================================================================
+   CORREÇÕES DA REUNIÃO COM A IU360 (23/11/2026)
+   ===================================================================== */
+/* 1. porta: os cartões ficam só com segmento e título (a lista saiu) */
+@media(min-width:761px){.doors{grid-template-rows:auto auto}.door{grid-row:span 2}}
+/* 2. "Falar com um especialista": maior e em destaque, para quem não sabe em qual segmento se encaixa */
+.g-skip{padding:14px 24px;font-size:15.5px;font-weight:600;color:#fff;background:linear-gradient(180deg,#F29300,var(--orange-deep));box-shadow:0 18px 36px -16px rgba(242,147,0,.8)}
+.g-skip .ic{width:16px;height:16px}
+.g-skip:hover{background:linear-gradient(180deg,#F29300,var(--orange-deep));color:#fff;filter:brightness(1.07)}
+.g-note{font-size:14.5px;color:var(--ink-2)}
+.g-note #gateTalk{font-weight:600}
+/* 3. números com "mais de" (+) e maiores */
+.stats strong{font-size:clamp(32px,min(4.2vw,6.4vh),62px)}
+.mais{font-style:normal;font-weight:400;color:var(--orange);margin-right:.03em}
+.stats span{font-size:13px}
+/* 5. o título do comparativo em cima dos quadros; a legenda embaixo */
+.clk-t{grid-column:1/-1;margin:0;text-align:center;font-size:clamp(18px,1.6vw,22px);font-weight:600;letter-spacing:-.02em;color:var(--ink)}
+.clk-k{justify-content:center;gap:6px 26px}
+/* 7. quem confia: uma linha de logos maiores, monocromáticos (até chegarem, o nome ocupa o lugar) */
+.marq div{font-size:clamp(22px,min(2.6vw,4vh),34px);align-items:center}
+.marq div .cli{display:inline-flex;align-items:center;height:clamp(48px,5.4vw,72px);padding-right:clamp(52px,5.4vw,80px)}
+.marq .cli .lgx{display:block;height:58%;width:auto;max-width:200px;filter:brightness(0) invert(1);opacity:.66}
+/* 9. bússola: logo da empresa junto do nome; sem o logo central */
+.ec-node span.tem-logo{align-content:center;gap:3px;font-size:clamp(9.5px,.8vw,11px)}
+.ec-node .lgx{display:block;width:64%;height:auto;max-height:36%;object-fit:contain}
+.ec-node.on .lgx{filter:brightness(0) invert(1)}
+.ec-core[hidden]{display:none}
+/* 10. governança: pilares lado a lado, não etapas */
+.gv-cols::before,.gv-cols .gv-track{display:none}
+.gv-cols .gv-steps{gap:clamp(14px,1.6vw,24px)}
+.gv-cols .gv-step{cursor:default;padding:clamp(28px,4vh,40px) clamp(24px,2.4vw,36px)}
+.gv-cols .gv-step::before,.gv-cols .gv-step::after{display:none}
+.gv-cols .gv-bg,.gv-cols .gv-step:hover .gv-bg{inset:0;opacity:1;transform:none}
+.gv-cols .gv-k{color:var(--orange-ink)}
+.gv-cols .gv-k::before{background:var(--orange);box-shadow:0 0 0 4px rgba(242,147,0,.16)}
+.gv-cols .gv-big{background-position:0 100%}
+/* 12. cases, quem confia e os quatro motivos num bloco escuro só */
+#resultados{margin-bottom:0;border-bottom-left-radius:0;border-bottom-right-radius:0;background:radial-gradient(70% 55% at 50% 0%,rgba(255,255,255,0.085),transparent 70%),#3F3F3F}
+#resultados .sc-in{padding-bottom:clamp(36px,6vh,72px)!important;min-height:0}
+#diferenciais .sc-in{padding-top:clamp(36px,6vh,72px)!important;min-height:0}
+#diferenciais{margin-top:0;border-top-left-radius:0;border-top-right-radius:0;background:radial-gradient(40% 50% at 100% 100%,rgba(255,255,255,.04),transparent 70%),#3F3F3F}
+/* 11. logo 360 do topo aplicado direto, sem a placa atrás; claro sobre as seções escuras */
+.top>.logo{background:none!important;box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;font-size:26px}
+.top>.logo .lg{transition:filter .4s}
+body.top-dark .top>.logo{--lg-iu:#fff}
+</style>
+<style id="cel-css">
+/* =====================================================================================================
+   VERSÃO DO CELULAR (html.cel)
+   Uma experiência própria para o telefone, não a página do computador espremida: sem porta de entrada, sem
+   partículas 3D e sem rolagem suave; a escolha do segmento fica no topo, as provas vêm logo em seguida e o
+   contato está sempre à mão numa barra fixa, com o formulário atrás de um botão.
+   Nada daqui alcança o computador: tudo está sob html.cel ou em classes .m-* que só existem dentro de #cel.
+   Só anima transform e opacity (o que o celular compõe sem redesenhar a página).
+   ===================================================================================================== */
+#cel{display:none}
+html.cel #cel{display:block}
+html.cel .gate,html.cel #universe,html.cel .progress,html.cel header.top,html.cel main{display:none!important}
+html.cel,html.cel body{height:auto;min-height:100%}
+html.cel body{overflow-x:clip}
+html.cel.m-lock,html.cel.m-lock body{overflow:hidden}
+.cel-box{--mx:20px;position:relative;z-index:1;max-width:560px;margin-inline:auto;padding-bottom:calc(84px + env(safe-area-inset-bottom));overflow-x:clip}   /* nada vaza para o lado: sem rolagem lateral */
+#cel h1{font-size:clamp(31px,8.7vw,42px);line-height:1.06}
+#cel h2{font-size:clamp(27px,7.5vw,36px);line-height:1.08}
+#cel h3{font-size:17px;line-height:1.25}
+#cel [hidden]{display:none!important}
+
+/* topo: logo e visão (varejo/financeiro). A visão só aparece depois da primeira tela: lá a escolha é a própria cena. Recolhe ao descer, volta ao subir */
+.m-top{position:fixed;inset:0 0 auto 0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:calc(10px + env(safe-area-inset-top)) 14px 10px;pointer-events:none;transition:transform .5s var(--ease)}
+.m-top>*{pointer-events:auto}
+html.m-hide:not(.m-lock) .m-top{transform:translateY(-105%)}
+.m-pill{background:#fff;box-shadow:inset 0 0 0 1px var(--line),0 10px 22px -16px rgba(63,63,63,.55)}
+.m-logo{padding:10px 14px;border-radius:999px}
+.m-top .m-seg{backdrop-filter:none;-webkit-backdrop-filter:none;background:#fff;box-shadow:inset 0 0 0 1px var(--line),0 10px 22px -16px rgba(63,63,63,.55);transition:opacity .4s,transform .5s var(--ease)}
+html.m-attop .m-top .m-seg{opacity:0;transform:translateY(-10px);pointer-events:none}
+.m-top .m-seg button{min-height:44px;padding:10px 13px;font-size:13px}
+
+/* seções */
+.m-sec{position:relative;padding:54px var(--mx) 0;display:grid;gap:18px;grid-template-columns:minmax(0,1fr)}
+.m-kick{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)}
+.m-kick::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px rgba(242,147,0,.2);flex:none}
+.m-lead{font-size:15.5px;line-height:1.5;color:var(--ink-2);text-wrap:pretty}
+.m-lead b{color:var(--ink);font-weight:600}
+.m-hd{display:grid;gap:11px}
+.m-card-w{background:#fff;border-radius:24px;box-shadow:0 1px 2px rgba(63,63,63,.04),0 20px 32px -24px rgba(63,63,63,.36)}
+
+/* entrada das seções: sobem uma vez, quando aparecem */
+html.m-anim .m-r{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--i,0)*70ms)}
+html.m-anim .in .m-r,html.m-anim .in.m-r{opacity:1;transform:none}
+@keyframes mfade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+html.m-anim .m-swap [data-only]{animation:mfade .5s var(--ease) both}
+.m-off *,.m-off *::before,.m-off *::after{animation-play-state:paused!important}
+
+/* 00 · primeira tela: o mostrador 360° é a cena. A agulha aponta para o segmento escolhido (os dois segmentos
+   estão no próprio mostrador) e o centro mostra um número da base por vez. Tudo por transform e opacity. */
+.m-hero{min-height:100vh;min-height:100svh;padding-top:calc(86px + env(safe-area-inset-top));padding-bottom:92px;text-align:center;justify-items:center;align-content:start;gap:12px}
+.m-eb{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--orange)}
+.m-eb::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px rgba(242,147,0,.2)}
+.m-hero .m-lead{max-width:34ch;font-size:15px}
+.m-scene{--s:min(84vw,46vh,372px);position:relative;width:var(--s);height:var(--s);margin-top:10px}
+.m-scene::before{content:"";position:absolute;inset:-7%;z-index:-1;border-radius:50%;background:radial-gradient(closest-side,rgba(242,147,0,.2),rgba(242,147,0,.07) 55%,rgba(242,147,0,0) 100%)}
+.m-scene-face{position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle at 50% 28%,#fff,#F7F7F7 70%);box-shadow:inset 0 0 0 1px var(--line),0 30px 50px -34px rgba(63,63,63,.55)}
+.m-ring{position:absolute;inset:0;display:block;width:100%;height:100%;fill:none;transform:rotate(-90deg)}
+.m-ring .t1{stroke:#3F3F3F;stroke-opacity:.38;stroke-width:3;stroke-dasharray:.34 4.66}
+.m-ring .t2{stroke:#3F3F3F;stroke-opacity:.6;stroke-width:6;stroke-dasharray:.5 29.5}
+.m-ring .t3{stroke:#F29300;stroke-width:8;stroke-dasharray:.8 89.2}
+.m-ring .t4{stroke:#3F3F3F;stroke-opacity:.14;stroke-width:.4;stroke-dasharray:1.4 1.6}
+.m-sweep{position:absolute;inset:0;will-change:transform;animation:msweep 16s linear infinite}
+.m-sweep i{position:absolute;left:50%;top:-1.2%;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 5px rgba(242,147,0,.16),0 0 16px 5px rgba(242,147,0,.42)}
+@keyframes msweep{to{transform:rotate(360deg)}}
+.m-scene-k{position:absolute;left:50%;top:13%;width:34%;translate:-50% 0;font-size:10.5px;font-weight:600;letter-spacing:.1em;line-height:1.35;text-transform:uppercase;color:var(--ink-3)}
+.m-pick{position:absolute;z-index:3;top:22%;translate:-50% -50%;display:grid;justify-items:center;gap:1px;min-width:104px;min-height:52px;padding:8px 14px 9px;border-radius:18px;background:#fff;box-shadow:inset 0 0 0 1px var(--line-2),0 14px 24px -16px rgba(63,63,63,.55);text-align:center;transition:background .45s,color .45s,box-shadow .45s}
+.m-pick-v{left:15%}
+.m-pick-f{left:85%}
+.m-pick strong{font-size:15.5px;font-weight:600;letter-spacing:-.02em;line-height:1.2}
+.m-pick small{font-size:11px;line-height:1.2;color:var(--ink-2);transition:color .45s}
+.m-pick[aria-pressed="true"]{background:var(--orange);color:#fff;box-shadow:0 16px 26px -14px rgba(242,147,0,.95)}
+.m-pick[aria-pressed="true"] small{color:rgba(255,255,255,.92)}
+.m-needle{position:absolute;z-index:2;left:50%;top:50%;width:15%;height:54%;margin:-27% 0 0 -7.5%;transform:rotate(-58deg);transition:transform 1.1s cubic-bezier(.34,1.5,.5,1);will-change:transform}
+html[data-lens="financeiro"] .m-needle{transform:rotate(58deg)}
+.m-needle svg{display:block;width:100%;height:100%;filter:drop-shadow(0 10px 12px rgba(242,147,0,.3))}   /* sem balanço parado: medido, custava ~60 ms/s no celular simulado */
+.m-read{position:absolute;left:50%;top:66%;width:62%;translate:-50% 0;display:grid;justify-items:center;gap:7px}
+.m-read-s{position:relative;display:grid;width:100%;min-height:58px}
+.m-stat{grid-area:1/1;display:grid;justify-items:center;align-content:start;gap:3px;opacity:0;transform:translateY(8px);transition:opacity .5s,transform .6s var(--ease)}
+.m-stat.on{opacity:1;transform:none}
+.m-stat strong{font-size:30px;font-weight:500;letter-spacing:-.04em;line-height:1}
+.m-stat strong b{color:var(--orange);font-weight:500}
+.m-stat span{font-size:12px;line-height:1.25;color:var(--ink-2);max-width:20ch}
+.m-read-d{display:flex;gap:5px}
+.m-read-d i{width:5px;height:5px;border-radius:50%;background:var(--line-2);transition:background .3s}
+.m-read-d i.on{background:var(--orange)}
+.m-cue{display:inline-flex;align-items:center;gap:7px;margin-top:6px;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.m-cue .ic{width:14px;height:14px;color:var(--orange)}
+
+/* 01 · desafios: cartões de arrastar para o lado (rolagem nativa com encaixe) */
+.m-pager{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:600;color:var(--ink-3)}
+.m-pager b{color:var(--ink)}
+.m-pager .m-pd{display:flex;gap:6px}
+.m-pager .m-pd i{width:6px;height:6px;border-radius:50%;background:var(--line-2);transition:background .3s,transform .3s}
+.m-pager .m-pd i.on{background:var(--orange);transform:scale(1.35)}
+.m-pager .m-hint{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-weight:500;font-size:12.5px}
+.m-pager .m-hint .ic{width:15px;height:15px;color:var(--orange)}
+.m-car{display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;margin-inline:calc(var(--mx)*-1);padding:4px var(--mx) 34px;scroll-padding-inline:var(--mx);scrollbar-width:none;overscroll-behavior-x:contain;margin-bottom:-22px}
+.m-car::-webkit-scrollbar{display:none}
+.m-ch{flex:0 0 82%;scroll-snap-align:start;display:grid;grid-template-rows:auto 1fr;overflow:hidden}
+.m-art{aspect-ratio:240/150;background:linear-gradient(#FBFBFB,#F1F1F1);border-bottom:1px solid var(--line);display:grid;place-items:center}
+.m-art svg{display:block;width:100%;height:100%}
+.m-ch-b{display:grid;gap:8px;align-content:start;padding:16px 18px 20px}
+.m-ch-b span{font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--orange)}
+.m-ch-b p{font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+.m-ch-b p b{color:var(--ink);font-weight:600}
+
+/* 02 · a diferença: UM campo de 100 cadastros e um alternador. A pessoa vê 12 meses passarem no modelo tradicional
+   (os pontos vão se apagando) e, ao tocar em "Direto da fonte", vê os mesmos 100 seguirem válidos. */
+.m-dif{gap:16px}
+.m-sw{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding:4px;border-radius:999px;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+.m-sw::before{content:"";position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:999px;background:#F4F4F4;transition:transform .6s var(--ease),background .5s}
+.m-dif[data-side="n"] .m-sw::before{transform:translateX(100%);background:var(--orange)}
+.m-sw button{position:relative;min-height:46px;padding:8px 6px;border-radius:999px;font-size:14px;font-weight:600;text-align:center;color:rgba(244,244,244,.7);transition:color .4s}
+.m-sw button[aria-selected="true"]{color:#3F3F3F}
+.m-dif[data-side="n"] .m-sw button[aria-selected="true"]{color:#fff}
+.m-field{display:grid;gap:13px;padding:18px 16px 16px;border-radius:24px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
+.m-field-h{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+.m-field-h span{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.m-field-h span b{color:var(--ink);font-weight:600}
+.m-field-h strong{display:grid;justify-items:end;font-size:12.5px;font-weight:500;color:var(--ink-2);line-height:1.2}
+.m-field-h strong b{font-size:34px;font-weight:500;letter-spacing:-.04em;line-height:1;color:var(--ink);transition:color .5s}
+.m-dif[data-side="n"] .m-field-h strong b{color:var(--orange)}
+.m-dots{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:5px}
+.m-dots i{aspect-ratio:1;border-radius:50%;background:#F4F4F4;transition:background .45s,box-shadow .45s,transform .45s}
+.m-dots i.l{background:transparent;box-shadow:inset 0 0 0 1.5px rgba(244,244,244,.4);transform:scale(.82)}
+.m-dots i.q{background:rgba(244,244,244,.24);box-shadow:inset 0 0 0 1.5px rgba(244,244,244,.3)}
+.m-dif[data-side="n"] .m-dots i{background:var(--orange)}
+.m-tl{position:relative;height:4px;border-radius:4px;background:rgba(255,255,255,.12);overflow:hidden}
+.m-tl i{position:absolute;inset:0;border-radius:4px;background:#F4F4F4;transform-origin:left;transform:scaleX(0);transition:transform .22s linear,background .5s}
+.m-dif[data-side="n"] .m-tl i{background:var(--orange)}
+.m-tl-k{display:flex;justify-content:space-between;margin-top:-7px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.m-field-s{font-size:14.5px;line-height:1.45;color:var(--ink);min-height:3em}
+.m-vs{list-style:none;padding:0 6px;display:grid}
+.m-vs li{display:grid;grid-template-columns:24px minmax(0,1fr);gap:2px 12px;padding:12px 0;border-top:1px solid var(--line)}
+.m-vs li:first-child{border-top:0}
+.m-vs .m-mk{grid-row:1/3;width:24px;height:24px;margin-top:2px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.1);color:rgba(244,244,244,.7);transition:background .45s,color .45s}
+.m-vs .m-mk .ic{width:14px;height:14px;stroke-width:2.2}
+.m-vs .m-mk .ok,.m-dif[data-side="n"] .m-vs .m-mk .no{display:none}
+.m-dif[data-side="n"] .m-vs .m-mk .ok{display:block}
+.m-dif[data-side="n"] .m-vs .m-mk{background:var(--orange);color:#fff}
+.m-vs .k{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.m-vs .v{font-size:14.5px;line-height:1.4;color:var(--ink)}
+.m-dif.sw .m-vs .v,.m-dif.sw .m-field-s{animation:mfade .45s var(--ease) both}
+.m-dif-go{justify-self:stretch;min-height:52px;margin-inline:6px;padding:0 20px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:15px;font-weight:600;background:var(--orange);color:#fff;transition:background .45s,color .45s}
+.m-dif[data-side="n"] .m-dif-go{background:rgba(255,255,255,.1);color:var(--ink)}
+.m-dif-go .ic{width:16px;height:16px}
+
+/* 03 · soluções: uma pilha de módulos à esquerda e a ficha do módulo escolhido ao lado. Cada módulo tem a sua ficha inteira. */
+.m-rack{display:grid;grid-template-columns:60px minmax(0,1fr);gap:10px;align-items:start}
+.m-rack-tabs{display:grid;gap:8px;align-content:start}
+.m-rack-tabs button{position:relative;height:58px;border-radius:18px;display:grid;place-items:center;background:#fff;color:var(--ink-2);box-shadow:inset 0 0 0 1px var(--line),0 12px 20px -16px rgba(63,63,63,.5);transition:background .4s,color .4s,transform .5s var(--ease)}
+.m-rack-tabs button .ic{width:22px;height:22px}
+.m-rack-tabs button[aria-selected="true"]{background:var(--orange);color:#fff;transform:translateX(5px);box-shadow:0 14px 22px -14px rgba(242,147,0,.95)}
+.m-rack-panels{display:grid}
+.m-mod{grid-area:1/1;display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:20px 18px 18px;border-radius:24px;background:#fff;box-shadow:0 1px 2px rgba(63,63,63,.04),0 20px 32px -24px rgba(63,63,63,.4);opacity:0;visibility:hidden;transform:translateX(10px);transition:opacity .35s,transform .5s var(--ease),visibility 0s .35s}
+.m-mod.on{opacity:1;visibility:visible;transform:none;transition:opacity .45s .05s,transform .55s var(--ease) .05s,visibility 0s}
+.m-mod-n{font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)}
+#cel .m-mod h3{font-size:19px;line-height:1.2;letter-spacing:-.025em}
+.m-mod p{font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+.m-mod .m-kpi{justify-self:start;margin:0}
+.m-mod-for{display:flex;align-items:center;gap:8px;margin-top:auto;padding-top:12px;border-top:1px solid var(--line);font-size:12.5px;line-height:1.3;color:var(--ink-2)}
+.m-mod-for .ic{width:16px;height:16px;color:var(--orange)}
+.m-rack-nav{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-left:70px}
+.m-rack-nav span{font-size:13px;font-weight:600;color:var(--ink-3)}
+.m-rack-nav span b{color:var(--ink)}
+.m-rack-nav button{min-height:44px;padding:0 16px;border-radius:999px;display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;background:rgba(63,63,63,.06)}
+.m-rack-nav button .ic{width:15px;height:15px;color:var(--orange)}
+
+/* 03 · soluções e 08 · dúvidas: lista que abre no toque */
+.m-acc{display:grid;gap:8px}
+#cel .m-acc details{border-radius:20px;background:#fff;border:1px solid var(--line);backdrop-filter:none;-webkit-backdrop-filter:none}
+#cel .m-acc details[open]{border-color:rgba(242,147,0,.6);box-shadow:0 18px 30px -24px rgba(63,63,63,.4)}
+#cel .m-acc summary{padding:13px 16px 13px 14px;gap:12px;min-height:60px;font-size:15px;font-weight:600;line-height:1.3;-webkit-tap-highlight-color:transparent}
+#cel .m-acc details p{padding:0 18px 17px 62px;font-size:14.5px;line-height:1.5}
+#cel .m-acc details[open] p,#cel .m-acc details[open] .m-kpi{animation:mfade .45s var(--ease) both}
+.m-ic{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:rgba(242,147,0,.12);color:var(--orange);flex:none}
+.m-ic .ic{width:19px;height:19px}
+.m-kpi{display:inline-flex;align-items:baseline;gap:7px;margin:-6px 18px 17px 62px;padding:6px 12px;border-radius:999px;background:rgba(242,147,0,.1);font-size:12.5px;font-weight:500;color:var(--ink-2)}
+.m-kpi b{color:var(--orange);font-weight:600;font-size:14px}
+#cel .m-faq summary{font-weight:500;padding-left:18px}
+#cel .m-faq details p{padding-left:18px}
+.m-note{font-size:14px;line-height:1.45;color:var(--ink-2);text-align:center;padding:2px 10px}
+
+/* blocos escuros (cases e fechamento), no grafite da marca */
+.m-dark{--ink:#F4F4F4;--ink-2:rgba(244,244,244,.76);--ink-3:rgba(244,244,244,.56);--line:rgba(255,255,255,.1);--line-2:rgba(255,255,255,.2);color:var(--ink);margin:54px 8px 0;padding:42px 14px 30px;border-radius:30px;background:radial-gradient(90% 34% at 50% 0%,rgba(255,255,255,.085),transparent 70%),#3F3F3F}
+.m-dark .m-hd{padding-inline:6px}
+.m-case{display:grid;gap:13px;padding:20px 18px;border-radius:24px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
+.m-case .case-tag{font-size:11.5px}
+.m-num{font-size:62px;line-height:.95;font-weight:500;letter-spacing:-.05em;color:var(--orange)}
+.m-num.txt{font-size:30px;line-height:1.05;letter-spacing:-.035em}
+.m-cap{font-size:14px;color:var(--ink-2);margin-top:-6px}
+.m-res{display:flex;gap:11px;align-items:flex-start;padding:13px 14px;border-radius:18px;background:rgba(242,147,0,.14);box-shadow:inset 0 0 0 1px rgba(242,147,0,.42);font-size:14.5px;font-weight:600;line-height:1.35}
+.m-res .m-ok{width:24px;height:24px;margin-top:1px}
+#cel .m-how{background:none;border:0;border-radius:0;backdrop-filter:none;-webkit-backdrop-filter:none;border-top:1px solid var(--line)}
+#cel .m-how summary{padding:13px 2px 2px;min-height:44px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.m-how ol{list-style:none;padding:10px 0 2px;display:grid;gap:9px}
+.m-how li{display:flex;align-items:center;gap:11px;font-size:14px;line-height:1.3;color:rgba(244,244,244,.9)}
+.m-how li .m-ic{width:30px;height:30px;border-radius:50%;background:rgba(242,147,0,.16)}
+.m-how li .m-ic .ic{width:15px;height:15px}
+#cel .m-how[open] ol{animation:mfade .45s var(--ease) both}
+.m-auth{font-size:15px;line-height:1.5;color:var(--ink-2);text-align:center;padding:6px 8px 0}
+.m-marq-k{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);text-align:center}
+.m-marq{position:relative;overflow:hidden;margin-inline:-14px}
+.m-marq::before,.m-marq::after{content:"";position:absolute;z-index:1;top:0;bottom:0;width:44px;pointer-events:none}
+.m-marq::before{left:0;background:linear-gradient(90deg,#3F3F3F,rgba(63,63,63,0))}
+.m-marq::after{right:0;background:linear-gradient(270deg,#3F3F3F,rgba(63,63,63,0))}
+.m-marq div{display:flex;width:max-content;will-change:transform;animation:slide 48s linear infinite;font-size:19px;font-weight:600;letter-spacing:-.03em;color:var(--ink-3);white-space:nowrap}
+.m-marq span{padding-right:38px}
+
+/* 05 · quatro motivos: quatro quadros de bater o olho, cada um com um dado */
+.m-four{list-style:none;padding:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.m-four li{position:relative;display:grid;align-content:start;gap:8px;padding:16px 14px 16px;min-height:178px}
+.m-four .n{position:absolute;right:14px;top:14px;font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--ink-3)}
+.m-four .m-ic{width:40px;height:40px;border-radius:14px;margin-bottom:2px}
+#cel .m-four h3{font-size:15.5px;line-height:1.22;letter-spacing:-.02em}
+.m-four p{font-size:13px;line-height:1.4;color:var(--ink-2)}
+.m-four p b{color:var(--orange);font-weight:600}
+.m-four li:nth-child(1){background:#3F3F3F;color:#F4F4F4;box-shadow:0 20px 32px -22px rgba(63,63,63,.7)}
+.m-four li:nth-child(1) p{color:rgba(244,244,244,.78)}
+.m-four li:nth-child(1) .n{color:rgba(244,244,244,.5)}
+.m-four li:nth-child(1) .m-ic{background:rgba(242,147,0,.2)}
+
+/* 06 · governança: um selo, não uma seção de leitura */
+.m-seal{display:grid;gap:16px;padding:20px 18px 18px;box-shadow:inset 0 0 0 1.5px rgba(242,147,0,.5),0 20px 32px -24px rgba(63,63,63,.4)}
+.m-seal-h{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:center}
+.m-seal-ic{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--orange);color:#fff;box-shadow:0 0 0 6px rgba(242,147,0,.16)}
+.m-seal-ic .ic{width:28px;height:28px;stroke-width:1.7}
+.m-seal-h>div{display:grid;gap:6px}
+#cel .m-seal h2{font-size:24px}
+.m-seal-l{list-style:none;padding:0;display:grid}
+.m-seal-l li{display:grid;grid-template-columns:104px minmax(0,1fr);gap:10px;align-items:baseline;padding:11px 0;border-top:1px solid var(--line)}
+.m-seal-l b{font-size:17px;font-weight:500;letter-spacing:-.03em;color:var(--orange);white-space:nowrap}
+.m-seal-l span{font-size:14px;line-height:1.35;color:var(--ink-2)}
+.m-gv-f{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;color:var(--ink-3);line-height:1.5}
+
+/* 07 · Grupo 360: as seis empresas em órbita do grupo; o toque traz uma para o cartão */
+.m-orbit{position:relative;width:min(100%,344px);aspect-ratio:1;justify-self:center}
+.m-orbit-ring{position:absolute;inset:12%;display:block;width:76%;height:76%;fill:none;stroke:rgba(63,63,63,.24);stroke-width:1.5;stroke-dasharray:5 6}
+.m-orbit-run{position:absolute;inset:12%;will-change:transform;animation:msweep 22s linear infinite}
+.m-orbit-run i{position:absolute;left:50%;top:-4px;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px rgba(242,147,0,.16)}
+.m-orbit-core{position:absolute;left:50%;top:50%;width:34%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;display:grid;place-items:center;background:#fff;box-shadow:inset 0 0 0 1px var(--line),0 24px 36px -22px rgba(63,63,63,.55)}
+.m-orbit-core svg{width:66%;height:auto}
+.m-orbit button{position:absolute;z-index:2;width:21%;min-width:68px;aspect-ratio:1;translate:-50% -50%;border-radius:50%;display:grid;place-items:center;padding:4px;background:#fff;box-shadow:inset 0 0 0 1px var(--line-2),0 14px 22px -14px rgba(63,63,63,.5);font-size:11.5px;font-weight:600;line-height:1.15;text-align:center;transition:background .4s,color .4s,transform .5s var(--ease),box-shadow .4s}
+.m-orbit button[aria-selected="true"]{background:var(--orange);color:#fff;transform:scale(1.14);box-shadow:0 16px 24px -12px rgba(242,147,0,.95)}
+.m-ec-card{display:grid;gap:7px;align-content:start;padding:18px;min-height:142px}
+.m-ec-cat{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)}
+.m-ec-name{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;font-size:24px!important;font-weight:500;letter-spacing:-.03em}
+.m-ec-here{font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:var(--orange);color:#fff}
+.m-ec-desc{font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+.m-ec-card.sw>*{animation:mfade .4s var(--ease) both}
+
+/* 08 · dúvidas num painel branco, para separar do que vem antes */
+.m-faq-box{margin:54px 8px 0;padding:36px 12px 16px;border-radius:30px;background:#fff;box-shadow:0 1px 2px rgba(63,63,63,.04),0 24px 40px -30px rgba(63,63,63,.4)}
+.m-faq-box .m-hd{padding-inline:8px}
+#cel .m-faq-box .m-acc details{background:var(--bg);border-color:transparent}
+#cel .m-faq-box .m-acc details[open]{background:#fff;border-color:rgba(242,147,0,.6)}
+
+/* fechamento e rodapé */
+.m-end{gap:20px}
+.m-end .steps li{font-size:14.5px;align-items:flex-start;line-height:1.4}
+.m-end .steps b{background:rgba(242,147,0,.2);color:var(--orange);font-weight:600}
+.m-end .btn{width:100%;min-height:54px;font-size:16px}
+.m-ft{display:grid;gap:16px;margin-top:10px;padding:26px 6px 0;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-2)}
+.m-ft .logo{font-size:28px;--lg-iu:#fff}
+.m-ft-tag{font-size:15px;line-height:1.45;color:var(--ink)}
+.m-ft-tag em{font-style:normal;color:var(--orange)}
+.m-ft-l{display:flex;flex-wrap:wrap;gap:8px}
+.m-ft-l a{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);color:var(--ink);font-weight:500}
+.m-ft-l .ic{width:14px;height:14px}
+.m-ft small{font-size:12px;line-height:1.5;color:var(--ink-3)}
+
+/* barra fixa: menu e contato sempre ao alcance do polegar */
+.m-bar{position:fixed;inset:auto 0 0 0;z-index:55;display:flex;justify-content:center;gap:8px;padding:8px 14px calc(12px + env(safe-area-inset-bottom));pointer-events:none;transition:transform .5s var(--ease)}
+.m-bar>*{pointer-events:auto}
+.m-bar .btn{flex:1;max-width:420px;min-height:54px;font-size:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 16px 30px -12px rgba(63,63,63,.65);transition:opacity .4s,transform .5s var(--ease)}
+.m-burger{flex:none;display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:0 18px 0 16px;border-radius:999px;background:#3F3F3F;color:#F4F4F4;font-size:15px;font-weight:500;box-shadow:0 16px 30px -12px rgba(63,63,63,.7)}
+.m-burger span{display:grid;gap:4px}
+.m-burger i{display:block;width:16px;height:2px;border-radius:2px;background:#F4F4F4}
+.m-burger i:last-child{width:10px;justify-self:end;background:var(--orange)}
+html.m-lock .m-bar{transform:translateY(110%)}
+html.m-bar-off .m-bar .btn{opacity:0;transform:translateY(16px);pointer-events:none}
+
+/* folhas (menu e formulário): sobem de baixo, ao alcance do polegar */
+.m-sheet{position:fixed;inset:0;z-index:80;visibility:hidden;transition:visibility 0s .5s}
+.m-sheet.on{visibility:visible;transition:none}
+.m-sheet-bg{position:absolute;inset:0;background:rgba(40,40,40,.52);opacity:0;transition:opacity .4s;touch-action:none}
+.m-sheet.on .m-sheet-bg{opacity:1}
+.m-sheet-p{position:absolute;inset:auto 0 0 0;max-width:560px;margin-inline:auto;max-height:92vh;max-height:92dvh;overflow-y:auto;overscroll-behavior:contain;background:var(--bg);border-radius:28px 28px 0 0;padding:8px 20px calc(24px + env(safe-area-inset-bottom));box-shadow:0 -24px 60px -24px rgba(0,0,0,.45);transform:translateY(103%);transition:transform .55s var(--ease)}
+.m-sheet.on .m-sheet-p{transform:none}
+.m-grab{display:block;width:40px;height:4px;border-radius:4px;background:var(--line-2);margin:0 auto 10px}
+.m-sheet-h{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
+#cel .m-sheet-h h2{font-size:26px}
+.m-x{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(63,63,63,.06);flex:none;margin-right:-6px}
+.m-nav{display:grid;padding-bottom:6px}
+.m-nav a{display:flex;align-items:center;gap:14px;min-height:54px;padding:10px 2px;border-top:1px solid var(--line);font-size:18px;font-weight:500;letter-spacing:-.02em}
+.m-nav a:first-child{border-top:0}
+.m-nav a span{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--orange);width:22px}
+.m-nav a .ic{margin-left:auto;width:16px;height:16px;color:var(--ink-3)}
+.m-nav-cta{margin-top:10px;width:100%;min-height:54px;font-size:16px}
+#cel form{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;padding:0}
+#cel form input[type=text],#cel form input[type=email],#cel form input[type=tel],#cel form select{font-size:16px;min-height:52px;background-color:#fff}
+#cel form label,#cel form legend{font-size:13px}
+#cel form .radios span{padding:12px 15px;font-size:14px;background:#fff}
+#cel form .radios input:checked+span{background:var(--ink);color:var(--bg)}
+.m-fs{display:none!important}
+.m-fs.on{display:grid!important;gap:14px}
+#cel form.done>*:not(.sent){display:none!important}
+.m-prog{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:var(--ink-3)}
+.m-prog i{height:4px;flex:1;border-radius:4px;background:var(--line-2);transition:background .4s}
+.m-prog i.on{background:var(--orange)}
+.m-prog span{margin-left:6px;white-space:nowrap}
+.m-row{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px}
+#cel form .btn{min-height:54px;font-size:16px}
+#cel form .m-back{width:auto;padding-inline:20px}
+#cel .m-sheet .sent h3{font-size:24px}
+#cel .m-sheet .sent .m-ok{width:56px;height:56px}
+#cel .m-sheet .sent .m-ok .ic{width:26px;height:26px}
+@media(prefers-reduced-motion:reduce){.m-orb,.m-marq div{animation:none}.m-orb{opacity:1}.m-sheet-p,.m-top,.m-bar{transition:none}}
+/* telefone deitado: mesma página, coluna central */
+@media(min-width:620px){html.cel .m-ch{flex-basis:300px}.m-dial{width:560px}}
+/* ===== correções da reunião com a IU360 (23/11/2026) ===== */
+/* logo do topo sem a placa branca; claro sobre as seções escuras */
+.m-logo.m-pill{background:none;box-shadow:none}
+html.m-top-dark .m-logo{--lg-iu:#fff}
+/* números com "mais de" (+) */
+.m-stat .mais{font-style:normal;font-weight:400;color:var(--orange);margin-right:.03em}
+/* a diferença: título em cima dos pontos, legenda embaixo */
+.m-field-t{margin:0;text-align:center;font-size:16px;font-weight:600;letter-spacing:-.015em;color:var(--ink)}
+.m-dots-k{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin:0;font-size:12px;color:var(--ink-3)}
+.m-dots-k>span:first-child{display:block;flex-basis:100%;text-align:center;color:var(--ink-2)}
+.m-dots-k b{font-weight:600;color:var(--ink)}
+.m-dots-k span{display:inline-flex;align-items:center;gap:6px}
+.m-dots-k i{width:9px;height:9px;border-radius:50%;flex:none}
+.m-dots-k .k-ok i{background:#F4F4F4}
+.m-dots-k .k-l i{box-shadow:inset 0 0 0 1.5px rgba(244,244,244,.4)}
+.m-dots-k .k-q i{background:rgba(244,244,244,.24);box-shadow:inset 0 0 0 1.5px rgba(244,244,244,.3)}
+.m-dif[data-side="n"] .m-dots-k .k-ok i{background:var(--orange)}
+/* quem confia: logos maiores, monocromáticos (até chegarem, o nome ocupa o lugar) */
+.m-marq div{font-size:22px;align-items:center}
+.m-marq .cli{display:inline-flex;align-items:center;height:52px;padding-right:44px}
+.m-marq .cli .lgx{display:block;height:58%;width:auto;max-width:150px;filter:brightness(0) invert(1);opacity:.66}
+/* grupo: logo de cada empresa junto do nome; sem o logo central */
+.m-orbit button.tem-logo{align-content:center;gap:2px;font-size:10px}
+.m-orbit button .lgx{display:block;width:62%;height:auto;max-height:36%;object-fit:contain}
+.m-orbit button[aria-selected="true"] .lgx{filter:brightness(0) invert(1)}
+.m-orbit-core[hidden]{display:none}
+/* rodapé depois das dúvidas */
+.m-fim .m-ft{margin-top:0;padding-top:4px;border-top:0}
 </style>
 </head>
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-  <!-- logos oficiais, extraídas em vetor da apresentação do 360 Grupo -->
+  <!-- logos oficiais, extraídas em vetor da apresentação do Grupo 360 -->
   <symbol id="ndl" viewBox="-30 -110 60 220"><path d="M0 -108 L26 0 L0 0Z" fill="#F29300"/><path d="M0 -108 L-26 0 L0 0Z" fill="#F29300"/><path d="M0 108 L26 0 L0 0Z" fill="#60606042"/><path d="M0 108 L-26 0 L0 0Z" fill="#60606075"/><circle r="9" fill="#FFFFFF"/><circle r="4.2" fill="#F29300"/></symbol>
   <symbol id="lg-iu360" viewBox="8.5 18.5 46 26"><path style="fill:var(--lg-or,#F29300)" d="M38.37 40.83C39.28 39.73 39.92 38.51 40.29 37.13C40.43 37.32 40.55 37.49 40.68 37.65C41.52 38.66 42.58 39.25 43.89 39.37C46.34 39.60 48.51 37.98 49.00 35.56C49.52 32.96 47.71 30.38 45.09 29.98C42.64 29.61 40.37 31.10 39.75 33.50C39.62 33.98 39.61 34.47 39.60 34.96C39.51 37.10 38.74 38.97 37.28 40.54C36.02 41.88 34.49 42.75 32.68 43.09C29.94 43.60 27.49 42.94 25.36 41.14C25.26 41.05 25.16 40.96 25.06 40.86C25.05 40.86 25.05 40.85 25.04 40.84C25.95 39.75 26.59 38.53 26.96 37.14C26.99 37.18 27.02 37.21 27.04 37.24C27.78 38.35 28.81 39.05 30.12 39.31C32.62 39.82 35.15 38.12 35.64 35.62C35.72 35.22 35.74 34.81 35.75 34.40C35.81 32.50 36.43 30.80 37.61 29.31C38.88 27.72 40.51 26.70 42.50 26.26C44.41 25.85 46.26 26.04 48.03 26.89C50.23 27.95 51.74 29.66 52.52 31.98C53.51 34.95 52.78 38.24 50.63 40.52C49.30 41.94 47.67 42.84 45.75 43.14C42.98 43.56 40.54 42.81 38.46 40.92C38.43 40.90 38.40 40.86 38.37 40.83"/><path style="fill:var(--lg-or,#F29300)" d="M9.05 34.66L12.92 34.66C12.94 34.86 12.95 35.06 12.97 35.25C13.10 36.26 13.51 37.14 14.20 37.89C15.02 38.77 16.04 39.30 17.25 39.38C19.23 39.51 20.76 38.70 21.79 37.00C22.24 36.26 22.40 35.43 22.41 34.55C22.42 32.91 22.87 31.39 23.77 30.02C24.24 29.30 24.76 28.60 25.27 27.90C27.38 24.96 29.49 22.02 31.61 19.08C31.63 19.05 31.65 19.03 31.67 19.00C31.77 18.78 31.93 18.74 32.16 18.74C33.55 18.75 34.93 18.75 36.31 18.75L36.47 18.75C34.71 21.19 32.96 23.62 31.21 26.07C32.30 26.10 33.34 26.31 34.33 26.73C35.32 27.15 36.20 27.73 36.98 28.48C36.07 29.58 35.42 30.80 35.05 32.18C34.92 31.99 34.79 31.81 34.65 31.64C33.76 30.59 32.63 30.01 31.26 29.93C29.93 29.86 28.77 30.29 27.79 31.19C26.95 31.96 26.46 32.92 26.31 34.05C26.27 34.40 26.28 34.76 26.26 35.11C26.17 36.79 25.64 38.33 24.64 39.69C23.25 41.60 21.39 42.78 19.05 43.14C16.28 43.58 13.83 42.82 11.77 40.91C10.32 39.57 9.46 37.89 9.17 35.94C9.11 35.52 9.09 35.09 9.05 34.66"/><path style="fill:var(--lg-or,#F29300)" d="M21.71 32.20C21.67 32.12 21.64 32.08 21.61 32.03C20.80 30.86 19.69 30.17 18.28 29.97C18.08 29.94 17.87 29.93 17.66 29.93C16.26 29.93 14.86 29.93 13.46 29.93L13.30 29.93C15.06 27.49 16.80 25.07 18.55 22.63L9.22 22.63L9.22 18.75L26.11 18.75C24.24 21.36 22.38 23.94 20.51 26.55C21.68 26.96 22.71 27.60 23.62 28.46C22.75 29.57 22.09 30.79 21.71 32.20"/><path style="fill:var(--lg-iu,#606060C0)" d="M20.26 32.64C20.26 32.68 20.26 32.72 20.26 32.76C20.26 33.48 20.26 34.20 20.26 34.93C20.26 35.88 19.66 36.64 18.75 36.84C17.62 37.08 16.50 36.21 16.48 35.06C16.47 34.27 16.48 33.49 16.48 32.71C16.48 32.69 16.48 32.67 16.49 32.64L17.61 32.64L17.61 32.76C17.61 33.49 17.61 34.22 17.61 34.95C17.61 35.35 17.86 35.66 18.24 35.73C18.69 35.81 19.12 35.47 19.12 35.00C19.13 34.60 19.12 34.19 19.12 33.79L19.12 32.77L19.12 32.64L20.26 32.64"/><path style="fill:var(--lg-iu,#606060C0)" d="M15.02 32.64H16.14V36.75H15.02Z"/><path style="fill:var(--lg-or,#F29300)" d="M50.99 23.51C49.92 23.51 49.03 24.38 49.03 25.43C49.03 26.54 49.89 27.42 50.98 27.42C52.06 27.42 52.93 26.55 52.93 25.47C52.93 24.38 52.07 23.51 50.99 23.51M50.98 26.27C50.54 26.27 50.18 25.91 50.18 25.47C50.18 25.02 50.54 24.65 50.98 24.66C51.42 24.66 51.78 25.02 51.78 25.46C51.79 25.91 51.43 26.27 50.98 26.27"/><path style="fill:var(--lg-or,#F29300)" d="M46.35 31.82C45.39 32.54 44.41 33.26 43.45 33.98C43.40 34.01 43.36 34.07 43.34 34.13C43.13 34.76 42.92 35.40 42.71 36.03C42.54 36.56 42.37 37.09 42.18 37.65C42.23 37.62 42.26 37.60 42.29 37.58C43.24 36.88 44.19 36.17 45.15 35.47C45.22 35.41 45.27 35.35 45.30 35.26C45.60 34.34 45.90 33.42 46.21 32.50C46.29 32.26 46.36 32.02 46.45 31.76C46.40 31.79 46.38 31.80 46.35 31.82M43.01 36.53C43.01 36.52 43.00 36.52 42.99 36.52C43.24 35.78 43.48 35.04 43.73 34.29C44.12 34.57 44.50 34.85 44.90 35.13C44.26 35.60 43.64 36.06 43.01 36.53"/></symbol>
+  <!-- LOGO DO GRUPO 360: quando o cliente mandar o logo novo, troque o conteúdo deste símbolo e o viewBox (ver img/grupo/LEIA-ME.txt) -->
   <symbol id="lg-360grupo" viewBox="0 0 186.29 156.38"><path style="fill:var(--lg-gp,#fc6610)" d="M72.95 46.97C72.95 45.75 72.88 44.72 72.97 43.71C73.19 41.38 73.42 39.05 73.77 36.74C74.30 33.32 75.20 29.99 76.79 26.89C78.00 24.54 79.55 22.46 81.79 20.95C83.55 19.77 85.49 19.08 87.60 18.88C90.21 18.64 92.78 18.83 95.26 19.75C97.93 20.74 99.79 22.62 100.95 25.19C101.34 26.07 101.66 26.99 102.01 27.89C106.97 28.51 111.44 26.39 113.66 21.81C115.26 18.51 115.29 15.16 113.56 11.87C112.67 10.19 111.35 8.89 109.74 7.88C106.43 5.80 102.81 4.53 98.98 3.80C95.89 3.22 92.77 3.00 89.63 3.05C88.93 3.06 88.23 3.12 87.51 3.03C88.42 2.83 89.32 2.61 90.24 2.43C93.51 1.76 96.84 1.66 100.16 1.79C104.45 1.97 108.64 2.72 112.63 4.36C116.20 5.83 119.36 7.90 122.08 10.63C122.36 10.91 122.66 11.19 122.98 11.50C123.21 11.34 123.41 11.22 123.60 11.07C128.07 7.58 133.16 5.58 138.76 4.82C142.07 4.36 145.39 4.36 148.71 4.65C151.46 4.89 154.15 5.45 156.77 6.33C157.13 6.45 157.47 6.59 157.88 6.74C157.71 7.14 157.57 7.48 157.43 7.82C156.44 10.20 155.93 12.69 155.76 15.26C155.55 18.30 155.83 21.29 156.58 24.23C157.16 26.46 158.09 28.55 159.46 30.42C161.87 33.71 165.13 35.67 169.14 36.37C172.06 36.88 174.95 36.76 177.79 35.86C177.95 35.81 178.10 35.76 178.26 35.73C178.33 35.72 178.41 35.75 178.58 35.78C178.70 36.41 178.86 37.06 178.94 37.71C179.26 40.25 179.60 42.79 179.84 45.33C180.20 49.11 180.24 52.91 180.17 56.71C180.10 60.50 179.90 64.29 179.50 68.07C178.97 73.03 178.13 77.93 176.72 82.72C175.37 87.29 173.52 91.64 170.84 95.60C167.88 99.98 164.09 103.43 159.31 105.74C156.25 107.23 153.01 108.15 149.64 108.56C147.85 108.77 146.03 108.93 144.23 108.94C138.92 108.96 133.73 108.21 128.84 105.99C126.16 104.78 123.74 103.19 121.55 101.24C119.87 99.74 118.41 98.05 117.10 96.23C116.64 95.59 116.65 95.58 117.10 94.98C120.19 90.85 122.15 86.22 123.25 81.22C123.82 78.63 124.12 76.02 124.24 73.38C124.47 68.63 124.03 63.97 122.77 59.39C121.50 54.77 119.35 50.62 116.10 47.07C114.19 44.98 111.98 43.27 109.51 41.88C105.80 39.81 101.80 38.65 97.58 38.28C92.71 37.85 87.92 38.26 83.27 39.85C79.97 40.97 77.08 42.76 74.59 45.19C74.05 45.71 73.58 46.29 72.95 46.97M128.74 55.17C128.63 59.62 128.77 64.05 129.15 68.48C129.44 71.94 129.87 75.38 130.64 78.77C131.29 81.62 132.16 84.39 133.63 86.93C134.89 89.12 136.50 90.96 138.82 92.11C140.82 93.10 142.94 93.38 145.13 93.20C147.09 93.05 148.93 92.48 150.58 91.34C152.64 89.92 154.02 87.96 155.07 85.73C156.36 83.01 157.10 80.12 157.64 77.17C158.34 73.28 158.69 69.34 158.87 65.39C159.01 62.32 159.07 59.25 159.10 56.19C159.14 52.42 159.04 48.65 158.80 44.89C158.58 41.39 158.19 37.92 157.46 34.49C156.87 31.70 156.05 28.97 154.63 26.46C153.67 24.78 152.52 23.26 150.92 22.13C148.04 20.10 144.84 19.75 141.48 20.38C138.31 20.98 135.92 22.77 134.12 25.39C132.64 27.55 131.67 29.94 130.96 32.44C129.47 37.70 128.98 43.11 128.76 48.55C128.67 50.75 128.74 52.97 128.74 55.17"/><path style="fill:var(--lg-gp,#fc6610)" d="M61.93 96.53C61.06 97.72 60.05 98.77 58.98 99.75C56.88 101.68 54.55 103.28 52.00 104.55C49.26 105.93 46.39 106.93 43.40 107.61C40.52 108.27 37.61 108.70 34.66 108.80C32.66 108.86 30.66 108.96 28.67 108.88C23.37 108.66 18.20 107.79 13.28 105.72C9.47 104.11 6.10 101.88 3.26 98.87C1.11 96.59 0.00 93.87 0.10 90.73C0.29 85.03 4.43 80.38 9.76 79.71C11.63 79.47 13.53 79.56 15.49 79.50C15.59 79.87 15.67 80.18 15.74 80.48C16.29 82.86 17.15 85.12 18.58 87.12C20.42 89.70 22.93 91.36 25.97 92.20C29.80 93.25 33.66 93.31 37.50 92.28C42.23 91.01 45.25 87.95 46.53 83.25C47.64 79.19 47.63 75.10 46.37 71.07C45.04 66.78 42.05 64.16 37.83 62.83C35.47 62.08 33.04 61.77 30.57 61.74C27.89 61.71 25.22 61.70 22.54 61.68C22.30 61.68 22.06 61.68 21.76 61.68C21.73 61.43 21.68 61.23 21.68 61.02C21.68 57.82 21.65 54.61 21.68 51.40C21.71 48.18 24.51 45.45 27.74 45.44C30.18 45.43 32.60 45.31 34.99 44.77C36.58 44.42 38.10 43.88 39.46 42.94C41.22 41.71 42.35 40.04 42.91 38.00C43.84 34.61 43.87 31.18 42.85 27.80C41.69 23.97 39.04 21.61 35.19 20.64C31.99 19.84 28.76 19.84 25.57 20.71C21.75 21.75 19.21 24.22 17.69 27.81C17.06 29.31 16.67 30.87 16.39 32.47C16.33 32.81 16.26 33.15 16.20 33.45C16.10 33.50 16.05 33.55 16.01 33.55C13.61 33.61 11.19 33.84 8.87 32.98C4.98 31.55 2.60 28.76 1.74 24.75C0.97 21.22 1.99 18.11 4.29 15.37C7.66 11.34 11.83 8.47 16.78 6.71C20.05 5.54 23.43 4.87 26.90 4.62C32.21 4.23 37.48 4.45 42.68 5.65C46.34 6.49 49.81 7.81 52.97 9.86C56.20 11.95 58.82 14.61 60.77 17.92C60.99 18.30 61.08 18.61 60.82 19.03C57.63 24.27 55.68 29.98 54.37 35.93C53.44 40.19 52.90 44.51 52.55 48.87C52.21 53.17 52.19 57.48 52.27 61.78C52.38 67.36 52.89 72.90 54.03 78.38C54.94 82.69 56.24 86.87 58.25 90.80C59.19 92.63 60.28 94.36 61.54 95.99C61.67 96.15 61.79 96.33 61.93 96.53"/><path style="fill:var(--lg-gp,#fc6610)" d="M103.41 72.46C103.38 75.66 103.05 78.81 102.07 81.86C101.22 84.52 99.89 86.90 97.76 88.77C96.19 90.15 94.37 91.06 92.32 91.48C89.16 92.14 86.04 92.04 83.00 90.90C79.94 89.75 77.82 87.56 76.33 84.72C75.14 82.45 74.50 80.01 74.10 77.50C73.72 75.05 73.54 72.58 73.61 70.10C73.69 67.30 73.98 64.52 75.05 61.88C76.69 57.80 79.71 55.37 83.99 54.51C85.39 54.23 86.83 54.05 88.25 54.04C91.25 54.03 94.16 54.52 96.75 56.20C99.29 57.84 100.88 60.18 101.92 62.94C102.70 65.03 103.10 67.19 103.26 69.40C103.33 70.42 103.36 71.44 103.41 72.46"/><path style="fill:var(--lg-gp,#fc6610)" d="M30.12 147.32C30.41 147.30 30.67 147.25 30.94 147.25C32.72 147.25 34.51 147.26 36.29 147.24C36.82 147.23 37.12 147.38 37.32 147.91C37.72 149.01 38.53 149.76 39.63 150.14C41.29 150.71 42.97 150.73 44.65 150.21C45.74 149.87 46.54 149.18 47.01 148.14C47.26 147.61 47.47 147.04 47.59 146.47C47.91 144.96 47.94 143.42 47.89 141.89C47.88 141.76 47.82 141.65 47.58 141.39C47.51 141.53 47.46 141.69 47.37 141.82C46.33 143.24 44.91 144.07 43.20 144.39C40.76 144.85 38.36 144.81 36.05 143.78C33.63 142.70 32.01 140.85 30.95 138.48C30.00 136.36 29.60 134.12 29.56 131.81C29.50 129.36 29.70 126.96 30.60 124.66C31.89 121.38 34.01 118.87 37.43 117.65C39.79 116.81 42.20 116.85 44.60 117.55C45.72 117.87 46.66 118.48 47.32 119.46C47.38 119.55 47.41 119.67 47.45 119.77C47.53 119.74 47.61 119.71 47.69 119.68C47.80 119.01 47.91 118.34 48.04 117.62L54.84 117.62C54.86 117.90 54.91 118.19 54.91 118.47C54.89 126.80 54.90 135.12 54.83 143.45C54.81 145.66 54.42 147.84 53.50 149.90C52.29 152.59 50.26 154.40 47.45 155.24C43.68 156.36 39.88 156.38 36.12 155.16C33.94 154.46 32.22 153.11 31.09 151.08C30.59 150.17 30.31 149.19 30.12 148.18C30.08 147.93 30.12 147.66 30.12 147.32M48.15 130.68C48.04 129.42 47.92 128.16 47.80 126.91C47.79 126.75 47.74 126.59 47.70 126.44C47.10 124.21 46.01 123.24 43.71 122.92C40.77 122.52 38.47 123.88 37.53 126.68C37.24 127.57 37.03 128.50 36.95 129.43C36.78 131.45 36.88 133.47 37.66 135.39C38.56 137.61 40.31 138.94 42.85 138.85C45.37 138.76 46.95 137.59 47.61 135.16C48.02 133.70 48.11 132.20 48.15 130.68"/><path style="fill:var(--lg-gp,#fc6610)" d="M112.10 142.86C112.07 143.31 112.03 143.62 112.03 143.93C112.03 147.46 112.03 150.99 112.03 154.51C112.02 154.86 111.99 155.20 111.97 155.58L105.05 155.58C104.87 154.92 104.79 120.08 104.95 117.70C105.50 117.53 110.49 117.47 111.81 117.64C111.90 118.66 111.98 119.71 112.06 120.76C112.15 120.81 112.24 120.86 112.33 120.91C112.37 120.78 112.40 120.64 112.47 120.53C113.65 118.75 115.36 117.74 117.42 117.32C119.72 116.84 121.99 116.92 124.16 117.91C126.16 118.82 127.57 120.34 128.58 122.25C129.74 124.43 130.24 126.80 130.34 129.23C130.44 131.52 130.42 133.81 129.82 136.05C129.12 138.62 127.97 140.93 125.96 142.74C124.09 144.44 121.89 145.34 119.36 145.44C118.25 145.48 117.15 145.46 116.06 145.21C114.71 144.90 113.50 144.35 112.57 143.30C112.47 143.18 112.34 143.09 112.10 142.86M111.61 131.27C111.64 131.27 111.67 131.27 111.70 131.28C111.70 131.71 111.69 132.14 111.71 132.57C111.77 133.97 111.93 135.35 112.45 136.68C112.85 137.71 113.45 138.60 114.46 139.11C116.11 139.96 117.83 140.01 119.54 139.30C121.22 138.59 122.09 137.18 122.58 135.53C123.23 133.28 123.31 130.97 122.99 128.66C122.83 127.53 122.54 126.45 121.98 125.44C121.28 124.17 120.25 123.31 118.82 123.01C117.47 122.73 116.13 122.79 114.84 123.29C113.97 123.63 113.32 124.22 112.85 125.00C112.39 125.77 112.08 126.61 111.97 127.50C111.83 128.75 111.73 130.01 111.61 131.27"/><path style="fill:var(--lg-gp,#fc6610)" d="M172.70 32.38C170.12 32.36 167.69 31.83 165.51 30.44C163.07 28.88 161.50 26.65 160.53 23.96C159.91 22.25 159.57 20.49 159.40 18.68C159.10 15.59 159.30 12.55 160.24 9.58C161.31 6.20 163.24 3.45 166.41 1.69C167.57 1.04 168.83 0.63 170.14 0.40C172.41 0.00 174.66 0.10 176.87 0.75C180.50 1.82 182.97 4.20 184.51 7.59C185.37 9.47 185.79 11.46 185.99 13.51C186.29 16.68 186.03 19.80 185.14 22.86C184.49 25.09 183.43 27.11 181.80 28.79C180.05 30.58 177.90 31.66 175.44 32.08C174.53 32.24 173.61 32.28 172.70 32.38M177.96 15.67C177.90 14.95 177.89 13.95 177.75 12.97C177.57 11.69 177.32 10.42 176.62 9.29C175.67 7.77 174.29 7.11 172.52 7.18C170.85 7.25 169.59 8.01 168.77 9.47C168.25 10.40 167.96 11.40 167.79 12.45C167.45 14.50 167.45 16.57 167.67 18.64C167.82 19.98 168.07 21.30 168.63 22.54C169.87 25.32 172.35 25.73 174.30 25.06C175.68 24.59 176.46 23.52 176.98 22.22C177.77 20.20 177.88 18.08 177.96 15.67"/><path style="fill:var(--lg-gp,#fc6610)" d="M158.28 131.07C158.24 133.96 157.80 136.75 156.43 139.34C154.95 142.16 152.67 144.04 149.62 144.92C146.95 145.69 144.23 145.74 141.52 145.14C137.32 144.23 134.63 141.63 133.19 137.67C132.38 135.44 132.14 133.12 132.16 130.76C132.19 128.57 132.58 126.47 133.45 124.48C135.30 120.29 138.52 117.87 143.05 117.23C145.30 116.91 147.53 116.97 149.72 117.62C153.43 118.71 155.88 121.16 157.23 124.73C158.01 126.77 158.29 128.90 158.28 131.07M139.37 131.12C139.43 131.82 139.45 132.66 139.56 133.48C139.77 135.01 140.16 136.48 141.05 137.79C142.89 140.49 147.00 140.65 148.96 138.42C149.73 137.55 150.22 136.54 150.51 135.44C150.97 133.66 151.13 131.85 151.02 130.01C150.94 128.62 150.76 127.28 150.25 125.99C149.44 123.98 147.98 122.82 145.79 122.65C143.42 122.46 141.65 123.39 140.53 125.51C139.63 127.23 139.45 129.09 139.37 131.12"/><path style="fill:var(--lg-gp,#fc6610)" d="M92.91 117.61L100.10 117.61L100.10 144.84C99.53 145.06 94.32 145.12 93.23 144.89C93.15 143.98 93.06 143.04 92.95 141.94C92.72 142.17 92.58 142.28 92.49 142.41C91.08 144.39 89.09 145.26 86.74 145.43C85.40 145.53 84.05 145.52 82.72 145.19C80.19 144.55 78.52 142.98 77.61 140.56C77.08 139.15 76.87 137.69 76.86 136.21C76.83 130.20 76.85 124.19 76.85 118.19C76.85 118.03 76.87 117.86 76.88 117.71C77.44 117.53 82.74 117.47 83.89 117.65C83.91 117.97 83.95 118.31 83.95 118.65C83.96 123.90 83.95 129.15 83.97 134.41C83.97 135.15 84.05 135.92 84.22 136.64C84.64 138.54 85.79 139.53 87.73 139.63C89.99 139.75 91.66 138.75 92.41 136.56C92.75 135.59 92.91 134.58 92.91 133.55C92.91 128.56 92.91 123.58 92.91 118.60L92.91 117.61"/><path style="fill:var(--lg-gp,#fc6610)" d="M59.49 144.91L59.49 117.62L66.29 117.62C66.68 119.01 66.45 120.49 66.66 121.97C67.67 120.29 68.87 118.82 70.71 118.06C71.55 117.71 72.44 117.48 73.33 117.26C73.76 117.16 74.23 117.20 74.66 117.18C74.90 117.81 74.98 123.02 74.76 124.24C74.21 124.30 73.63 124.33 73.06 124.43C72.24 124.56 71.40 124.67 70.61 124.92C68.99 125.44 67.92 126.57 67.33 128.15C66.90 129.27 66.70 130.43 66.69 131.63C66.69 135.72 66.69 139.82 66.69 143.91C66.69 144.23 66.69 144.55 66.69 144.84C66.03 145.05 60.60 145.11 59.49 144.91"/></symbol>
   <!-- materiais da marca: vidro laranja (como o "360" 3D da apresentação) e vidro fosco -->
   <linearGradient id="iu-scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F29300" stop-opacity="0"/><stop offset="1" stop-color="#F29300" stop-opacity=".18"/></linearGradient><linearGradient id="gx-wire" gradientUnits="userSpaceOnUse" x1="100" y1="0" x2="248" y2="0"><stop offset="0" stop-color="#F29300" stop-opacity=".35"/><stop offset=".55" stop-color="#F29300"/><stop offset="1" stop-color="#F29300"/></linearGradient><linearGradient id="gx-or" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F29300"/><stop offset=".42" stop-color="#F29300"/><stop offset="1" stop-color="#F29300"/></linearGradient>
@@ -1963,6 +2363,520 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
   <symbol id="i-hand" viewBox="0 0 24 24"><path d="M9 11V5a1.500 1.500 0 013 0v5m0-1.500a1.500 1.500 0 013 0V11m0-.5a1.500 1.500 0 013 0V15a6 6 0 01-6 6h-1a6 6 0 01-5-2.700L4 14.500a1.500 1.500 0 012.500-1.600L9 15"/></symbol>
 </defs></svg>
 
+<!-- =====================================================================================================
+     VERSÃO DO CELULAR — só aparece com html.cel (ver o <head>). Página curta, de polegar:
+     topo com a escolha do segmento, desafios, a diferença, soluções, cases, motivos, governança, grupo,
+     dúvidas e fechamento; barra fixa "Agendar diagnóstico" que abre o formulário numa folha.
+     Os textos seguem a direção da página do computador, encurtados onde ela se alonga.
+     ===================================================================================================== -->
+<div id="cel" class="cel-box">
+
+  <header class="m-top">
+    <a href="#m-inicio" data-m-go="m-inicio" class="logo m-logo m-pill" aria-label="IU360 — início"><svg class="lg" viewBox="0 0 46 26" role="img" aria-label="IU360"><use href="#lg-iu360"/></svg></a>
+    <div class="seg m-seg" role="group" aria-label="Visão do conteúdo">
+      <button type="button" data-m-lens="varejo" aria-pressed="true">Varejo</button>
+      <button type="button" data-m-lens="financeiro" aria-pressed="false">Financeiro</button>
+    </div>
+  </header>
+
+  <!-- 00 · PRIMEIRA TELA: o mostrador 360° com a agulha apontando para o segmento escolhido -->
+  <section class="m-sec m-hero" id="m-inicio">
+    <p class="m-eb m-r" style="--i:0">Dados direto da fonte</p>
+    <h1 class="m-r" style="--i:1" data-only="varejo">Dados confiáveis para vender a quem tem <em>perfil de comprar</em></h1>
+    <h1 class="m-r" style="--i:1" data-only="financeiro">Dados confiáveis para <em>cobrar de quem pode pagar</em></h1>
+    <p class="m-lead m-r" style="--i:2" data-only="varejo">Há mais de 12 anos, a IU360 mostra quem são os seus clientes mais rentáveis e onde estão os próximos.</p>
+    <p class="m-lead m-r" style="--i:2" data-only="financeiro">Com atualização cadastral direto da fonte e scores de cobrança, a sua operação evita contatos inválidos e reduz custos.</p>
+    <div class="m-scene m-r" style="--i:3" role="group" aria-labelledby="mSceneK">
+      <span class="m-scene-face" aria-hidden="true"></span>
+      <svg class="m-ring" viewBox="0 0 200 200" aria-hidden="true"><circle class="t4" cx="100" cy="100" r="80" pathLength="360"/><circle class="t1" cx="100" cy="100" r="97" pathLength="360"/><circle class="t2" cx="100" cy="100" r="95.500" pathLength="360"/><circle class="t3" cx="100" cy="100" r="94.500" pathLength="360"/></svg>
+      <span class="m-sweep" aria-hidden="true"><i></i></span>
+      <p class="m-scene-k" id="mSceneK">Qual é a sua operação?</p>
+      <button type="button" class="m-pick m-pick-v" data-m-lens="varejo" aria-pressed="true"><strong>Varejo</strong><small>Franquias e agências</small></button>
+      <button type="button" class="m-pick m-pick-f" data-m-lens="financeiro" aria-pressed="false"><strong>Financeiro</strong><small>Cobrança e bancos</small></button>
+      <span class="m-needle" aria-hidden="true"><svg viewBox="0 0 60 220" preserveAspectRatio="xMidYMid meet"><use href="#ndl"/></svg></span>
+      <div class="m-read">
+        <div class="m-read-s">
+          <p class="m-stat on"><strong><i class="mais" aria-label="mais de">+</i><b>255</b>M</strong><span>CPFs mapeados</span></p>
+          <p class="m-stat"><strong><i class="mais" aria-label="mais de">+</i><b>70</b>M</strong><span>CNPJs mapeados</span></p>
+          <p class="m-stat"><strong><i class="mais" aria-label="mais de">+</i><b>12</b> anos</strong><span>de marketing direcionado por dados</span></p>
+          <p class="m-stat"><strong><b>90</b>%</strong><span>dos e-commerces usam scores com nossos dados</span></p>
+        </div>
+        <span class="m-read-d" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span>
+      </div>
+    </div>
+    <p class="m-cue m-r" style="--i:4" aria-hidden="true">Role para explorar <svg class="ic"><use href="#i-down"/></svg></p>
+  </section>
+
+  <!-- 01 · DESAFIOS -->
+  <section class="m-sec" id="m-desafios">
+    <div class="m-hd m-r">
+      <p class="m-kick">Desafios</p>
+      <h2 data-only="varejo">Seu crescimento pede <em>dados à altura.</em></h2>
+      <h2 data-only="financeiro">Menos discador, <em>mais contato efetivo.</em></h2>
+    </div>
+    <div class="m-carx m-r" style="--i:1" data-only="varejo">
+      <div class="m-car" role="list" aria-label="Desafios do varejo">
+        <article class="m-ch m-card-w" role="listitem"><div class="m-art" data-art="varejo:0"></div><div class="m-ch-b"><span>01</span><h3>Campanhas para audiências aderentes</h3><p>Em vez de falar com quem não compra, <b>invista em campanhas que atingem audiências aderentes</b> e gere vendas qualificadas.</p></div></article>
+        <article class="m-ch m-card-w" role="listitem"><div class="m-art" data-art="varejo:1"></div><div class="m-ch-b"><span>02</span><h3>Expansão guiada por perfil rentável</h3><p>Antes de abrir uma nova unidade, <b>saiba quais perfis de cliente</b> geram mais receita e rentabilidade na sua rede.</p></div></article>
+        <article class="m-ch m-card-w" role="listitem"><div class="m-art" data-art="varejo:2"></div><div class="m-ch-b"><span>03</span><h3>Contatos válidos, sem duplicidades</h3><p>Contato inválido custa caro, por isso <b>trabalhe com contatos válidos</b>, completos e sem duplicidades, e reduza o custo por contato.</p></div></article>
+        <article class="m-ch m-card-w" role="listitem"><div class="m-art" data-art="varejo:3"></div><div class="m-ch-b"><span>04</span><h3>Listas lookalike 100% validadas</h3><p>Troque a prospecção fria por <b>listas lookalike e contatos 100% validados</b>, construídos a partir do perfil dos seus melhores clientes.</p></div></article>
+        <article class="m-ch m-card-w" role="listitem"><div class="m-art" data-art="varejo:4"></div><div class="m-ch-b"><span>05</span><h3>Clusters de comportamento e consumo</h3><p>Deixe de tratar todo cliente igual com <b>agrupamentos personalizados</b> que revelam comportamentos e potenciais de consumo.</p></div></article>
+      </div>
+      <div class="m-pager" aria-hidden="true"><span><b>01</b> / 05</span><span class="m-pd"><i class="on"></i><i></i><i></i><i></i><i></i></span><span class="m-hint">arraste <svg class="ic"><use href="#i-right"/></svg></span></div>
+    </div>
+    <div class="m-carx m-r" style="--i:1" data-only="financeiro">
+      <div class="m-car" role="list" aria-label="Desafios do setor financeiro">
+        <article class="m-ch m-card-w" role="listitem"><div class="m-art" data-art="financeiro:0"></div><div class="m-ch-b"><span>01</span><h3>Números atualizados no discador</h3><p>Em vez de gastar discagem com números desatualizados, <b>ligue para números atualizados</b> e bloqueie chamadas para óbitos e terceiros.</p></div></article>
+        <article class="m-ch m-card-w" role="listitem"><div class="m-art" data-art="financeiro:1"></div><div class="m-ch-b"><span>02</span><h3>Canal ideal para cada cliente</h3><p><b>Descubra o canal ideal de contato</b> para cada cliente e pare de insistir onde ele não responde.</p></div></article>
+        <article class="m-ch m-card-w" role="listitem"><div class="m-art" data-art="financeiro:2"></div><div class="m-ch-b"><span>03</span><h3>Fim do desperdício com dado defasado</h3><p>Os birôs tradicionais sofrem defasagens de 22% a 35% ao ano, por isso <b>elimine esse desperdício</b> com dados atualizados todos os dias.</p></div></article>
+        <article class="m-ch m-card-w" role="listitem"><div class="m-art" data-art="financeiro:3"></div><div class="m-ch-b"><span>04</span><h3>APIs estáveis nos picos de operação</h3><p><b>Use APIs rápidas e com 99,9% de estabilidade</b>, que não travam a sua esteira nos picos de operação.</p></div></article>
+        <article class="m-ch m-card-w" role="listitem"><div class="m-art" data-art="financeiro:4"></div><div class="m-ch-b"><span>05</span><h3>Prevenção contínua de fraudes</h3><p><b>Previna fraudes cadastrais</b> com validações cruzadas contínuas de CPF, CNPJ, vínculos e restritivos.</p></div></article>
+      </div>
+      <div class="m-pager" aria-hidden="true"><span><b>01</b> / 05</span><span class="m-pd"><i class="on"></i><i></i><i></i><i></i><i></i></span><span class="m-hint">arraste <svg class="ic"><use href="#i-right"/></svg></span></div>
+    </div>
+  </section>
+
+  <!-- 02 · A DIFERENÇA: um campo de 100 cadastros e um alternador entre os dois modelos -->
+  <section class="m-sec m-dark m-dif" id="m-diferenca" data-side="t">
+    <div class="m-hd m-r">
+      <p class="m-kick">A diferença</p>
+      <h2>Modelo tradicional × <em>direto da fonte</em></h2>
+      <p class="m-lead">Toque nos dois lados e compare.</p>
+    </div>
+    <div class="m-sw m-r" style="--i:1" role="tablist" aria-label="Comparar os dois modelos">
+      <button type="button" role="tab" aria-selected="true" aria-controls="mField" data-side="t">Modelo tradicional</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="mField" data-side="n">Direto da fonte</button>
+    </div>
+    <div class="m-field m-r" style="--i:2" id="mField" role="tabpanel">
+      <p class="m-field-t">Os mesmos 100 cadastros, 12 meses depois</p>
+      <div class="m-field-h"><span>Mês <b class="m-month">0</b> de 12</span><strong><b class="m-valid">100</b>cadastros válidos</strong></div>
+      <div class="m-dots" data-dots role="img" aria-label="De cada 100 cadastros, a base no modelo tradicional tem de 22 a 35 desatualizados em 12 meses; na base direto da fonte, os 100 seguem válidos."></div>
+      <div class="m-tl" aria-hidden="true"><i></i></div>
+      <p class="m-tl-k" aria-hidden="true"><span>hoje</span><span>12 meses</span></p>
+      <p class="m-dots-k" aria-hidden="true"><span>Cada ponto = <b>1 cadastro</b></span><span class="k-ok"><i></i>válido e atualizado</span><span class="k-l"><i></i>desatualizado</span><span class="k-q"><i></i>pode estar desatualizado</span></p>
+      <p class="m-field-s" aria-live="polite" data-t="No modelo tradicional, de 22 a 35 de cada 100 cadastros perdem a validade em um ano. Cada contato defasado é custo sem retorno." data-n="Direto da fonte, os 100 seguem válidos: atualização diária na fonte oficial e nas operadoras.">No modelo tradicional, de 22 a 35 de cada 100 cadastros perdem a validade em um ano. Cada contato defasado é custo sem retorno.</p>
+    </div>
+    <ul class="m-vs m-r" style="--i:3">
+      <li><span class="m-mk" aria-hidden="true"><svg class="ic no"><use href="#i-x"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><span class="k">De onde vem o dado</span><span class="v" data-t="Cadastros reciclados e listas repassadas por terceiros." data-n="Captação e validação direta na fonte oficial e nas operadoras.">Cadastros reciclados e listas repassadas por terceiros.</span></li>
+      <li><span class="m-mk" aria-hidden="true"><svg class="ic no"><use href="#i-x"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><span class="k">Atualização</span><span class="v" data-t="Perda anual de 22% a 35% de precisão cadastral." data-n="Atualização diária e máxima completude cadastral.">Perda anual de 22% a 35% de precisão cadastral.</span></li>
+      <li><span class="m-mk" aria-hidden="true"><svg class="ic no"><use href="#i-x"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><span class="k">Como entrega</span><span class="v" data-t="Venda de pacotes de consultas, sem apoio analítico." data-n="Modelo híbrido: consultoria + APIs diretas.">Venda de pacotes de consultas, sem apoio analítico.</span></li>
+      <li><span class="m-mk" aria-hidden="true"><svg class="ic no"><use href="#i-x"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><span class="k">Para começar</span><span class="v" data-t="Burocracia contratual e semanas para liberar testes." data-n="Menos etapas, menos papelada, mais proximidade.">Burocracia contratual e semanas para liberar testes.</span></li>
+    </ul>
+    <button type="button" class="m-dif-go m-r" style="--i:4" data-t="Ver direto da fonte" data-n="Rever o modelo tradicional"><span>Ver direto da fonte</span><svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+  </section>
+
+  <!-- 03 · SOLUÇÕES: a pilha de módulos e a ficha de cada um -->
+  <section class="m-sec" id="m-solucoes">
+    <div class="m-hd m-r">
+      <p class="m-kick">Soluções</p>
+      <h2>Soluções <em>modulares</em></h2>
+      <p class="m-lead">Da atualização cadastral à criação de score, cada módulo se encaixa na mesma base. Toque em um módulo da pilha para ver o que ele faz.</p>
+    </div>
+    <div class="m-rackx m-r" style="--i:1" data-only="varejo">
+      <div class="m-rack">
+        <div class="m-rack-tabs" role="tablist" aria-orientation="vertical" aria-label="Módulos para varejo">
+          <button type="button" role="tab" aria-selected="true" aria-label="Consultoria Data Science"><svg class="ic" aria-hidden="true"><use href="#i-chart"/></svg></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="MyList, leads validados"><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Estudo e Modelagem"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Clusters Sob Medida"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Enriquecimento de Dados"><svg class="ic" aria-hidden="true"><use href="#i-refresh"/></svg></button>
+        </div>
+        <div class="m-rack-panels" aria-live="polite">
+          <article class="m-mod on"><span class="m-mod-n">Módulo 01 de 05</span><h3>Consultoria Data Science para Crescimento Estratégico</h3><p>Transforme dados em informações estratégicas, identifique oportunidades e oriente decisões de marketing e expansão.</p><span class="m-mod-for"><svg class="ic" aria-hidden="true"><use href="#i-store"/></svg>Para varejo, franquias e agências</span></article>
+          <article class="m-mod"><span class="m-mod-n">Módulo 02 de 05</span><h3>MyList · Leads Validados</h3><p>Conquiste novos negócios com listas lookalike e contatos 100% validados para prospecção, construídas a partir do perfil dos seus melhores clientes.</p><span class="m-kpi"><b>255M</b>CPFs · lookalike</span><span class="m-mod-for"><svg class="ic" aria-hidden="true"><use href="#i-store"/></svg>Para varejo, franquias e agências</span></article>
+          <article class="m-mod"><span class="m-mod-n">Módulo 03 de 05</span><h3>Estudo e Modelagem</h3><p>Classifique e estruture a sua base em perfis e descubra quem são os seus clientes mais rentáveis, os hábitos de compra e o potencial de consumo de cada um.</p><span class="m-mod-for"><svg class="ic" aria-hidden="true"><use href="#i-store"/></svg>Para varejo, franquias e agências</span></article>
+          <article class="m-mod"><span class="m-mod-n">Módulo 04 de 05</span><h3>Clusters Sob Medida</h3><p>Agrupamentos personalizados que revelam comportamentos e potenciais de consumo para orientar marketing, vendas e expansão.</p><span class="m-mod-for"><svg class="ic" aria-hidden="true"><use href="#i-store"/></svg>Para varejo, franquias e agências</span></article>
+          <article class="m-mod"><span class="m-mod-n">Módulo 05 de 05</span><h3>Enriquecimento de Dados</h3><p>Amplie as informações sobre os seus clientes com novos pontos de contato e atributos e mantenha a base sempre atualizada.</p><span class="m-mod-for"><svg class="ic" aria-hidden="true"><use href="#i-store"/></svg>Para varejo, franquias e agências</span></article>
+        </div>
+      </div>
+      <div class="m-rack-nav"><span><b>01</b> / 05</span><button type="button" class="m-rack-next">Próximo módulo <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></div>
+    </div>
+    <div class="m-rackx m-r" style="--i:1" data-only="financeiro">
+      <div class="m-rack">
+        <div class="m-rack-tabs" role="tablist" aria-orientation="vertical" aria-label="Módulos para o setor financeiro">
+          <button type="button" role="tab" aria-selected="true" aria-label="APIs Customizáveis"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Data First"><svg class="ic" aria-hidden="true"><use href="#i-filter"/></svg></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Atualização Cadastral"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Criação de Score, Risco e Fraude"><svg class="ic" aria-hidden="true"><use href="#i-gauge"/></svg></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Prevenção de Fraudes"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></button>
+        </div>
+        <div class="m-rack-panels" aria-live="polite">
+          <article class="m-mod on"><span class="m-mod-n">Módulo 01 de 05</span><h3>APIs Customizáveis</h3><p>Enriquecimento e atualização de dados integrados ao seu CRM, esteira ou discador, para automatizar processos com 99,9% de estabilidade.</p><span class="m-kpi"><b>&lt;180ms</b>resposta · 99,9% SLA</span><span class="m-mod-for"><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg>Para cobrança, bancos e financeiras</span></article>
+          <article class="m-mod"><span class="m-mod-n">Módulo 02 de 05</span><h3>Data First</h3><p>Validação de dado cadastral com alta precisão e segurança, para garantir a qualidade das informações desde a entrada na base.</p><span class="m-mod-for"><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg>Para cobrança, bancos e financeiras</span></article>
+          <article class="m-mod"><span class="m-mod-n">Módulo 03 de 05</span><h3>Atualização Cadastral</h3><p>Mantenha a sua base atualizada, evite contatos inválidos e reduza custos operacionais, elevando o índice de contato efetivo da operação.</p><span class="m-mod-for"><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg>Para cobrança, bancos e financeiras</span></article>
+          <article class="m-mod"><span class="m-mod-n">Módulo 04 de 05</span><h3>Criação de Score, Risco e Fraude</h3><p>Scores de cobrança desenvolvidos a partir de centenas de dados para priorizar as carteiras com maior chance de recuperação e reduzir perdas operacionais.</p><span class="m-mod-for"><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg>Para cobrança, bancos e financeiras</span></article>
+          <article class="m-mod"><span class="m-mod-n">Módulo 05 de 05</span><h3>Prevenção de Fraudes</h3><p>Análise preditiva de risco com validação cruzada de CPF, CNPJ, vínculos e restritivos em tempo real, conforme a LGPD.</p><span class="m-mod-for"><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg>Para cobrança, bancos e financeiras</span></article>
+        </div>
+      </div>
+      <div class="m-rack-nav"><span><b>01</b> / 05</span><button type="button" class="m-rack-next">Próximo módulo <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></div>
+    </div>
+    <p class="m-note m-r" style="--i:2">Use um módulo ou combine vários, conforme o momento da sua operação.</p>
+  </section>
+
+  <!-- 04 · GRUPO 360: as seis empresas em órbita -->
+  <section class="m-sec" id="m-grupo">
+    <div class="m-hd m-r">
+      <p class="m-kick">Grupo 360</p>
+      <h2>Muito mais do que um <em>birô de dados</em></h2>
+      <p class="m-lead">A IU360 é o braço de dados do Grupo 360, um ecossistema que conecta marcas, dados e performance. Toque em uma empresa.</p>
+    </div>
+    <div class="m-orbit m-r" style="--i:1" role="tablist" aria-label="Empresas do Grupo 360">
+      <svg class="m-orbit-ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="49.250" vector-effect="non-scaling-stroke"/></svg>
+      <span class="m-orbit-run" aria-hidden="true"><i></i></span>
+      <span class="m-orbit-core" aria-hidden="true"><svg viewBox="0 0 186.29 156.38"><use href="#lg-360grupo"/></svg></span>
+      <button type="button" role="tab" style="left:50%;top:12%" aria-selected="true" aria-controls="mEcCard" data-logo="" data-t="IU360" data-here="1" data-c="Big Data Analytics" data-p="Soluções avançadas em dados, enriquecimento e modelagem, no braço de inteligência do Grupo&nbsp;360.">IU360</button>
+      <button type="button" role="tab" style="left:82.900%;top:31%" aria-selected="false" aria-controls="mEcCard" data-logo="" data-t="Agência Cative" data-c="Marketing de performance" data-p="Agência de performance 360° focada em marketing e previsibilidade.">Cative</button>
+      <button type="button" role="tab" style="left:82.900%;top:69%" aria-selected="false" aria-controls="mEcCard" data-logo="" data-t="Direct Smart Data" data-c="Automação multicanal" data-p="Plataforma completa para automação de e-mail, SMS e WhatsApp.">Direct</button>
+      <button type="button" role="tab" style="left:50%;top:88%" aria-selected="false" aria-controls="mEcCard" data-logo="" data-t="Pesquisa Ativa" data-c="Pesquisa de mercado" data-p="Método de pesquisa ultrarrápida com insights em tempo real.">Pesquisa Ativa</button>
+      <button type="button" role="tab" style="left:17.100%;top:69%" aria-selected="false" aria-controls="mEcCard" data-logo="" data-t="Control.ai" data-c="Bens em garantia" data-p="Solução inovadora para gestão e negociação de bens em garantia.">Control.ai</button>
+      <button type="button" role="tab" style="left:17.100%;top:31%" aria-selected="false" aria-controls="mEcCard" data-logo="" data-t="HUB3" data-c="Estruturação comercial" data-p="Estruturação comercial e expansão para varejo e atacado.">HUB3</button>
+    </div>
+    <div class="m-ec-card m-card-w m-r" style="--i:2" id="mEcCard" role="tabpanel" aria-live="polite">
+      <span class="m-ec-cat">Big Data Analytics</span>
+      <h3 class="m-ec-name"><span>IU360</span><em class="m-ec-here">você está aqui</em></h3>
+      <p class="m-ec-desc">Soluções avançadas em dados, enriquecimento e modelagem, no braço de inteligência do Grupo&nbsp;360.</p>
+    </div>
+  </section>
+
+  <!-- 05 · GOVERNANÇA: um selo -->
+  <section class="m-sec" id="m-governanca">
+    <div class="m-seal m-card-w m-r">
+      <div class="m-seal-h">
+        <span class="m-seal-ic" aria-hidden="true"><svg class="ic"><use href="#i-shield"/></svg></span>
+        <div><p class="m-kick">Governança</p><h2>Inteligência <em>com governança</em></h2></div>
+      </div>
+      <ul class="m-seal-l">
+        <li><b>Art. 7º e 11</b><span>Base legal em cada tratamento de dados</span></li>
+        <li><b>DPO</b><span>Encarregado nomeado, com canal para os titulares</span></li>
+        <li><b>TLS 1.3</b><span>Criptografia, controle de acesso e auditoria periódica</span></li>
+      </ul>
+      <p class="m-gv-f">Lei nº 13.709/2018 · LGPD · Certificado OneTrust</p>
+    </div>
+  </section>
+
+  <!-- 06 · RESULTADOS: cases e quem confia -->
+  <section class="m-sec m-dark" id="m-resultados">
+    <div class="m-hd m-r">
+      <p class="m-kick">Resultados</p>
+      <h2>Cases que transformam <em>dados em resultados</em></h2>
+    </div>
+    <article class="m-case m-r" style="--i:1" data-only="varejo"><span class="case-tag">Varejo | Franquias</span><div class="m-num"><span data-m-count="60">60</span>+</div><p class="m-cap">cidades pelo Brasil</p><p class="m-res"><span class="m-ok"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>Metas de venda das franquias atingidas</p>
+      <details class="m-how"><summary>Como chegamos lá</summary><ol><li><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-filter"/></svg></span>Base de dados segmentada</li><li><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg></span>Marketing direcionado</li><li><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-refresh"/></svg></span>Carteira higienizada e enriquecida</li><li><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg></span>Pesquisa de branding em 60+ cidades</li></ol></details></article>
+    <article class="m-case m-r" style="--i:2" data-only="varejo"><span class="case-tag">Varejo | Beleza e estética</span><div class="m-num">−<span data-m-count="38">38</span>%</div><p class="m-cap">no custo de aquisição (CAC)</p><p class="m-res"><span class="m-ok"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>CAC 38% menor e faturamento acelerado nas unidades em expansão</p>
+      <details class="m-how"><summary>Como chegamos lá</summary><ol><li><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span>Base histórica cruzada com 255M de perfis</li><li><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-chart"/></svg></span>Clusters de alta rentabilidade</li><li><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg></span>Listas Lookalike MyList</li></ol></details></article>
+    <article class="m-case m-r" style="--i:1" data-only="financeiro"><span class="case-tag">Cobrança | BPO para bancos</span><div class="m-num txt">Score de cobrança</div><p class="m-cap">recuperação de crédito</p><p class="m-res"><span class="m-ok"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>Melhores resultados de cobrança nos bancos atendidos e aumento nas vendas com a base segmentada</p>
+      <details class="m-how"><summary>Como chegamos lá</summary><ol><li><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-gauge"/></svg></span>Criação de score de cobrança</li><li><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-filter"/></svg></span>Segmentação da base de dados</li><li><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-refresh"/></svg></span>Higienização, atualização e enriquecimento automatizados</li></ol></details></article>
+    <article class="m-case m-r" style="--i:2" data-only="financeiro"><span class="case-tag">Risco e Fraude</span><div class="m-num"><span data-m-count="90">90</span>%</div><p class="m-cap">e-commerces brasileiros, desde 2016</p><p class="m-res"><span class="m-ok"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>Score de risco e fraude presente em 90% dos e-commerces brasileiros, com dados fornecidos desde 2016</p>
+      <details class="m-how"><summary>Como chegamos lá</summary><ol><li><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span>Dados de cadastro na origem</li><li><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span>Múltiplos contatos</li><li><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-chart"/></svg></span>Perfil de consumo</li></ol></details></article>
+    <p class="m-auth m-r" style="--i:3">Única empresa nacional a fornecer dados para os principais bureaus de crédito do país, a IU360 também abastece os principais call centers brasileiros.</p>
+    <p class="m-marq-k m-r" style="--i:3">Quem confia na inteligência da IU360</p>
+    <div class="m-marq m-r" style="--i:3" aria-label="Clientes e parceiros: Espaçolaser, Vivo, PicPay, Arezzo, Banco Pan, Claro, Santander, Itaú, Nubank, Serasa Experian, Amil, Nielsen, Óticas Carol, SPC Brasil, Boa Vista, Quod, Neoway, Morana e Cyrela" role="img"><div aria-hidden="true"><span class="cli" data-logo="">Espaçolaser</span><span class="cli" data-logo="">Vivo</span><span class="cli" data-logo="">PicPay</span><span class="cli" data-logo="">Arezzo</span><span class="cli" data-logo="">Banco Pan</span><span class="cli" data-logo="">Claro</span><span class="cli" data-logo="">Santander</span><span class="cli" data-logo="">Itaú</span><span class="cli" data-logo="">Nubank</span><span class="cli" data-logo="">Serasa Experian</span><span class="cli" data-logo="">Amil</span><span class="cli" data-logo="">Nielsen</span><span class="cli" data-logo="">Óticas Carol</span><span class="cli" data-logo="">SPC Brasil</span><span class="cli" data-logo="">Boa Vista</span><span class="cli" data-logo="">Quod</span><span class="cli" data-logo="">Neoway</span><span class="cli" data-logo="">Morana</span><span class="cli" data-logo="">Cyrela</span><span class="cli" data-logo="">Espaçolaser</span><span class="cli" data-logo="">Vivo</span><span class="cli" data-logo="">PicPay</span><span class="cli" data-logo="">Arezzo</span><span class="cli" data-logo="">Banco Pan</span><span class="cli" data-logo="">Claro</span><span class="cli" data-logo="">Santander</span><span class="cli" data-logo="">Itaú</span><span class="cli" data-logo="">Nubank</span><span class="cli" data-logo="">Serasa Experian</span><span class="cli" data-logo="">Amil</span><span class="cli" data-logo="">Nielsen</span><span class="cli" data-logo="">Óticas Carol</span><span class="cli" data-logo="">SPC Brasil</span><span class="cli" data-logo="">Boa Vista</span><span class="cli" data-logo="">Quod</span><span class="cli" data-logo="">Neoway</span><span class="cli" data-logo="">Morana</span><span class="cli" data-logo="">Cyrela</span></div></div>
+  </section>
+
+  <!-- 07 · QUATRO MOTIVOS: quatro quadros, cada um com um dado -->
+  <section class="m-sec" id="m-porque">
+    <div class="m-hd m-r">
+      <p class="m-kick">Diferenciais</p>
+      <h2>Quatro motivos para <em>escolher a IU360</em></h2>
+    </div>
+    <ol class="m-four m-r" style="--i:1">
+      <li class="m-card-w"><span class="n">01</span><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><h3>Dados direto da fonte</h3><p>Mais de <b>255M</b> de CPFs e <b>70M</b> de CNPJs, captados e validados continuamente.</p></li>
+      <li class="m-card-w"><span class="n">02</span><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg></span><h3>Inteligência que parte do seu negócio</h3><p>A serviço de marketing, vendas, expansão, cobrança e risco.</p></li>
+      <li class="m-card-w"><span class="n">03</span><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg></span><h3>Tecnologia em escala</h3><p>Consultas via API em <b>menos de 180 ms</b>, em processamento contínuo.</p></li>
+      <li class="m-card-w"><span class="n">04</span><span class="m-ic"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span><h3>Atuação consultiva e tecnológica</h3><p>Data science, APIs e conectores no <b>mesmo time</b>.</p></li>
+    </ol>
+  </section>
+
+  <!-- 08 · CONTATO (antes das dúvidas) -->
+  <section class="m-sec m-dark m-end" id="m-contato">
+    <div class="m-hd m-r">
+      <p class="m-kick">Contato</p>
+      <h2>Vamos juntos <em>além dos dados</em></h2>
+      <p class="m-lead">Uma conversa de diagnóstico mostra onde os dados direto da fonte podem gerar resultado na sua operação.</p>
+    </div>
+    <ol class="steps m-r" style="--i:1">
+      <li><b>1</b><span>Você preenche um formulário curto.</span></li>
+      <li><b>2</b><span>Um especialista chama você no WhatsApp informado.</span></li>
+      <li><b>3</b><span>Agendamos uma conversa de diagnóstico da sua operação.</span></li>
+    </ol>
+    <button type="button" class="btn btn-p m-r" style="--i:2" data-m-open="mForm">Agendar diagnóstico <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+  </section>
+
+  <!-- 09 · DÚVIDAS -->
+  <section class="m-sec m-faq-box" id="m-faq">
+    <div class="m-hd m-r">
+      <p class="m-kick">Dúvidas</p>
+      <h2>Perguntas <em>frequentes</em></h2>
+    </div>
+    <div class="m-acc m-faq m-r" style="--i:1">
+      <details name="m-faq"><summary>O que significa “dados direto da fonte” e qual a diferença para outras empresas?</summary><p>Enquanto birôs secundários comercializam cadastros reciclados, que perdem de 22% a 35% de precisão por ano, a IU360 capta e valida os dados direto na fonte oficial e nas operadoras e atualiza a base todos os dias.</p></details>
+      <details name="m-faq"><summary>Os dados são tratados conforme a LGPD?</summary><p>Sim, cada tratamento tem base legal analisada conforme os artigos 7º e 11 da LGPD, a IU360 tem DPO formalmente nomeado, passa por auditoria periódica de adequação e é certificada pela OneTrust.</p></details>
+      <details name="m-faq"><summary>Minha empresa já possui agência de marketing ou consultoria interna. Por que a IU360?</summary><p>A IU360 não substitui sua agência ou seu time: ela entrega a camada de dados e de análise que alimenta o trabalho deles, com base higienizada, enriquecida e segmentada em clusters.</p></details>
+      <details name="m-faq"><summary>Quais empresas podem contratar as soluções da IU360?</summary><p>Operações de varejo, redes de franquias e agências que buscam crescimento, e bancos, financeiras e empresas de cobrança e risco que processam grandes volumes.</p></details>
+      <details name="m-faq"><summary>É possível integrar as soluções aos sistemas da empresa?</summary><p>Sim. As soluções de enriquecimento e validação podem ser integradas via APIs e conectores direto ao seu CRM, esteira ou discador.</p></details>
+      <details name="m-faq"><summary>Como começa e como saber qual solução é a certa para minha empresa?</summary><p>Tudo começa com uma conversa de diagnóstico, em que um especialista entende o momento da sua empresa e indica o caminho entre apoio consultivo, APIs ou o modelo híbrido, com menos etapas e menos papelada do que no modelo tradicional.</p></details>
+    </div>
+  </section>
+
+  <!-- 10 · RODAPÉ (depois das dúvidas) -->
+  <section class="m-sec m-dark m-end m-fim" id="m-fim">
+    <footer class="m-ft m-r">
+      <span class="logo" aria-label="IU360"><svg class="lg" viewBox="0 0 46 26" role="img" aria-label="IU360"><use href="#lg-iu360"/></svg></span>
+      <p class="m-ft-tag"><em>Dados direto da fonte</em> que geram inteligência, e inteligência que gera crescimento.</p>
+      <div class="m-ft-l">
+        <a href="https://360grupo.com.br" rel="noopener" target="_blank">360grupo.com.br <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="https://www.instagram.com/iu360_br/" rel="noopener" target="_blank">@iu360_br <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="#m-governanca" data-m-go="m-governanca">Aviso de Privacidade</a>
+      </div>
+      <small>© 2026 IU360 Data Solutions · Parte do Grupo 360<br>Tratamento de dados conforme a LGPD (Lei nº 13.709/2018)</small>
+    </footer>
+  </section>
+
+<!-- barra fixa: menu e contato -->
+  <div class="m-bar"><button type="button" class="m-burger" data-m-open="mMenu" aria-label="Abrir menu" aria-haspopup="dialog"><span aria-hidden="true"><i></i><i></i></span>Menu</button><button type="button" class="btn btn-p" data-m-open="mForm">Agendar diagnóstico <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+
+  <!-- folha: menu -->
+  <div class="m-sheet" id="mMenu" role="dialog" aria-modal="true" aria-label="Menu" aria-hidden="true">
+    <div class="m-sheet-bg" data-m-close></div>
+    <div class="m-sheet-p" tabindex="-1">
+      <span class="m-grab" aria-hidden="true"></span>
+      <div class="m-sheet-h"><h2>Navegue</h2><button type="button" class="m-x" data-m-close aria-label="Fechar menu"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+      <nav class="m-nav" aria-label="Seções">
+        <a href="#m-desafios" data-m-go="m-desafios"><span>01</span>Desafios<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-diferenca" data-m-go="m-diferenca"><span>02</span>A diferença<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-solucoes" data-m-go="m-solucoes"><span>03</span>Soluções<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-grupo" data-m-go="m-grupo"><span>04</span>Grupo 360<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-governanca" data-m-go="m-governanca"><span>05</span>Governança e LGPD<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-resultados" data-m-go="m-resultados"><span>06</span>Resultados<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-porque" data-m-go="m-porque"><span>07</span>Por que a IU360<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-contato" data-m-go="m-contato"><span>08</span>Falar com a equipe<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-faq" data-m-go="m-faq"><span>09</span>Dúvidas frequentes<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+      </nav>
+      <button type="button" class="btn btn-p m-nav-cta" data-m-open="mForm">Agendar diagnóstico <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+    </div>
+  </div>
+
+  <!-- folha: formulário (protótipo, como na página do computador: valida e confirma; ainda não envia a um servidor) -->
+  <div class="m-sheet" id="mForm" role="dialog" aria-modal="true" aria-labelledby="mFormT" aria-hidden="true">
+    <div class="m-sheet-bg" data-m-close></div>
+    <div class="m-sheet-p" tabindex="-1">
+      <span class="m-grab" aria-hidden="true"></span>
+      <div class="m-sheet-h"><h2 id="mFormT">Agendar <em>diagnóstico</em></h2><button type="button" class="m-x" data-m-close aria-label="Fechar formulário"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button></div>
+      <form id="mLead" novalidate>
+        <p class="m-lead">Um especialista chama você no WhatsApp para agendar a conversa.</p>
+        <div class="m-prog" aria-hidden="true"><i class="on"></i><i></i><span>Etapa <b>1</b> de 2</span></div>
+        <fieldset class="m-fs on" data-step="1">
+          <div class="f"><label for="m-nome">Nome completo</label><input id="m-nome" name="nome" type="text" autocomplete="name" required></div>
+          <div class="f"><label for="m-email">E-mail corporativo</label><input id="m-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="voce@empresa.com.br" required></div>
+          <div class="f"><label for="m-fone">WhatsApp direto</label><input id="m-fone" name="fone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 90000-0000" required></div>
+          <button type="button" class="btn btn-p" id="mNext">Continuar <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+        </fieldset>
+        <fieldset class="m-fs" data-step="2">
+          <div class="f"><label for="m-cargo">Cargo / Função</label><select id="m-cargo" name="cargo" required><option value="">Selecione</option><option>C-Level / Sócio</option><option>Diretoria</option><option>Gerência</option><option>Coordenação / Especialista</option><option>Outro</option></select></div>
+          <div class="f"><label for="m-segmento">Segmento principal</label><select id="m-segmento" name="segmento" required><option value="">Selecione</option><option value="varejo">Varejo, Franquias &amp; Agências</option><option value="financeiro">Cobrança, Bancos &amp; Financeiras</option><option value="outro">Outro segmento</option></select></div>
+          <fieldset><legend>Faturamento anual</legend><div class="radios">
+            <label><input type="radio" name="fat" value="1-5" required><span>R$1M a R$5M</span></label>
+            <label><input type="radio" name="fat" value="5-10"><span>R$5M a R$10M</span></label>
+            <label><input type="radio" name="fat" value="10-50+"><span>R$10M a R$50M +</span></label></div></fieldset>
+          <div class="m-row"><button type="button" class="btn btn-g m-back" id="mBack">Voltar</button><button class="btn btn-p" type="submit">Agendar diagnóstico <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+        </fieldset>
+        <p class="fine" id="mFormMsg" role="status">Ao enviar, suas informações serão tratadas conforme a LGPD e o nosso <a href="#m-governanca" data-m-go="m-governanca">Aviso de Privacidade</a>.</p>
+        <div class="sent" role="status"><span class="m-ok"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span><h3>Pedido registrado.</h3><p style="color:var(--ink-2);max-width:36ch">Nosso especialista entrará em contato pelo WhatsApp informado para agendar a reunião.</p><button type="button" class="btn btn-g" data-m-close style="margin-top:8px">Fechar</button></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+/* LOGOS DE CLIENTES E DAS EMPRESAS DO GRUPO 360 — o nome aparece até o logo chegar.
+   Para trocar: salve o arquivo (SVG ou PNG) em img/clientes/ ou img/grupo/ e preencha o atributo no item,
+   ex.: no span "Vivo", data-logo com o caminho img/clientes/vivo.svg. O estilo deixa o logo monocromático.
+   Na faixa de clientes o logo substitui o nome; na bússola do grupo ele entra junto do nome. */
+function putLogos(scope) {
+  scope.querySelectorAll('[data-logo]').forEach(el => {
+    const src = el.dataset.logo; if (!src || el.classList.contains('tem-logo')) return;
+    const img = new Image(); img.className = 'lgx'; img.decoding = 'async'; img.src = src;
+    el.classList.add('tem-logo');
+    if (el.classList.contains('cli')) { img.alt = el.textContent.trim(); el.textContent = ''; } else img.alt = '';
+    el.prepend(img);
+  });
+}
+</script>
+<script>
+/* VERSÃO DO CELULAR: só roda com html.cel. Sem biblioteca, sem laço de animação: tudo responde a toque,
+   a rolagem nativa e a observadores de interseção. Nenhuma medição de layout dentro da rolagem. */
+(() => {
+  const root = document.documentElement; if (!root.classList.contains('cel')) return;
+  const C = document.getElementById('cel'), $ = (s, c = C) => c.querySelector(s), $$ = (s, c = C) => [...c.querySelectorAll(s)];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce) root.classList.add('m-anim');
+  putLogos(C);
+  /* logo do topo sem fundo: sobre as seções escuras o "IU" fica claro */
+  if ('IntersectionObserver' in window) { const dk = new Set();
+    const io = new IntersectionObserver(es => { es.forEach(e => e.isIntersecting ? dk.add(e.target) : dk.delete(e.target)); root.classList.toggle('m-top-dark', dk.size > 0); }, { rootMargin: '-24px 0px -93% 0px' });
+    $$('.m-dark').forEach(s => io.observe(s)); }
+
+  /* ---------- entrada das seções ---------- */
+  const secs = $$('.m-sec');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
+    secs.forEach(s => io.observe(s));
+    /* o que se mexe sozinho (ponto do mostrador, letreiro) para quando sai da tela */
+    const off = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('m-off', !e.isIntersecting)), { rootMargin: '80px 0px' });
+    [$('.m-hero'), $('.m-marq'), $('.m-orbit')].forEach(el => off.observe(el));
+    /* a barra fixa sai quando o fechamento (que tem o mesmo botão) entra na tela */
+    new IntersectionObserver(([e]) => root.classList.toggle('m-bar-off', e.isIntersecting), { rootMargin: '0px 0px -12px 0px' }).observe($('#m-contato .btn'));
+  } else secs.forEach(s => s.classList.add('in'));
+
+  /* ---------- visão: varejo ou financeiro ---------- */
+  const cars = [];
+  function setLens(l, save) {
+    root.dataset.lens = l;
+    $$('[data-m-lens]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mLens === l)));
+    const sel = $('#m-segmento'); if (sel.value !== 'outro') sel.value = l;
+    if (save) { try { localStorage.setItem('iu360-lens', l); } catch (e) {}
+      if (!reduce) { C.classList.remove('m-swap'); void C.offsetWidth; C.classList.add('m-swap'); } }
+    cars.forEach(c => c.measure());
+  }
+  $$('[data-m-lens]').forEach(b => b.addEventListener('click', () => { if (root.dataset.lens !== b.dataset.mLens) setLens(b.dataset.mLens, true); }));
+
+  /* ---------- topo: recolhe ao descer, volta ao subir ---------- */
+  let ly = scrollY, acc = 0, q = 0;
+  addEventListener('scroll', () => { if (q) return; q = requestAnimationFrame(() => { q = 0;
+    const y = scrollY, d = y - ly; ly = y; acc = (d > 0) === (acc > 0) ? acc + d : d;
+    if (y < 90 || acc < -28) root.classList.remove('m-hide'); else if (acc > 44) root.classList.add('m-hide'); }); }, { passive: true });
+
+  /* ---------- desafios: contador e pontos seguem o arrasto (rolagem nativa com encaixe) ---------- */
+  $$('.m-carx').forEach(box => {
+    const tr = $('.m-car', box), cnt = $('.m-pager b', box), dots = $$('.m-pd i', box), hint = $('.m-hint', box); let step = 0, cur = 0, t = 0;
+    const measure = () => { const a = tr.children[0], b = tr.children[1]; step = a && b ? b.offsetLeft - a.offsetLeft : 0; };
+    tr.addEventListener('scroll', () => { if (t) return; t = requestAnimationFrame(() => { t = 0; if (!step) measure(); if (!step) return;
+      const n = Math.max(0, Math.min(dots.length - 1, Math.round(tr.scrollLeft / step))); if (n === cur) return; cur = n;
+      cnt.textContent = String(n + 1).padStart(2, '0'); dots.forEach((d, k) => d.classList.toggle('on', k === n)); if (hint) hint.style.opacity = n ? 0 : 1; }); }, { passive: true });
+    cars.push({ measure });
+  });
+  addEventListener('resize', () => cars.forEach(c => c.measure()));
+
+  /* ---------- primeira tela: um número da base por vez; a visão do topo só aparece depois dela ---------- */
+  (() => {
+    const hero = $('.m-hero'), stats = $$('.m-stat', hero), dots = $$('.m-read-d i', hero); let k = 0;
+    root.classList.add('m-attop');
+    if ('IntersectionObserver' in window) new IntersectionObserver(([e]) => root.classList.toggle('m-attop', e.isIntersecting), { rootMargin: '-90px 0px 0px 0px' }).observe($('.m-scene', hero));
+    else root.classList.remove('m-attop');
+    if (!reduce) setInterval(() => { if (hero.classList.contains('m-off') || document.hidden) return;
+      k = (k + 1) % stats.length; stats.forEach((s, i) => s.classList.toggle('on', i === k)); dots.forEach((d, i) => d.classList.toggle('on', i === k)); }, 2800);
+  })();
+
+  /* ---------- a diferença: 100 cadastros, 12 meses, dois modelos ---------- */
+  (() => {
+    const sec = $('#m-diferenca'), box = $('[data-dots]', sec), tabs = $$('.m-sw button', sec), go = $('.m-dif-go', sec);
+    const month = $('.m-month', sec), valid = $('.m-valid', sec), bar = $('.m-tl i', sec), swap = $$('[data-t][data-n]', sec).filter(e => e !== go);
+    /* ordem em que os cadastros se perdem (22 com certeza) e ficam em dúvida (mais 13): espalhados, sempre os mesmos */
+    const lost = [3, 47, 91, 28, 66, 12, 75, 39, 84, 55, 7, 96, 21, 62, 33, 79, 44, 17, 88, 51, 70, 25], maybe = [9, 58, 36, 93, 14, 72, 41, 81, 5, 64, 30, 99, 48];
+    box.innerHTML = '<i></i>'.repeat(100); const dots = [...box.children];
+    let side = 't', timer = 0, seen = false;
+    const paint = m => { const L = Math.round(22 * m / 12), Q = Math.round(13 * m / 12);
+      dots.forEach(d => { d.className = ''; });
+      if (side === 't') { lost.slice(0, L).forEach(i => dots[i].className = 'l'); maybe.slice(0, Q).forEach(i => dots[i].className = 'q'); }
+      month.textContent = m; bar.style.transform = `scaleX(${m / 12})`;
+      valid.textContent = side === 'n' || !L ? '100' : Q ? `${100 - L - Q} a ${100 - L}` : String(100 - L); };
+    function run() { clearInterval(timer); if (reduce) return paint(12); let m = 0; paint(0);
+      timer = setInterval(() => { paint(++m); if (m >= 12) clearInterval(timer); }, 210); }
+    function set(s) { side = s; sec.dataset.side = s;
+      tabs.forEach(b => b.setAttribute('aria-selected', String(b.dataset.side === s)));
+      swap.forEach(e => { e.textContent = e.dataset[s]; }); $('span', go).textContent = go.dataset[s];
+      if (!reduce) { sec.classList.remove('sw'); void sec.offsetWidth; sec.classList.add('sw'); }
+      run(); }
+    tabs.forEach(b => b.addEventListener('click', () => { if (b.dataset.side !== side) set(b.dataset.side); }));
+    go.addEventListener('click', () => set(side === 't' ? 'n' : 't'));
+    paint(reduce ? 12 : 0);
+    /* os 12 meses começam a passar quando o campo entra na tela */
+    if (!reduce && 'IntersectionObserver' in window) new IntersectionObserver(([e], o) => { if (e.isIntersecting && !seen) { seen = true; o.disconnect(); run(); } }, { threshold: .6 }).observe(box);
+  })();
+
+  /* ---------- soluções: a pilha escolhe a ficha ---------- */
+  $$('.m-rackx').forEach(box => {
+    const tabs = $$('.m-rack-tabs button', box), mods = $$('.m-mod', box), cnt = $('.m-rack-nav b', box); let cur = 0;
+    const show = n => { cur = (n + tabs.length) % tabs.length;
+      tabs.forEach((t, i) => t.setAttribute('aria-selected', String(i === cur))); mods.forEach((m, i) => m.classList.toggle('on', i === cur));
+      cnt.textContent = String(cur + 1).padStart(2, '0'); };
+    tabs.forEach((t, i) => t.addEventListener('click', () => show(i)));
+    $('.m-rack-next', box).addEventListener('click', () => show(cur + 1));
+  });
+
+  /* ---------- cases: o número conta uma vez, quando o bloco aparece ---------- */
+  if (!reduce && 'IntersectionObserver' in window) {
+    const cio = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; cio.unobserve(e.target);
+      const el = e.target, to = +el.dataset.mCount, t0 = performance.now();
+      const f = t => { const p = Math.min(1, (t - t0) / 1100); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(f); }; requestAnimationFrame(f); }), { threshold: .6 });
+    $$('[data-m-count]').forEach(el => cio.observe(el));
+  }
+
+  /* ---------- Grupo 360: o toque troca o cartão ---------- */
+  (() => {
+    const chips = $$('.m-orbit button'), card = $('#mEcCard');
+    chips.forEach(b => b.addEventListener('click', () => {
+      chips.forEach(x => x.setAttribute('aria-selected', String(x === b)));
+      $('.m-ec-cat', card).textContent = b.dataset.c; $('.m-ec-name span', card).textContent = b.dataset.t; $('.m-ec-here', card).hidden = !b.dataset.here; $('.m-ec-desc', card).textContent = b.dataset.p;
+      if (!reduce) { card.classList.remove('sw'); void card.offsetWidth; card.classList.add('sw'); }
+    }));
+  })();
+
+  /* ---------- folhas (menu e formulário) ---------- */
+  let openS = null, lastFocus = null;
+  function openSheet(id) {
+    const s = document.getElementById(id); if (!s) return; if (openS && openS !== s) closeSheet(true);
+    lastFocus = lastFocus || document.activeElement; openS = s; s.classList.add('on'); s.setAttribute('aria-hidden', 'false'); root.classList.add('m-lock');
+    const p = $('.m-sheet-p', s); p.scrollTop = 0; setTimeout(() => p.focus({ preventScroll: true }), 60);
+  }
+  function closeSheet(keep) {
+    if (!openS) return; openS.classList.remove('on'); openS.setAttribute('aria-hidden', 'true'); openS = null;
+    if (!keep) { root.classList.remove('m-lock'); lastFocus?.focus?.({ preventScroll: true }); lastFocus = null; }
+  }
+  addEventListener('keydown', e => { if (e.key === 'Escape') closeSheet(); });
+
+  /* ---------- navegação: rola até o título da seção (janela, nunca scrollIntoView) ---------- */
+  function go(id, instant) {
+    const el = document.getElementById(id); if (!el) return;
+    const y = id === 'm-inicio' ? 0 : ($('.m-kick', el) || el).getBoundingClientRect().top + scrollY - 84;
+    scrollTo({ top: Math.max(0, y), behavior: instant || reduce ? 'auto' : 'smooth' });
+  }
+  C.addEventListener('click', e => {
+    const t = e.target.closest('[data-m-go],[data-m-open],[data-m-close]'); if (!t) return;
+    if (t.dataset.mGo) { e.preventDefault(); closeSheet(); go(t.dataset.mGo); }
+    else if (t.dataset.mOpen) openSheet(t.dataset.mOpen);
+    else closeSheet();
+  });
+  /* links antigos (#solucoes, #contato…) caem na seção equivalente do celular */
+  const MAP = { dimensoes: 'm-diferenca', desafios: 'm-desafios', diferenca: 'm-diferenca', solucoes: 'm-solucoes', resultados: 'm-resultados', ecossistema: 'm-grupo', confianca: 'm-governanca', diferenciais: 'm-porque', faq: 'm-faq', contato: 'm-contato' };
+  const h0 = location.hash.slice(1), tgt = MAP[h0] || (/^m-/.test(h0) ? h0 : '');
+  if (tgt) { let mexeu = false; addEventListener('touchstart', () => { mexeu = true; }, { passive: true, once: true });
+    const cai = () => { if (!mexeu) go(tgt, true); };   // repete quando a fonte termina de carregar, porque a altura dos textos muda
+    addEventListener('load', () => { cai(); document.fonts?.ready.then(() => setTimeout(cai, 60)); }); }
+
+  /* ---------- formulário em duas etapas (protótipo: valida e confirma; ainda não envia a um servidor) ---------- */
+  const form = $('#mLead'), msg = $('#mFormMsg'), fone = $('#m-fone'), steps = $$('.m-fs', form), prog = $$('.m-prog i', form), progN = $('.m-prog b', form), msg0 = msg.innerHTML;
+  fone.addEventListener('input', () => { const d = fone.value.replace(/\D/g, '').slice(0, 11); fone.value = d.length > 6 ? `(${d.slice(0, 2)}) ${d.slice(2, d.length - 4)}-${d.slice(-4)}` : d.length > 2 ? `(${d.slice(0, 2)}) ${d.slice(2)}` : d; });
+  const warn = bad => { msg.textContent = 'Preencha todos os campos para solicitar sua reunião.'; msg.style.color = 'var(--orange-deep)'; bad?.focus(); };
+  const show = n => { steps.forEach((s, k) => s.classList.toggle('on', k === n)); prog.forEach((i, k) => i.classList.toggle('on', k <= n)); progN.textContent = n + 1; msg.innerHTML = msg0; msg.style.color = ''; };
+  const firstBad = scope => $$('input,select', scope).find(el => !el.checkValidity());
+  $('#mNext').addEventListener('click', () => { const bad = firstBad(steps[0]); if (bad) return warn(bad); show(1); $('#m-cargo').focus({ preventScroll: true }); });
+  $('#mBack').addEventListener('click', () => show(0));
+  form.addEventListener('submit', e => { e.preventDefault();
+    const b0 = firstBad(steps[0]); if (b0) { show(0); return warn(b0); }
+    const b1 = firstBad(steps[1]); if (b1) return warn(b1.type === 'radio' ? null : b1);
+    form.classList.add('done'); });
+
+  /* estado inicial */
+  setLens(root.dataset.lens === 'financeiro' ? 'financeiro' : 'varejo', false);
+  requestAnimationFrame(() => $('.m-hero').classList.add('in'));
+
+  /* as ilustrações dos desafios são as mesmas da página do computador: saem de lá (que não aparece no celular) e vêm para cá */
+  const adopt = () => $$('[data-art]').forEach(slot => { const [l, k] = slot.dataset.art.split(':'), svg = document.querySelectorAll(`main .chx[data-only="${l}"] .ch`)[+k]?.querySelector('.ch-art svg'); if (svg) slot.append(svg); });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', adopt); else adopt();
+})();
+</script>
+
 <div class="gate play" id="gate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
   <div class="g-bg" aria-hidden="true"><span class="g-blob g-warm"><i></i></span><span class="g-blob g-cool"><i></i></span></div>
   <div class="g-top gi" style="--gd:.05">
@@ -1978,15 +2892,13 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
       <button type="button" class="door gi" style="--gd:.7" data-set-lens="varejo">
         <span class="d-top"><span class="d-k"><i></i>Varejo</span><span class="d-go" aria-hidden="true"><svg class="d-dial" viewBox="0 0 64 64"><circle cx="32" cy="32" r="20" class="d-hub"/><g><line class="m" x1="56.5" y1="32.0" x2="62.0" y2="32.0"/><line x1="58.1" y1="36.6" x2="61.5" y2="37.2"/><line x1="56.9" y1="41.1" x2="60.2" y2="42.3"/><line x1="54.9" y1="45.2" x2="58.0" y2="47.0"/><line x1="52.3" y1="49.0" x2="55.0" y2="51.3"/><line x1="49.0" y1="52.3" x2="51.3" y2="55.0"/><line class="m" x1="44.2" y1="53.2" x2="47.0" y2="58.0"/><line x1="41.1" y1="56.9" x2="42.3" y2="60.2"/><line x1="36.6" y1="58.1" x2="37.2" y2="61.5"/><line x1="32.0" y1="58.5" x2="32.0" y2="62.0"/><line x1="27.4" y1="58.1" x2="26.8" y2="61.5"/><line x1="22.9" y1="56.9" x2="21.7" y2="60.2"/><line class="m" x1="19.8" y1="53.2" x2="17.0" y2="58.0"/><line x1="15.0" y1="52.3" x2="12.7" y2="55.0"/><line x1="11.7" y1="49.0" x2="9.0" y2="51.3"/><line x1="9.1" y1="45.2" x2="6.0" y2="47.0"/><line x1="7.1" y1="41.1" x2="3.8" y2="42.3"/><line x1="5.9" y1="36.6" x2="2.5" y2="37.2"/><line class="m" x1="7.5" y1="32.0" x2="2.0" y2="32.0"/><line x1="5.9" y1="27.4" x2="2.5" y2="26.8"/><line x1="7.1" y1="22.9" x2="3.8" y2="21.7"/><line x1="9.1" y1="18.7" x2="6.0" y2="17.0"/><line x1="11.7" y1="15.0" x2="9.0" y2="12.7"/><line x1="15.0" y1="11.7" x2="12.7" y2="9.0"/><line class="m" x1="19.7" y1="10.8" x2="17.0" y2="6.0"/><line x1="22.9" y1="7.1" x2="21.7" y2="3.8"/><line x1="27.4" y1="5.9" x2="26.8" y2="2.5"/><line x1="32.0" y1="5.5" x2="32.0" y2="2.0"/><line x1="36.6" y1="5.9" x2="37.2" y2="2.5"/><line x1="41.1" y1="7.1" x2="42.3" y2="3.8"/><line class="m" x1="44.2" y1="10.8" x2="47.0" y2="6.0"/><line x1="49.0" y1="11.7" x2="51.3" y2="9.0"/><line x1="52.3" y1="15.0" x2="55.0" y2="12.7"/><line x1="54.9" y1="18.7" x2="58.0" y2="17.0"/><line x1="56.9" y1="22.9" x2="60.2" y2="21.7"/><line x1="58.1" y1="27.4" x2="61.5" y2="26.8"/></g></svg><svg class="d-ndl" viewBox="0 0 60 220"><use href="#ndl"/></svg></span></span>
         <span class="d-tt"><strong>Varejo, Franquias &amp; Agências</strong><small>Crescimento, expansão e aquisição</small></span>
-        <span class="d-prev"><em>Sua página vai mostrar</em><span class="d-rail"><span><i></i>Campanhas para audiências aderentes</span><span><i></i>Listas lookalike a partir de 255M de perfis</span><span><i></i>Case: −38% no custo de aquisição</span></span></span>
       </button>
       <button type="button" class="door gi" style="--gd:.82" data-set-lens="financeiro">
         <span class="d-top"><span class="d-k"><i></i>Financeiro</span><span class="d-go" aria-hidden="true"><svg class="d-dial" viewBox="0 0 64 64"><circle cx="32" cy="32" r="20" class="d-hub"/><g><line class="m" x1="56.5" y1="32.0" x2="62.0" y2="32.0"/><line x1="58.1" y1="36.6" x2="61.5" y2="37.2"/><line x1="56.9" y1="41.1" x2="60.2" y2="42.3"/><line x1="54.9" y1="45.2" x2="58.0" y2="47.0"/><line x1="52.3" y1="49.0" x2="55.0" y2="51.3"/><line x1="49.0" y1="52.3" x2="51.3" y2="55.0"/><line class="m" x1="44.2" y1="53.2" x2="47.0" y2="58.0"/><line x1="41.1" y1="56.9" x2="42.3" y2="60.2"/><line x1="36.6" y1="58.1" x2="37.2" y2="61.5"/><line x1="32.0" y1="58.5" x2="32.0" y2="62.0"/><line x1="27.4" y1="58.1" x2="26.8" y2="61.5"/><line x1="22.9" y1="56.9" x2="21.7" y2="60.2"/><line class="m" x1="19.8" y1="53.2" x2="17.0" y2="58.0"/><line x1="15.0" y1="52.3" x2="12.7" y2="55.0"/><line x1="11.7" y1="49.0" x2="9.0" y2="51.3"/><line x1="9.1" y1="45.2" x2="6.0" y2="47.0"/><line x1="7.1" y1="41.1" x2="3.8" y2="42.3"/><line x1="5.9" y1="36.6" x2="2.5" y2="37.2"/><line class="m" x1="7.5" y1="32.0" x2="2.0" y2="32.0"/><line x1="5.9" y1="27.4" x2="2.5" y2="26.8"/><line x1="7.1" y1="22.9" x2="3.8" y2="21.7"/><line x1="9.1" y1="18.7" x2="6.0" y2="17.0"/><line x1="11.7" y1="15.0" x2="9.0" y2="12.7"/><line x1="15.0" y1="11.7" x2="12.7" y2="9.0"/><line class="m" x1="19.7" y1="10.8" x2="17.0" y2="6.0"/><line x1="22.9" y1="7.1" x2="21.7" y2="3.8"/><line x1="27.4" y1="5.9" x2="26.8" y2="2.5"/><line x1="32.0" y1="5.5" x2="32.0" y2="2.0"/><line x1="36.6" y1="5.9" x2="37.2" y2="2.5"/><line x1="41.1" y1="7.1" x2="42.3" y2="3.8"/><line class="m" x1="44.2" y1="10.8" x2="47.0" y2="6.0"/><line x1="49.0" y1="11.7" x2="51.3" y2="9.0"/><line x1="52.3" y1="15.0" x2="55.0" y2="12.7"/><line x1="54.9" y1="18.7" x2="58.0" y2="17.0"/><line x1="56.9" y1="22.9" x2="60.2" y2="21.7"/><line x1="58.1" y1="27.4" x2="61.5" y2="26.8"/></g></svg><svg class="d-ndl" viewBox="0 0 60 220"><use href="#ndl"/></svg></span></span>
         <span class="d-tt"><strong>Cobrança, Bancos &amp; Financeiras</strong><small>Operação, crédito e risco</small></span>
-        <span class="d-prev"><em>Sua página vai mostrar</em><span class="d-rail"><span><i></i>Números atualizados para o discador</span><span><i></i>Scores de propensão a pagamento</span><span><i></i>Consultas via API em menos de 180ms</span></span></span>
       </button>
     </div>
-    <p class="g-note gi" style="--gd:1">Dá para trocar de segmento quando quiser, no topo da página, ou <button type="button" id="gateAll" class="g-all">ver a página completa</button>.</p>
+    <p class="g-note gi" style="--gd:1">Não sabe em qual se encaixa? <button type="button" id="gateTalk" class="g-all">Fale com um especialista</button>. Ou <button type="button" id="gateAll" class="g-all">veja a página completa</button>.</p>
   </div>
   <div class="g-build" aria-live="polite">
     <div class="g-mark"><div class="cps" aria-hidden="true"><svg class="cps-face" viewBox="0 0 200 200"><circle class="cps-bz" cx="100" cy="100" r="88"/><circle class="cps-arc" cx="100" cy="100" r="88" pathLength="360" transform="rotate(-90 100 100)"/><g class="cps-tk"></g><circle class="cps-in" cx="100" cy="100" r="58"/><text class="cps-c cps-n" x="100" y="38">N</text><text class="cps-c" x="164" y="104">L</text><text class="cps-c" x="100" y="170">S</text><text class="cps-c" x="36" y="104">O</text></svg><span class="cps-ptr"><i></i></span><span class="cps-val"><b>0</b>°</span><span class="cps-lg"><svg class="lg" viewBox="0 0 46 26"><use href="#lg-iu360"/></svg></span></div></div>
@@ -2003,16 +2915,17 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
   <a href="#inicio" class="logo" data-go="0" aria-label="IU360 — início"><svg class="lg" viewBox="0 0 46 26" role="img" aria-label="IU360"><use href="#lg-iu360"/></svg></a>
   <nav class="chapters" id="chapters" aria-label="Seções">
     <div class="grp"><a href="#dimensoes" data-go="1" data-grp="1,2,3">Como funciona<svg class="ic cv" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg></a><div class="sub"><a href="#dimensoes" data-go="1">O dado em 4 dimensões</a><a href="#desafios" data-go="2">Desafios</a><a href="#diferenca" data-go="3">A diferença</a></div></div>
-    <div class="grp"><a href="#solucoes" data-go="4" data-grp="4,5">Soluções<svg class="ic cv" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg></a><div class="sub"><a href="#solucoes" data-go="4">Soluções modulares</a><a href="#resultados" data-go="5">Resultados</a></div></div>
-    <div class="grp"><a href="#ecossistema" data-go="6" data-grp="6,7,8">Sobre a IU360<svg class="ic cv" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg></a><div class="sub"><a href="#ecossistema" data-go="6">Ecossistema 360 Grupo</a><a href="#confianca" data-go="7">Governança</a><a href="#diferenciais" data-go="8">Diferenciais</a></div></div>
-    <div class="grp"><a href="#faq" data-go="9" data-grp="9,10">Contato<svg class="ic cv" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg></a><div class="sub"><a href="#faq" data-go="9">Dúvidas frequentes</a><a href="#contato" data-go="10">Falar com a equipe</a></div></div>
+    <div class="grp"><a href="#solucoes" data-go="4" data-grp="4">Soluções<svg class="ic cv" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg></a><div class="sub"><a href="#solucoes" data-go="4">Soluções modulares</a></div></div>
+    <div class="grp"><a href="#ecossistema" data-go="5" data-grp="5,6">Sobre a IU360<svg class="ic cv" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg></a><div class="sub"><a href="#ecossistema" data-go="5">Ecossistema Grupo 360</a><a href="#confianca" data-go="6">Governança</a></div></div>
+    <div class="grp"><a href="#resultados" data-go="7" data-grp="7,8">Resultados<svg class="ic cv" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg></a><div class="sub"><a href="#resultados" data-go="7">Cases e clientes</a><a href="#diferenciais" data-go="8">Por que a IU360</a></div></div>
+    <div class="grp"><a href="#contato" data-go="9" data-grp="9,10">Contato<svg class="ic cv" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg></a><div class="sub"><a href="#contato" data-go="9">Falar com a equipe</a><a href="#faq" data-go="10">Dúvidas frequentes</a></div></div>
     <i class="chapters-bar" aria-hidden="true"></i>
   </nav>
   <div class="seg" role="group" aria-label="Visão do conteúdo">
     <button type="button" data-set-lens="varejo" aria-pressed="true">Varejo</button>
     <button type="button" data-set-lens="financeiro" aria-pressed="false">Financeiro</button>
   </div>
-  <a href="#contato" data-go="10" class="btn btn-p">Agendar diagnóstico</a>
+  <a href="#contato" data-go="9" class="btn btn-p">Agendar diagnóstico</a>
 </header>
 
 <main>
@@ -2026,17 +2939,17 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
     <p class="mono hero-eb a" style="--d:0">Dados direto da fonte</p>
     <h1 class="a" style="--d:1" data-only="varejo">Dados confiáveis para vender a quem tem <em>perfil de comprar</em></h1>
     <h1 class="a" style="--d:1" data-only="financeiro">Dados confiáveis para <em>cobrar de quem pode pagar</em></h1>
-    <p class="lead a" style="--d:2" data-only="varejo">Há 12 anos gerando resultados com marketing direcionado por dados, a IU360 cruza a sua base com mais de 255 milhões de CPFs e 70 milhões de CNPJs para mostrar quem são os seus clientes mais rentáveis e onde estão os próximos.</p>
-    <p class="lead a" style="--d:2" data-only="financeiro">Com atualização cadastral direto da fonte e scores de cobrança construídos a partir de centenas de dados, a sua operação evita contatos inválidos e reduz custos operacionais.</p>
+    <p class="lead a" style="--d:2" data-only="varejo">Há mais de 12 anos, a IU360 mostra quem são os seus clientes mais rentáveis e onde estão os próximos.</p>
+    <p class="lead a" style="--d:2" data-only="financeiro">Atualização cadastral direto da fonte e scores de cobrança para a sua operação evitar contatos inválidos e reduzir custos.</p>
   </div>
   <div class="cta-row a" style="--d:3">
-    <a href="#contato" data-go="10" class="btn btn-p">Agendar diagnóstico <svg class="ic"><use href="#i-arrow"/></svg></a>
+    <a href="#contato" data-go="9" class="btn btn-p">Agendar diagnóstico <svg class="ic"><use href="#i-arrow"/></svg></a>
     <a href="#dimensoes" data-go="1" class="btn btn-g">Ver como funciona</a>
   </div>
   <div class="stats a" style="--d:4">
-    <div><strong><b>255</b>M</strong><span>CPFs mapeados</span></div>
-    <div><strong><b>70</b>M</strong><span>CNPJs mapeados</span></div>
-    <div><strong><b>12</b> anos</strong><span>de marketing direcionado por dados</span></div>
+    <div><strong><i class="mais" aria-label="mais de">+</i><b>255</b>M</strong><span>CPFs mapeados</span></div>
+    <div><strong><i class="mais" aria-label="mais de">+</i><b>70</b>M</strong><span>CNPJs mapeados</span></div>
+    <div><strong><i class="mais" aria-label="mais de">+</i><b>12</b> anos</strong><span>de marketing direcionado por dados</span></div>
     <div><strong><b>90</b>%</strong><span>dos e-commerces usam scores com nossos dados</span></div>
   </div>
  </div></div>
@@ -2047,9 +2960,9 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
  <div class="sc-scroll"><div class="sc-in">
   <div class="d4">
     <div class="dims a">
-      <article class="dim on"><h2>Tudo começa <em>na origem.</em></h2><p class="lead">Captação e validação direta na fonte oficial e nas operadoras, sem cadastros reciclados de terceiros.</p><div class="fact"><strong>255M + 70M</strong><span>CPFs e CNPJs mapeados continuamente</span></div></article>
+      <article class="dim on"><h2>Tudo começa <em>na origem.</em></h2><p class="lead">Captação e validação direta na fonte oficial e nas operadoras, sem cadastros reciclados de terceiros.</p><div class="fact"><strong>+255M e +70M</strong><span>CPFs e CNPJs mapeados continuamente</span></div></article>
       <article class="dim"><h2>Do ruído <em>à ordem.</em></h2><p class="lead">Padronização, higienização e enriquecimento que eliminam duplicidades e garantem confiabilidade à sua base.</p><div class="fact"><strong>22–35%</strong><span>é a perda anual de precisão cadastral no modelo tradicional</span></div></article>
-      <article class="dim"><h2>Padrões que <em>viram decisão.</em></h2><p class="lead">Clusters sob medida e scores para venda, cobrança, risco e fraude.</p><div class="fact"><strong>7 soluções</strong><span>em dados, da atualização cadastral à criação de score</span></div></article>
+      <article class="dim"><h2>Padrões que <em>viram decisão.</em></h2><p class="lead">Clusters sob medida e scores para venda, cobrança, risco e fraude.</p><div class="fact"><strong>Do cadastro ao score</strong><span>soluções em dados que se combinam conforme a sua operação</span></div></article>
       <article class="dim"><h2>Dado vivo, <em>todos os dias.</em></h2><p class="lead">Atualização diária e máxima completude cadastral.</p><div class="fact"><strong>&lt;180ms</strong><span>de tempo de resposta nas consultas via API</span></div></article>
     </div>
   </div>
@@ -2093,13 +3006,14 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
 <!-- 03 · DIFERENÇA -->
 <section class="scene" id="diferenca" data-name="A diferença">
  <div class="sc-scroll"><div class="sc-in center">
-  <h2 class="a" style="max-width:none;text-wrap:balance"><em>Dados direto da fonte</em> × modelo tradicional</h2>
+  <h2 class="a" style="max-width:none;text-wrap:balance">Modelo tradicional × <em>dados direto da fonte</em></h2>
   <p class="lead a" style="--d:1;max-width:58ch">No modelo tradicional, a base perde de 22% a 35% de precisão cadastral por ano, e cada contato defasado é um custo que a sua operação paga sem retorno.</p>
   <!-- RELÓGIO DA BASE: o lead arrasta os meses e vê a base tradicional perder precisão (faixa de 22% a 35% ao ano) enquanto a base direto da fonte segue completa -->
   <div class="clk a" style="--d:2" id="clk" role="img" aria-label="De cada 100 cadastros, a base no modelo tradicional tem de 22 a 35 desatualizados em 12 meses; na base direto da fonte, os 100 seguem válidos.">
-    <p class="clk-k" aria-hidden="true"><span>Cada ponto é <b>1 cadastro</b>. Os mesmos 100 cadastros, 12 meses depois:</span><span class="clk-lg"><span class="lg-ok"><i></i>válido</span><span class="lg-lost"><i></i>desatualizado</span><span class="lg-may"><i></i>pode estar desatualizado</span></span></p>
+    <p class="clk-t" aria-hidden="true">Os mesmos 100 cadastros, 12 meses depois</p>
     <div class="clk-p"><div class="clk-h"><span>Base no modelo tradicional</span><b class="clk-v" id="clkLoss">0%</b></div><canvas class="clk-c" id="clkA" aria-hidden="true"></canvas><p class="clk-s" id="clkLossTx">de 22 a 35 de cada 100 cadastros perdem a validade</p></div>
     <div class="clk-p n"><div class="clk-h"><span>Base direto da fonte</span><b class="clk-v">100 de 100</b></div><canvas class="clk-c" id="clkB" aria-hidden="true"></canvas><p class="clk-s">os 100 seguem válidos, com atualização diária na fonte oficial e nas operadoras</p></div>
+    <p class="clk-k" aria-hidden="true"><span>Cada ponto = <b>1 cadastro</b></span><span class="clk-lg"><span class="lg-ok"><i></i>válido e atualizado</span><span class="lg-lost"><i></i>desatualizado</span><span class="lg-may"><i></i>pode estar desatualizado</span></span></p>
   </div>
   <div class="cmp glass a" style="--d:2" id="cmp">
     <div class="cmp-head cr"><h3 class="o">Empresas de dados tradicionais</h3><h3 class="n"><span class="logo" style="font-size:19px"><svg class="lg" viewBox="0 0 46 26" role="img" aria-label="IU360"><use href="#lg-iu360"/></svg></span>Direto da fonte</h3></div>
@@ -2108,7 +3022,7 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
     <div class="cr"><span class="o"><i class="no"><svg class="ic"><use href="#i-x"/></svg></i>Venda de pacotes de consultas sem apoio analítico.</span><span class="n"><i class="ok"><svg class="ic"><use href="#i-check"/></svg></i>Modelo híbrido: consultoria + APIs diretas.</span></div>
     <div class="cr"><span class="o"><i class="no"><svg class="ic"><use href="#i-x"/></svg></i>Burocracia contratual e semanas para liberar testes.</span><span class="n"><i class="ok"><svg class="ic"><use href="#i-check"/></svg></i>Menos etapas, menos papelada, mais proximidade.</span></div>
   </div>
-  <div class="cta-row a" style="--d:3"><a href="#contato" data-go="10" class="btn btn-p">Agendar diagnóstico <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  <div class="cta-row a" style="--d:3"><a href="#contato" data-go="9" class="btn btn-p">Agendar diagnóstico <svg class="ic"><use href="#i-arrow"/></svg></a></div>
  </div></div>
 </section>
 
@@ -2117,7 +3031,7 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
  <div class="sc-scroll"><div class="sc-in">
   <header class="mb-hd">
     <h2 class="a" style="--d:1">Soluções <em>modulares</em></h2>
-    <p class="lead a" style="--d:2">São 7 soluções em dados, da atualização cadastral à criação de score, e cada módulo se encaixa na mesma base. Toque em um módulo para vê-lo em destaque.</p>
+    <p class="lead a" style="--d:2">Soluções em dados, da atualização cadastral à criação de score, e cada módulo se encaixa na mesma base. Toque em um módulo para vê-lo em destaque.</p>
   </header>
     <div class="mx a" style="--d:3" data-only="varejo">
     <div class="mx-stage" aria-hidden="true"><div class="mb-iso"><i class="mb-sl in" style="--k:4"><b class="t"><svg class="ic"><use href="#i-refresh"/></svg></b><b class="f"></b><b class="r"></b></i><i class="mb-sl in" style="--k:3"><b class="t"><svg class="ic"><use href="#i-pin"/></svg></b><b class="f"></b><b class="r"></b></i><i class="mb-sl in" style="--k:2"><b class="t"><svg class="ic"><use href="#i-users"/></svg></b><b class="f"></b><b class="r"></b></i><i class="mb-sl in" style="--k:1"><b class="t"><svg class="ic"><use href="#i-target"/></svg></b><b class="f"></b><b class="r"></b></i><i class="mb-sl in" style="--k:0"><b class="t"><svg class="ic"><use href="#i-chart"/></svg></b><b class="f"></b><b class="r"></b></i></div></div>
@@ -2127,11 +3041,71 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
     <div class="mx-stage" aria-hidden="true"><div class="mb-iso"><i class="mb-sl in" style="--k:4"><b class="t"><svg class="ic"><use href="#i-shield"/></svg></b><b class="f"></b><b class="r"></b></i><i class="mb-sl in" style="--k:3"><b class="t"><svg class="ic"><use href="#i-gauge"/></svg></b><b class="f"></b><b class="r"></b></i><i class="mb-sl in" style="--k:2"><b class="t"><svg class="ic"><use href="#i-phone"/></svg></b><b class="f"></b><b class="r"></b></i><i class="mb-sl in" style="--k:1"><b class="t"><svg class="ic"><use href="#i-filter"/></svg></b><b class="f"></b><b class="r"></b></i><i class="mb-sl in" style="--k:0"><b class="t"><svg class="ic"><use href="#i-code"/></svg></b><b class="f"></b><b class="r"></b></i></div></div>
     <button type="button" class="mx-card" style="--k:0" data-side="l" aria-pressed="false"><span class="mx-ic"><svg class="ic"><use href="#i-code"/></svg></span><span class="mx-tx"><strong>APIs Customizáveis</strong><span class="mx-d">Enriquecimento e atualização de dados integrados ao seu CRM, esteira ou discador, para automatizar processos com 99,9% de estabilidade.</span><span class="mx-kpi"><b>&lt;180ms</b>resposta · 99,9% SLA</span></span></button><button type="button" class="mx-card" style="--k:1" data-side="r" aria-pressed="false"><span class="mx-ic"><svg class="ic"><use href="#i-filter"/></svg></span><span class="mx-tx"><strong>Data First</strong><span class="mx-d">Validação de dado cadastral com alta precisão e segurança, para garantir a qualidade das informações desde a entrada na base.</span></span></button><button type="button" class="mx-card" style="--k:2" data-side="l" aria-pressed="false"><span class="mx-ic"><svg class="ic"><use href="#i-phone"/></svg></span><span class="mx-tx"><strong>Atualização Cadastral</strong><span class="mx-d">Mantenha a sua base atualizada, evite contatos inválidos e reduza custos operacionais, elevando o índice de contato efetivo da operação.</span></span></button><button type="button" class="mx-card" style="--k:3" data-side="r" aria-pressed="false"><span class="mx-ic"><svg class="ic"><use href="#i-gauge"/></svg></span><span class="mx-tx"><strong>Criação de Score, Risco e Fraude</strong><span class="mx-d">Scores de cobrança desenvolvidos a partir de centenas de dados para priorizar as carteiras com maior chance de recuperação e reduzir perdas operacionais.</span></span></button><button type="button" class="mx-card" style="--k:4" data-side="l" aria-pressed="false"><span class="mx-ic"><svg class="ic"><use href="#i-shield"/></svg></span><span class="mx-tx"><strong>Prevenção de Fraudes</strong><span class="mx-d">Análise preditiva de risco com validação cruzada de CPF, CNPJ, vínculos e restritivos em tempo real, conforme a LGPD.</span></span></button>
   </div>
-  <div class="mx-cta a" style="--d:4"><span>Use um módulo ou combine vários, conforme o momento da sua operação.</span><a href="#contato" data-go="10" class="btn btn-p">Agendar diagnóstico <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  <div class="mx-cta a" style="--d:4"><span>Use um módulo ou combine vários, conforme o momento da sua operação.</span><a href="#contato" data-go="9" class="btn btn-p">Agendar diagnóstico <svg class="ic"><use href="#i-arrow"/></svg></a></div>
  </div></div>
 </section>
 
-<!-- 05 · RESULTADOS -->
+<!-- 05 · ECOSSISTEMA — o mostrador 360°: o anel gira e traz cada empresa ao foco; o painel a apresenta -->
+<section class="scene" id="ecossistema" data-name="Ecossistema Grupo 360">
+ <div class="sc-scroll"><div class="sc-in">
+  <header class="ec-hd">
+    <h2 class="a" style="--d:1">Muito mais do que um <em>birô de dados</em></h2>
+    <p class="lead a" style="--d:2">A IU360 é o braço de dados do Grupo 360, um ecossistema que conecta marcas, dados e performance.</p>
+  </header>
+  <div class="ec" id="ec">
+    <div class="ec-dial a" style="--d:3" aria-hidden="true">
+      <svg class="ec-scale" viewBox="0 0 400 400"><g class="ec-tk"></g><circle cx="200" cy="200" r="150" fill="none" stroke="#3F3F3F" stroke-opacity=".1"/><circle cx="200" cy="200" r="104" fill="none" stroke="#F29300" stroke-opacity=".22" stroke-dasharray="2 5"/></svg>
+      <span class="ec-beam"></span>
+      <span class="ec-ndl"><svg viewBox="0 0 60 220"><use href="#ndl"/></svg></span>
+      <div class="ec-ring"><span class="ec-node" style="--a:0deg"><span data-logo="">IU360</span></span><span class="ec-node" style="--a:60deg"><span data-logo="">Cative</span></span><span class="ec-node" style="--a:120deg"><span data-logo="">Direct</span></span><span class="ec-node" style="--a:180deg"><span data-logo="">Pesquisa Ativa</span></span><span class="ec-node" style="--a:240deg"><span data-logo="">Control.ai</span></span><span class="ec-node" style="--a:300deg"><span data-logo="">HUB3</span></span></div>
+      <!-- logo central do Grupo 360: fica (decisão do Gabriel, 23/11/2026). Para tirar, acrescente o atributo hidden. -->
+      <div class="ec-core"><svg class="lg-gp" viewBox="0 0 186.29 156.38" role="img" aria-label="Grupo 360"><use href="#lg-360grupo"/></svg></div>
+    </div>
+    <div class="ec-panel a" style="--d:4">
+      <div class="ec-meta"><span class="ec-count" aria-hidden="true"><b>01</b> / 06</span><span class="ec-seg" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+      <div class="ec-card" aria-live="polite">
+        <span class="ec-cat ec-sw">Big Data Analytics</span>
+        <h3 class="ec-name ec-sw">IU360<em class="ec-here">você está aqui</em></h3>
+        <p class="ec-desc ec-sw">Soluções avançadas em dados, enriquecimento e modelagem, no braço de inteligência do Grupo&nbsp;360.</p>
+      </div>
+      <span class="ec-pick" aria-hidden="true">Clique para conhecer cada empresa</span><div class="ec-chips" role="tablist" aria-label="Empresas do Grupo 360"><button type="button" class="ec-chip" role="tab" aria-selected="true" data-t="IU360" data-p="Soluções avançadas em dados, enriquecimento e modelagem, no braço de inteligência do Grupo&nbsp;360." data-c="Big Data Analytics">IU360</button><button type="button" class="ec-chip" role="tab" aria-selected="false" data-t="Agência Cative" data-p="Agência de performance 360° focada em marketing e previsibilidade." data-c="Marketing de performance">Cative</button><button type="button" class="ec-chip" role="tab" aria-selected="false" data-t="Direct Smart Data" data-p="Plataforma completa para automação de e-mail, SMS e WhatsApp." data-c="Automação multicanal">Direct</button><button type="button" class="ec-chip" role="tab" aria-selected="false" data-t="Pesquisa Ativa" data-p="Método de pesquisa ultrarrápida com insights em tempo real." data-c="Pesquisa de mercado">Pesquisa Ativa</button><button type="button" class="ec-chip" role="tab" aria-selected="false" data-t="Control.ai" data-p="Solução inovadora para gestão e negociação de bens em garantia." data-c="Bens em garantia">Control.ai</button><button type="button" class="ec-chip" role="tab" aria-selected="false" data-t="HUB3" data-p="Estruturação comercial e expansão para varejo e atacado." data-c="Estruturação comercial">HUB3</button></div>
+    </div>
+  </div>
+ </div></div>
+</section>
+
+<!-- 06 · GOVERNANÇA -->
+<section class="scene" id="confianca" data-name="Governança">
+ <div class="sc-scroll"><div class="sc-in">
+  <div class="gv">
+    <header class="gv-hd">
+      <h2 class="a" style="--d:1">Inteligência <em>com governança</em></h2>
+      <div class="gv-side a" style="--d:2">
+        <p class="lead">Os pilares jurídicos e técnicos em que a IU360 se baseia para captar e tratar cada dado.</p>
+      </div>
+    </header>
+    <!-- pilares paralelos (não são etapas): sem linha do tempo e sem o script que acendia uma etapa por vez -->
+    <div class="gv-chain gv-cols a" style="--d:3">
+      <div class="gv-track" aria-hidden="true">
+        <span class="gv-rail"><i class="gv-fill"></i></span><span class="gv-ticks"></span>
+        <span class="gv-run"><i class="gv-pkt"></i></span>
+        <span class="gv-node gv-n0" style="--x:0%"><i></i><b>Captação na fonte</b></span>
+        <span class="gv-node gv-n1 lit" style="--x:33.333%"><i></i></span>
+        <span class="gv-node gv-n2" style="--x:66.667%"><i></i></span>
+        <span class="gv-node gv-n3" style="--x:100%"><i></i><b>Consulta via API</b></span>
+      </div>
+      <ol class="gv-steps">
+        <li class="gv-step" data-k="1"><span class="gv-bg" aria-hidden="true"></span><span class="gv-k">Base legal</span><strong class="gv-big" aria-hidden="true">Art. 7º <small>e</small> 11</strong><h3>Base legal em cada tratamento</h3><p>Cada tratamento de dados tem uma base legal válida, como o legítimo interesse, analisada conforme a LGPD (Lei nº 13.709/2018), artigos 7º e 11.</p></li>
+        <li class="gv-step" data-k="2"><span class="gv-bg" aria-hidden="true"></span><span class="gv-k">Encarregado</span><strong class="gv-big" aria-hidden="true">DPO</strong><h3>Encarregado de dados nomeado</h3><p>DPO formalmente nomeado para a comunicação entre a empresa, os titulares e a ANPD, com canal para pedidos de exclusão ou correção.</p></li>
+        <li class="gv-step" data-k="3"><span class="gv-bg" aria-hidden="true"></span><span class="gv-k">Segurança</span><strong class="gv-big" aria-hidden="true">TLS 1.3</strong><h3>Segurança e auditoria</h3><p>Criptografia, controles de acesso, plano de resposta a incidentes e auditoria periódica de adequação à LGPD.</p></li>
+      </ol>
+    </div>
+    <footer class="gv-foot a" style="--d:4"><span>Lei nº 13.709/2018 · Lei Geral de Proteção de Dados · Certificado OneTrust</span><a href="#confianca">Aviso de Privacidade <svg class="ic"><use href="#i-arrow"/></svg></a></footer>
+  </div>
+ </div></div>
+</section>
+
+<!-- 07 · RESULTADOS: cases e quem confia -->
 <section class="scene dark" id="resultados" data-name="Resultados">
  <div class="sc-scroll"><div class="sc-in center">
   <h2 class="a">Cases que transformam <em>dados em resultados</em></h2>
@@ -2145,69 +3119,11 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
   </div>
   <p class="lead auth a" style="--d:2">Única empresa nacional a fornecer dados para os principais bureaus de crédito do país, a IU360 também abastece os principais call centers brasileiros.</p>
   <p class="mono a" style="--d:2;color:var(--ink-3)">Quem confia na inteligência da IU360</p>
-  <div class="marq a" style="--d:3" aria-label="Clientes e parceiros"><div><span>Espaçolaser</span><span>Vivo</span><span>PicPay</span><span>Arezzo</span><span>Banco Pan</span><span>Claro</span><span>Santander</span><span>Itaú</span><span>Nubank</span><span>Serasa Experian</span><span>Amil</span><span>Nielsen</span><span>Óticas Carol</span><span>SPC Brasil</span><span>Boa Vista</span><span>Quod</span><span>Neoway</span><span>Morana</span><span>Cyrela</span></div></div>
+  <div class="marq a" style="--d:3" aria-label="Clientes e parceiros"><div><span class="cli" data-logo="">Espaçolaser</span><span class="cli" data-logo="">Vivo</span><span class="cli" data-logo="">PicPay</span><span class="cli" data-logo="">Arezzo</span><span class="cli" data-logo="">Banco Pan</span><span class="cli" data-logo="">Claro</span><span class="cli" data-logo="">Santander</span><span class="cli" data-logo="">Itaú</span><span class="cli" data-logo="">Nubank</span><span class="cli" data-logo="">Serasa Experian</span><span class="cli" data-logo="">Amil</span><span class="cli" data-logo="">Nielsen</span><span class="cli" data-logo="">Óticas Carol</span><span class="cli" data-logo="">SPC Brasil</span><span class="cli" data-logo="">Boa Vista</span><span class="cli" data-logo="">Quod</span><span class="cli" data-logo="">Neoway</span><span class="cli" data-logo="">Morana</span><span class="cli" data-logo="">Cyrela</span></div></div>
  </div></div>
 </section>
 
-<!-- 06 · ECOSSISTEMA — o mostrador 360°: o anel gira e traz cada empresa ao foco; o painel a apresenta -->
-<section class="scene" id="ecossistema" data-name="Ecossistema 360 Grupo">
- <div class="sc-scroll"><div class="sc-in">
-  <header class="ec-hd">
-    <h2 class="a" style="--d:1">Muito mais do que um <em>birô de dados</em></h2>
-    <p class="lead a" style="--d:2">A IU360 é o braço de dados do 360 Grupo, um ecossistema que conecta marcas, dados e performance.</p>
-  </header>
-  <div class="ec" id="ec">
-    <div class="ec-dial a" style="--d:3" aria-hidden="true">
-      <svg class="ec-scale" viewBox="0 0 400 400"><g class="ec-tk"></g><circle cx="200" cy="200" r="150" fill="none" stroke="#3F3F3F" stroke-opacity=".1"/><circle cx="200" cy="200" r="104" fill="none" stroke="#F29300" stroke-opacity=".22" stroke-dasharray="2 5"/></svg>
-      <span class="ec-beam"></span>
-      <span class="ec-ndl"><svg viewBox="0 0 60 220"><use href="#ndl"/></svg></span>
-      <div class="ec-ring"><span class="ec-node" style="--a:0deg"><span>IU360</span></span><span class="ec-node" style="--a:60deg"><span>Cative</span></span><span class="ec-node" style="--a:120deg"><span>Direct</span></span><span class="ec-node" style="--a:180deg"><span>Pesquisa Ativa</span></span><span class="ec-node" style="--a:240deg"><span>Control.ai</span></span><span class="ec-node" style="--a:300deg"><span>HUB3</span></span></div>
-      <div class="ec-core"><svg class="lg-gp" viewBox="0 0 186.29 156.38" role="img" aria-label="360 Grupo"><use href="#lg-360grupo"/></svg></div>
-    </div>
-    <div class="ec-panel a" style="--d:4">
-      <div class="ec-meta"><span class="ec-count" aria-hidden="true"><b>01</b> / 06</span><span class="ec-seg" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
-      <div class="ec-card" aria-live="polite">
-        <span class="ec-cat ec-sw">Big Data Analytics</span>
-        <h3 class="ec-name ec-sw">IU360<em class="ec-here">você está aqui</em></h3>
-        <p class="ec-desc ec-sw">Soluções avançadas em dados, enriquecimento e modelagem, no braço de inteligência do Grupo&nbsp;360°.</p>
-      </div>
-      <span class="ec-pick" aria-hidden="true">Clique para conhecer cada empresa</span><div class="ec-chips" role="tablist" aria-label="Empresas do Grupo 360°"><button type="button" class="ec-chip" role="tab" aria-selected="true" data-t="IU360" data-p="Soluções avançadas em dados, enriquecimento e modelagem, no braço de inteligência do Grupo&nbsp;360°." data-c="Big Data Analytics">IU360</button><button type="button" class="ec-chip" role="tab" aria-selected="false" data-t="Agência Cative" data-p="Agência de performance 360° focada em marketing e previsibilidade." data-c="Marketing de performance">Cative</button><button type="button" class="ec-chip" role="tab" aria-selected="false" data-t="Direct Smart Data" data-p="Plataforma completa para automação de e-mail, SMS e WhatsApp." data-c="Automação multicanal">Direct</button><button type="button" class="ec-chip" role="tab" aria-selected="false" data-t="Pesquisa Ativa" data-p="Método de pesquisa ultrarrápida com insights em tempo real." data-c="Pesquisa de mercado">Pesquisa Ativa</button><button type="button" class="ec-chip" role="tab" aria-selected="false" data-t="Control.ai" data-p="Solução inovadora para gestão e negociação de bens em garantia." data-c="Bens em garantia">Control.ai</button><button type="button" class="ec-chip" role="tab" aria-selected="false" data-t="HUB3" data-p="Estruturação comercial e expansão para varejo e atacado." data-c="Estruturação comercial">HUB3</button></div>
-    </div>
-  </div>
- </div></div>
-</section>
-
-<!-- 07 · GOVERNANÇA -->
-<section class="scene" id="confianca" data-name="Governança">
- <div class="sc-scroll"><div class="sc-in">
-  <div class="gv">
-    <header class="gv-hd">
-      <h2 class="a" style="--d:1">Inteligência <em>com governança</em></h2>
-      <div class="gv-side a" style="--d:2">
-        <p class="lead">Rigor jurídico e técnico em cada etapa, da captação na fonte à consulta via API.</p>
-      </div>
-    </header>
-    <div class="gv-chain a" style="--d:3" id="gv">
-      <div class="gv-track" aria-hidden="true">
-        <span class="gv-rail"><i class="gv-fill"></i></span><span class="gv-ticks"></span>
-        <span class="gv-run"><i class="gv-pkt"></i></span>
-        <span class="gv-node gv-n0" style="--x:0%"><i></i><b>Captação na fonte</b></span>
-        <span class="gv-node gv-n1 lit" style="--x:33.333%"><i></i></span>
-        <span class="gv-node gv-n2" style="--x:66.667%"><i></i></span>
-        <span class="gv-node gv-n3" style="--x:100%"><i></i><b>Consulta via API</b></span>
-      </div>
-      <ol class="gv-steps">
-        <li class="gv-step" data-k="1"><span class="gv-bg" aria-hidden="true"></span><span class="gv-k">Etapa 01 · Base legal</span><strong class="gv-big" aria-hidden="true">Art. 7º <small>e</small> 11</strong><h3>Base legal em cada tratamento</h3><p>Cada tratamento de dados tem uma base legal válida, analisada conforme a LGPD (Lei nº 13.709/2018), artigos 7º e 11.</p></li>
-        <li class="gv-step" data-k="2"><span class="gv-bg" aria-hidden="true"></span><span class="gv-k">Etapa 02 · Encarregado</span><strong class="gv-big" aria-hidden="true">DPO</strong><h3>Encarregado de dados nomeado</h3><p>DPO formalmente nomeado para a comunicação entre a empresa, os titulares e a ANPD, com canal para pedidos de exclusão ou correção.</p></li>
-        <li class="gv-step" data-k="3"><span class="gv-bg" aria-hidden="true"></span><span class="gv-k">Etapa 03 · Segurança</span><strong class="gv-big" aria-hidden="true">TLS 1.3</strong><h3>Segurança e auditoria</h3><p>Criptografia, controles de acesso, plano de resposta a incidentes e auditoria periódica de adequação à LGPD.</p></li>
-      </ol>
-    </div>
-    <footer class="gv-foot a" style="--d:4"><span>Lei nº 13.709/2018 · Lei Geral de Proteção de Dados · Certificado OneTrust</span><a href="#confianca">Aviso de Privacidade <svg class="ic"><use href="#i-arrow"/></svg></a></footer>
-  </div>
- </div></div>
-</section>
-
-<!-- 08 · DIFERENCIAIS -->
+<!-- 08 · DIFERENCIAIS (subiu para junto dos cases) -->
 <section class="scene dark auto" id="diferenciais" data-name="Diferenciais">
  <div class="sc-scroll"><div class="sc-in">
   <header class="mv-hd">
@@ -2222,7 +3138,7 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
         <div class="mv-copy">
           <span class="mv-big" aria-hidden="true">01</span>
           <div><h3>Dados direto da fonte</h3><p>Captados e validados continuamente, com a maior completude do mercado.</p>
-          <dl class="mv-facts"><div><dt data-to="255">255M</dt><dd>CPFs mapeados</dd></div><div><dt data-to="70">70M</dt><dd>CNPJs mapeados</dd></div></dl></div>
+          <dl class="mv-facts"><div><dt data-to="255">+255M</dt><dd>CPFs mapeados</dd></div><div><dt data-to="70">+70M</dt><dd>CNPJs mapeados</dd></div></dl></div>
         </div>
         <div class="mv-vis" aria-hidden="true"><div class="v-rec">
           <div class="v-rec-card">
@@ -2300,41 +3216,11 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
     </article>
 
   </div>
-  <div class="band a" style="--d:3"><span><b>Decida com clareza antes de <span class="hl">investir.</span></b> Uma conversa de diagnóstico mostra onde os dados podem gerar resultado.</span><a href="#contato" data-go="10" class="btn btn-p">Agendar diagnóstico <svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  <div class="band a" style="--d:3"><span><b>Decida com clareza antes de <span class="hl">investir.</span></b> Uma conversa de diagnóstico mostra onde os dados podem gerar resultado.</span><a href="#contato" data-go="9" class="btn btn-p">Agendar diagnóstico <svg class="ic"><use href="#i-arrow"/></svg></a></div>
  </div></div>
 </section>
 
-<!-- 09 · DÚVIDAS -->
-<section class="scene" id="faq" data-name="Dúvidas">
- <div class="sc-scroll"><div class="sc-in">
-  <div class="fq" id="fq">
-    <div class="fq-l">
-      <div class="fq-head">
-        <h2 class="a" style="--d:1">Perguntas <em>frequentes</em></h2>
-        <p class="lead a" style="--d:2">Escolha uma pergunta. Se a sua não estiver aqui, um especialista responde direto com você.</p>
-      </div>
-      <div class="fq-list a" style="--d:3" role="tablist" aria-label="Perguntas frequentes" aria-orientation="vertical">
-        <div class="fq-i"><button type="button" class="fq-q" role="tab" id="fq-q1" aria-controls="fq-panel" aria-selected="true"><span class="fq-n">01</span><span class="fq-t">O que significa “dados direto da fonte” e qual a diferença para outras empresas?</span><svg class="ic fq-ar"><use href="#i-right"/></svg></button><div class="fq-a"><p>Enquanto birôs secundários comercializam cadastros reciclados, que perdem de 22% a 35% de precisão por ano, a IU360 capta e valida os dados direto na fonte oficial e nas operadoras e atualiza a base todos os dias.</p></div></div>
-        <div class="fq-i"><button type="button" class="fq-q" role="tab" id="fq-q6" aria-controls="fq-panel" aria-selected="false" tabindex="-1"><span class="fq-n">02</span><span class="fq-t">Os dados são tratados conforme a LGPD?</span><svg class="ic fq-ar"><use href="#i-right"/></svg></button><div class="fq-a"><p>Sim, cada tratamento tem base legal analisada conforme os artigos 7º e 11 da LGPD, a IU360 tem DPO formalmente nomeado, passa por auditoria periódica de adequação e é certificada pela OneTrust.</p></div></div>
-        <div class="fq-i"><button type="button" class="fq-q" role="tab" id="fq-q2" aria-controls="fq-panel" aria-selected="false" tabindex="-1"><span class="fq-n">03</span><span class="fq-t">Minha empresa já possui agência de marketing ou consultoria interna. Por que a IU360?</span><svg class="ic fq-ar"><use href="#i-right"/></svg></button><div class="fq-a"><p>A IU360 não substitui sua agência ou seu time: ela entrega a camada de dados e de análise que alimenta o trabalho deles, com base higienizada, enriquecida e segmentada em clusters.</p></div></div>
-        <div class="fq-i"><button type="button" class="fq-q" role="tab" id="fq-q3" aria-controls="fq-panel" aria-selected="false" tabindex="-1"><span class="fq-n">04</span><span class="fq-t">Quais empresas podem contratar as soluções da IU360?</span><svg class="ic fq-ar"><use href="#i-right"/></svg></button><div class="fq-a"><p>Operações de varejo, redes de franquias e agências que buscam crescimento, e bancos, financeiras e empresas de cobrança e risco que processam grandes volumes.</p></div></div>
-        <div class="fq-i"><button type="button" class="fq-q" role="tab" id="fq-q4" aria-controls="fq-panel" aria-selected="false" tabindex="-1"><span class="fq-n">05</span><span class="fq-t">É possível integrar as soluções aos sistemas da empresa?</span><svg class="ic fq-ar"><use href="#i-right"/></svg></button><div class="fq-a"><p>Sim. As soluções de enriquecimento e validação podem ser integradas via APIs e conectores direto ao seu CRM, esteira ou discador.</p></div></div>
-        <div class="fq-i"><button type="button" class="fq-q" role="tab" id="fq-q5" aria-controls="fq-panel" aria-selected="false" tabindex="-1"><span class="fq-n">06</span><span class="fq-t">Como começa e como saber qual solução é a certa para minha empresa?</span><svg class="ic fq-ar"><use href="#i-right"/></svg></button><div class="fq-a"><p>Tudo começa com uma conversa de diagnóstico, em que um especialista entende o momento da sua empresa e indica o caminho entre apoio consultivo, APIs ou o modelo híbrido, com menos etapas e menos papelada do que no modelo tradicional.</p></div></div>
-      </div>
-    </div>
-    <article class="fq-panel a" style="--d:4" id="fq-panel" role="tabpanel" aria-labelledby="fq-q1" aria-live="polite">
-      <header class="fq-top"><span class="fq-dots" aria-hidden="true"></span><span class="fq-pn">Resposta <b class="fq-sw">01</b> / 06</span></header>
-      <div class="fq-main">
-        <div class="fq-gauge"><div class="cps" aria-hidden="true"><svg class="cps-face" viewBox="0 0 200 200"><circle class="cps-bz" cx="100" cy="100" r="88"/><circle class="cps-arc" cx="100" cy="100" r="88" pathLength="360" transform="rotate(-90 100 100)"/><g class="cps-tk"></g><circle class="cps-in" cx="100" cy="100" r="58"/><text class="cps-c cps-n" x="100" y="38">N</text><text class="cps-c" x="164" y="104">L</text><text class="cps-c" x="100" y="170">S</text><text class="cps-c" x="36" y="104">O</text></svg><span class="cps-ptr"><i></i></span><span class="cps-val"><b>0</b>°</span><span class="cps-lg"><svg class="lg" viewBox="0 0 46 26"><use href="#lg-iu360"/></svg></span></div></div>
-        <div class="fq-txt"><h3 class="fq-pt fq-sw"></h3><p class="fq-pa fq-sw"></p></div>
-      </div>
-      <footer class="fq-cta"><span>Sua dúvida não está aqui?<b>Um especialista responde na conversa de diagnóstico.</b></span><a href="#contato" data-go="10" class="btn btn-p">Agendar diagnóstico <svg class="ic"><use href="#i-arrow"/></svg></a></footer>
-    </article>
-  </div>
- </div></div>
-</section>
-
-<!-- 10 · CONTATO -->
+<!-- 09 · CONTATO (antes das dúvidas) -->
 <section class="scene" id="contato" data-name="Contato">
  <div class="sc-scroll"><div class="sc-in">
   <div class="contact">
@@ -2359,11 +3245,41 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
           <label><input type="radio" name="fat" value="5-10"><span>R$5M a R$10M</span></label>
           <label><input type="radio" name="fat" value="10-50+"><span>R$10M a R$50M +</span></label></div></fieldset>
         <div class="full"><button class="btn btn-p" type="submit">Agendar diagnóstico <svg class="ic"><use href="#i-arrow"/></svg></button></div>
-        <p class="fine full" id="formMsg" role="status">Ao enviar, suas informações serão tratadas conforme a LGPD e o nosso <a href="#confianca" data-go="7">Aviso de Privacidade</a>.</p>
+        <p class="fine full" id="formMsg" role="status">Ao enviar, suas informações serão tratadas conforme a LGPD e o nosso <a href="#confianca" data-go="6">Aviso de Privacidade</a>.</p>
         <div class="sent" role="status"><span class="ok" style="width:56px;height:56px"><svg class="ic" style="width:26px;height:26px"><use href="#i-check"/></svg></span><h3 style="font-size:24px">Pedido registrado.</h3><p style="color:var(--ink-2);max-width:36ch">Nosso especialista entrará em contato pelo WhatsApp informado para agendar a reunião.</p></div>
       </form>
 
     </div>
+  </div>
+ </div></div>
+</section>
+
+<!-- 10 · DÚVIDAS -->
+<section class="scene" id="faq" data-name="Dúvidas">
+ <div class="sc-scroll"><div class="sc-in">
+  <div class="fq" id="fq">
+    <div class="fq-l">
+      <div class="fq-head">
+        <h2 class="a" style="--d:1">Perguntas <em>frequentes</em></h2>
+        <p class="lead a" style="--d:2">Escolha uma pergunta. Se a sua não estiver aqui, um especialista responde direto com você.</p>
+      </div>
+      <div class="fq-list a" style="--d:3" role="tablist" aria-label="Perguntas frequentes" aria-orientation="vertical">
+        <div class="fq-i"><button type="button" class="fq-q" role="tab" id="fq-q1" aria-controls="fq-panel" aria-selected="true"><span class="fq-n">01</span><span class="fq-t">O que significa “dados direto da fonte” e qual a diferença para outras empresas?</span><svg class="ic fq-ar"><use href="#i-right"/></svg></button><div class="fq-a"><p>Enquanto birôs secundários comercializam cadastros reciclados, que perdem de 22% a 35% de precisão por ano, a IU360 capta e valida os dados direto na fonte oficial e nas operadoras e atualiza a base todos os dias.</p></div></div>
+        <div class="fq-i"><button type="button" class="fq-q" role="tab" id="fq-q6" aria-controls="fq-panel" aria-selected="false" tabindex="-1"><span class="fq-n">02</span><span class="fq-t">Os dados são tratados conforme a LGPD?</span><svg class="ic fq-ar"><use href="#i-right"/></svg></button><div class="fq-a"><p>Sim, cada tratamento tem base legal analisada conforme os artigos 7º e 11 da LGPD, a IU360 tem DPO formalmente nomeado, passa por auditoria periódica de adequação e é certificada pela OneTrust.</p></div></div>
+        <div class="fq-i"><button type="button" class="fq-q" role="tab" id="fq-q2" aria-controls="fq-panel" aria-selected="false" tabindex="-1"><span class="fq-n">03</span><span class="fq-t">Minha empresa já possui agência de marketing ou consultoria interna. Por que a IU360?</span><svg class="ic fq-ar"><use href="#i-right"/></svg></button><div class="fq-a"><p>A IU360 não substitui sua agência ou seu time: ela entrega a camada de dados e de análise que alimenta o trabalho deles, com base higienizada, enriquecida e segmentada em clusters.</p></div></div>
+        <div class="fq-i"><button type="button" class="fq-q" role="tab" id="fq-q3" aria-controls="fq-panel" aria-selected="false" tabindex="-1"><span class="fq-n">04</span><span class="fq-t">Quais empresas podem contratar as soluções da IU360?</span><svg class="ic fq-ar"><use href="#i-right"/></svg></button><div class="fq-a"><p>Operações de varejo, redes de franquias e agências que buscam crescimento, e bancos, financeiras e empresas de cobrança e risco que processam grandes volumes.</p></div></div>
+        <div class="fq-i"><button type="button" class="fq-q" role="tab" id="fq-q4" aria-controls="fq-panel" aria-selected="false" tabindex="-1"><span class="fq-n">05</span><span class="fq-t">É possível integrar as soluções aos sistemas da empresa?</span><svg class="ic fq-ar"><use href="#i-right"/></svg></button><div class="fq-a"><p>Sim. As soluções de enriquecimento e validação podem ser integradas via APIs e conectores direto ao seu CRM, esteira ou discador.</p></div></div>
+        <div class="fq-i"><button type="button" class="fq-q" role="tab" id="fq-q5" aria-controls="fq-panel" aria-selected="false" tabindex="-1"><span class="fq-n">06</span><span class="fq-t">Como começa e como saber qual solução é a certa para minha empresa?</span><svg class="ic fq-ar"><use href="#i-right"/></svg></button><div class="fq-a"><p>Tudo começa com uma conversa de diagnóstico, em que um especialista entende o momento da sua empresa e indica o caminho entre apoio consultivo, APIs ou o modelo híbrido, com menos etapas e menos papelada do que no modelo tradicional.</p></div></div>
+      </div>
+    </div>
+    <article class="fq-panel a" style="--d:4" id="fq-panel" role="tabpanel" aria-labelledby="fq-q1" aria-live="polite">
+      <header class="fq-top"><span class="fq-dots" aria-hidden="true"></span><span class="fq-pn">Resposta <b class="fq-sw">01</b> / 06</span></header>
+      <div class="fq-main">
+        <div class="fq-gauge"><div class="cps" aria-hidden="true"><svg class="cps-face" viewBox="0 0 200 200"><circle class="cps-bz" cx="100" cy="100" r="88"/><circle class="cps-arc" cx="100" cy="100" r="88" pathLength="360" transform="rotate(-90 100 100)"/><g class="cps-tk"></g><circle class="cps-in" cx="100" cy="100" r="58"/><text class="cps-c cps-n" x="100" y="38">N</text><text class="cps-c" x="164" y="104">L</text><text class="cps-c" x="100" y="170">S</text><text class="cps-c" x="36" y="104">O</text></svg><span class="cps-ptr"><i></i></span><span class="cps-val"><b>0</b>°</span><span class="cps-lg"><svg class="lg" viewBox="0 0 46 26"><use href="#lg-iu360"/></svg></span></div></div>
+        <div class="fq-txt"><h3 class="fq-pt fq-sw"></h3><p class="fq-pa fq-sw"></p></div>
+      </div>
+      <footer class="fq-cta"><span>Sua dúvida não está aqui?<b>Um especialista responde na conversa de diagnóstico.</b></span><a href="#contato" data-go="9" class="btn btn-p">Agendar diagnóstico <svg class="ic"><use href="#i-arrow"/></svg></a></footer>
+    </article>
   </div>
  </div></div>
 </section>
@@ -2376,33 +3292,33 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
       <div class="ft-brand">
         <a href="#inicio" data-go="0" class="logo ft-logo" aria-label="IU360 — voltar ao início"><svg class="lg" viewBox="0 0 46 26" role="img" aria-label="IU360"><use href="#lg-iu360"/></svg></a>
         <p id="ftTitle" class="ft-tag"><em>Dados direto da fonte</em> que geram inteligência, e inteligência que gera crescimento.</p>
-        <a href="#contato" data-go="10" class="btn btn-p">Agendar diagnóstico <svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a href="#contato" data-go="9" class="btn btn-p">Agendar diagnóstico <svg class="ic"><use href="#i-arrow"/></svg></a>
       </div>
       <nav class="ft-col" aria-label="Navegação do rodapé">
         <span class="ft-h">Navegue</span>
         <a href="#dimensoes" data-go="1">Como funciona</a>
         <a href="#desafios" data-go="2">Desafios</a>
         <a href="#solucoes" data-go="4">Soluções</a>
-        <a href="#resultados" data-go="5">Resultados</a>
-        <a href="#faq" data-go="9">Dúvidas frequentes</a>
+        <a href="#resultados" data-go="7">Resultados</a>
+        <a href="#faq" data-go="10">Dúvidas frequentes</a>
       </nav>
       <nav class="ft-col" aria-label="Sobre a IU360">
         <span class="ft-h">Sobre</span>
-        <a href="#ecossistema" data-go="6">Ecossistema 360 Grupo</a>
-        <a href="#confianca" data-go="7">Governança e LGPD</a>
+        <a href="#ecossistema" data-go="5">Ecossistema Grupo 360</a>
+        <a href="#confianca" data-go="6">Governança e LGPD</a>
         <a href="#diferenciais" data-go="8">Diferenciais</a>
-        <a href="#contato" data-go="10">Fale com a equipe</a>
+        <a href="#contato" data-go="9">Fale com a equipe</a>
       </nav>
       <div class="ft-col ft-grp">
-        <span class="ft-h">Grupo 360°</span>
+        <span class="ft-h">Grupo 360</span>
         <ul><li>IU360</li><li>Agência Cative</li><li>Direct Smart Data</li><li>Pesquisa Ativa</li><li>Control.ai</li><li>HUB3</li></ul>
         <a href="https://360grupo.com.br" rel="noopener" target="_blank" class="ft-ext">360grupo.com.br <svg class="ic"><use href="#i-arrow"/></svg></a>
         <a href="https://www.instagram.com/iu360_br/" rel="noopener" target="_blank" class="ft-ext">@iu360_br <svg class="ic"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
     <div class="ft-bot">
-      <span>© 2026 IU360 Data Solutions · Parte do 360 Grupo</span>
-      <span class="ft-legal"><a href="#confianca" data-go="7">Aviso de Privacidade</a><i aria-hidden="true">·</i><span>Tratamento de dados conforme a LGPD (Lei nº 13.709/2018)</span></span>
+      <span>© 2026 IU360 Data Solutions · Parte do Grupo 360</span>
+      <span class="ft-legal"><a href="#confianca" data-go="6">Aviso de Privacidade</a><i aria-hidden="true">·</i><span>Tratamento de dados conforme a LGPD (Lei nº 13.709/2018)</span></span>
       <a href="#inicio" data-go="0" class="ft-up">Voltar ao topo <svg class="ic"><use href="#i-up"/></svg></a>
     </div>
   </div>
@@ -2414,6 +3330,7 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
 <script src="vendor/lenis.min.js"></script>
 <script>
 (() => {
+  if (document.documentElement.classList.contains('cel')) return;   // celular: a experiência é a do bloco #cel (script próprio, logo depois dele); nada daqui roda
   const root = document.documentElement, $ = (s, c = document) => c.querySelector(s), $$ = (s, c = document) => [...c.querySelectorAll(s)];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
@@ -2421,6 +3338,10 @@ body.docked.dock-hide .chapters{transform:translate(-50%,calc(100% + 44px));opac
   const lens = () => root.dataset.lens;
   const scenes = $$('.scene'), api = {};
   let cur = 0;
+  /* logo do topo aplicado direto, sem fundo: sobre as seções escuras o "IU" fica claro */
+  if ('IntersectionObserver' in window) { const dk = new Set();
+    const io = new IntersectionObserver(es => { es.forEach(e => e.isIntersecting ? dk.add(e.target) : dk.delete(e.target)); document.body.classList.toggle('top-dark', dk.size > 0); }, { rootMargin: '-30px 0px -92% 0px' });
+    $$('.scene.dark').forEach(s => io.observe(s)); }
 
   /* =================== UNIVERSO 3D =================== */
   const SIDE = innerWidth < 760 ? 10 : 13, N = SIDE ** 3;
@@ -2536,8 +3457,8 @@ vec3 col=vC<.5?uC0:vC<1.5?uC1:uC2;float A=al*vA;gl_FragColor=vec4(col*A,A);}`));
     { a: 'sphere', scale: .3, cx: .5, cy: .5, alpha: 0 },
     { a: 'sphere', scale: .3, cx: .5, cy: .5, alpha: 0 },
     { a: 'sphere', scale: .3, cx: .5, cy: .5, alpha: 0 },
-    { a: 'sphere', scale: .3, cx: .5, cy: .5, alpha: 0 },
     { a: 'disc', scale: .5, cx: .5, cy: .55, alpha: 0, pitch: .42, speed: .1 },   // ecossistema: o mostrador 360° (HTML) faz o papel do disco
+    { a: 'sphere', scale: .3, cx: .5, cy: .5, alpha: 0 },
     { a: 'sphere', scale: .3, cx: .5, cy: .5, alpha: 0 },
     { a: 'sphere', scale: .3, cx: .5, cy: .5, alpha: 0 },
     { a: 'sphere', scale: .3, cx: .5, cy: .5, alpha: 0 },
@@ -2751,7 +3672,7 @@ vec3 col=vC<.5?uC0:vC<1.5?uC1:uC2;float A=al*vA;gl_FragColor=vec4(col*A,A);}`));
   });
   addEventListener('keydown', e => { if (e.key !== 'Escape' || !gateOpen) return; if (gate.classList.contains('building')) finish(); else closeGate(0); });
   $('#gateAll').onclick = () => closeGate(0);
-  $('#gateSkip').onclick = () => closeGate(10);
+  $('#gateSkip').onclick = $('#gateTalk').onclick = () => closeGate(9);
   $('#reopen')?.addEventListener('click', openGate);
   let savedLens = null;
   try { const s = localStorage.getItem('iu360-lens'); if (s === 'financeiro' || s === 'varejo') { setLens(s, false); savedLens = s; } } catch (e) {}
@@ -3001,6 +3922,7 @@ vec3 col=vC<.5?uC0:vC<1.5?uC1:uC2;float A=al*vA;gl_FragColor=vec4(col*A,A);}`));
 
   /* =================== 05 · resultados =================== */
   (() => {
+    putLogos(document.querySelector('main'));   // logos antes de duplicar a faixa
     const m = $('.marq div'); if (!reduce) m.innerHTML += m.innerHTML;
     /* "Como chegamos lá": a bolinha pula de nó em nó e cada ícone acende quando ela chega; o check do Resultado
        acende por último. Roda uma vez quando o case aparece e repete enquanto o mouse está sobre o cartão.
@@ -3159,11 +4081,11 @@ vec3 col=vC<.5?uC0:vC<1.5?uC1:uC2;float A=al*vA;gl_FragColor=vec4(col*A,A);}`));
     const mv = $('#mv'); if (!mv) return;
     const sec = mv.closest('.scene'), ps = $$('.mv-p', mv), segs = $$('.mv-seg button', sec), cnt = $('.mv-count b', sec), idx = scenes.indexOf(sec), src = $('.v-src', mv);
     let cur = 0, seen = false, counted = false;
-    if (reduce) sec.classList.remove('auto'); else $$('dt[data-to]', mv).forEach(dt => dt.textContent = '0M');
+    if (reduce) sec.classList.remove('auto'); else $$('dt[data-to]', mv).forEach(dt => dt.textContent = '+0M');
 
     /* 01: os números contam ao abrir */
     const count = () => { counted = true; if (reduce) return; $$('dt[data-to]', ps[0]).forEach(dt => { const to = +dt.dataset.to, t0 = performance.now();
-      const f = t => { const q = Math.min(1, Math.max(0, t - t0) / 1800); dt.textContent = Math.round(to * (1 - Math.pow(1 - q, 4))) + 'M'; if (q < 1) requestAnimationFrame(f); }; requestAnimationFrame(f); }); };
+      const f = t => { const q = Math.min(1, Math.max(0, t - t0) / 1800); dt.textContent = '+' + Math.round(to * (1 - Math.pow(1 - q, 4))) + 'M'; if (q < 1) requestAnimationFrame(f); }; requestAnimationFrame(f); }); };
 
     /* 02: o traço sai do "seu negócio" e chega a uma área por vez; a legenda diz o que a IU360 entrega ali.
        Mouse numa área = ela fica selecionada. */

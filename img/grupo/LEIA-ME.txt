@@ -1,0 +1,12 @@
+Logos das empresas do Grupo 360 (bússola "Muito mais do que um birô de dados").
+
+1. Salve o logo aqui, em SVG (de preferência) ou PNG com fundo transparente. Ex.: cative.svg
+2. No index.html, preencha o atributo data-logo da empresa:
+   - computador: <span data-logo="img/grupo/cative.svg">Cative</span> (dentro de .ec-ring)
+   - celular: o botão da órbita com data-t="Agência Cative" recebe data-logo="img/grupo/cative.svg"
+3. O logo entra junto do nome; na empresa selecionada (fundo laranja) ele fica branco.
+
+Logo do Grupo 360 (o novo, que o cliente vai mandar): fica no símbolo <symbol id="lg-360grupo"> no começo do
+<body>. Troque o conteúdo do símbolo (e o viewBox) pelo SVG novo. Hoje ele só aparecia no centro da bússola,
+que foi retirado a pedido do cliente (23/11/2026); para voltar com ele, apague o atributo hidden de .ec-core
+(computador) e .m-orbit-core (celular).
