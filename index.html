@@ -1478,6 +1478,9 @@ html.m-anim .m-swap [data-only]{animation:mfade .5s var(--ease) both}
 .m-pick small{font-size:11px;line-height:1.2;color:var(--ink-2);transition:color .45s}
 .m-pick[aria-pressed="true"]{background:var(--orange);color:#fff;box-shadow:0 16px 26px -14px rgba(242,147,0,.95)}
 .m-pick[aria-pressed="true"] small{color:rgba(255,255,255,.92)}
+.m-pick{width:min(118px,31.5vw);min-width:0;min-height:56px;padding:8px 6px 9px;align-content:center}
+.m-pick strong{font-size:16.5px}
+.m-pick small{font-size:10.5px;white-space:nowrap}
 .m-needle{position:absolute;z-index:2;left:50%;top:50%;width:15%;height:54%;margin:-27% 0 0 -7.5%;transform:rotate(-58deg);transition:transform 1.1s cubic-bezier(.34,1.5,.5,1);will-change:transform}
 html[data-lens="financeiro"] .m-needle{transform:rotate(58deg)}
 .m-needle svg{display:block;width:100%;height:100%;filter:drop-shadow(0 10px 12px rgba(242,147,0,.3))}
@@ -1729,13 +1732,15 @@ html.m-top-dark .m-logo{--lg-iu:#fff}
 .m-dots-k .k-l i{box-shadow:inset 0 0 0 1.5px rgba(244,244,244,.4)}
 .m-dots-k .k-q i{background:rgba(244,244,244,.24);box-shadow:inset 0 0 0 1.5px rgba(244,244,244,.3)}
 .m-dif[data-side="n"] .m-dots-k .k-ok i{background:var(--orange)}
+.m-dif[data-side="n"] .m-sw::before{transform:none}
+.m-dif[data-side="t"] .m-sw::before{transform:translateX(100%)}
 
 .m-marq div{font-size:22px;align-items:center}
 .m-marq .cli{display:inline-flex;align-items:center;height:52px;padding-right:44px}
 .m-marq .cli .lgx{display:block;height:58%;width:auto;max-width:150px;filter:brightness(0) invert(1);opacity:.66}
 
-.m-orbit button.tem-logo{align-content:center;gap:2px;font-size:10px}
-.m-orbit button .lgx{display:block;width:62%;height:auto;max-height:36%;object-fit:contain}
+.m-orbit button.tem-logo{width:25%;min-width:84px;padding:0;font-size:0;color:transparent}
+.m-orbit button .lgx{display:block;width:78%;height:50%;object-fit:contain}
 .m-orbit button[aria-selected="true"] .lgx{filter:brightness(0) invert(1)}
 .m-orbit-core[hidden]{display:none}
 
@@ -1852,32 +1857,32 @@ html.m-top-dark .m-logo{--lg-iu:#fff}
     </div>
   </section>
 
-  <section class="m-sec m-dark m-dif" id="m-diferenca" data-side="t">
+  <section class="m-sec m-dark m-dif" id="m-diferenca" data-side="n">
     <div class="m-hd m-r">
       <p class="m-kick">A diferença</p>
-      <h2>Modelo tradicional × <em>direto da fonte</em></h2>
+      <h2><em>Direto da fonte</em> × modelo tradicional</h2>
       <p class="m-lead">Toque nos dois lados e compare.</p>
     </div>
     <div class="m-sw m-r" style="--i:1" role="tablist" aria-label="Comparar os dois modelos">
-      <button type="button" role="tab" aria-selected="true" aria-controls="mField" data-side="t">Modelo tradicional</button>
-      <button type="button" role="tab" aria-selected="false" aria-controls="mField" data-side="n">Direto da fonte</button>
+      <button type="button" role="tab" aria-selected="true" aria-controls="mField" data-side="n">Direto da fonte</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="mField" data-side="t">Modelo tradicional</button>
     </div>
     <div class="m-field m-r" style="--i:2" id="mField" role="tabpanel">
-      <p class="m-field-t">Os mesmos 100 cadastros, 12 meses depois</p>
+      <p class="m-field-t">Os mesmos 100 cadastros, 12&nbsp;meses depois</p>
       <div class="m-field-h"><span>Mês <b class="m-month">0</b> de 12</span><strong><b class="m-valid">100</b>cadastros válidos</strong></div>
       <div class="m-dots" data-dots role="img" aria-label="De cada 100 cadastros, a base no modelo tradicional tem de 22 a 35 desatualizados em 12 meses; na base direto da fonte, os 100 seguem válidos."></div>
       <div class="m-tl" aria-hidden="true"><i></i></div>
       <p class="m-tl-k" aria-hidden="true"><span>hoje</span><span>12 meses</span></p>
       <p class="m-dots-k" aria-hidden="true"><span>Cada ponto = <b>1 cadastro</b></span><span class="k-ok"><i></i>válido e atualizado</span><span class="k-l"><i></i>desatualizado</span><span class="k-q"><i></i>pode estar desatualizado</span></p>
-      <p class="m-field-s" aria-live="polite" data-t="No modelo tradicional, de 22 a 35 de cada 100 cadastros perdem a validade em um ano. Cada contato defasado é custo sem retorno." data-n="Direto da fonte, os 100 seguem válidos: atualização diária na fonte oficial e nas operadoras.">No modelo tradicional, de 22 a 35 de cada 100 cadastros perdem a validade em um ano. Cada contato defasado é custo sem retorno.</p>
+      <p class="m-field-s" aria-live="polite" data-t="No modelo tradicional, de 22 a 35 de cada 100 cadastros perdem a validade em um ano. Cada contato defasado é custo sem retorno." data-n="Direto da fonte, os 100 seguem válidos: atualização diária na fonte oficial e nas operadoras.">Direto da fonte, os 100 seguem válidos: atualização diária na fonte oficial e nas operadoras.</p>
     </div>
     <ul class="m-vs m-r" style="--i:3">
-      <li><span class="m-mk" aria-hidden="true"><svg class="ic no"><use href="#i-x"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><span class="k">De onde vem o dado</span><span class="v" data-t="Cadastros reciclados e listas repassadas por terceiros." data-n="Captação e validação direta na fonte oficial e nas operadoras.">Cadastros reciclados e listas repassadas por terceiros.</span></li>
-      <li><span class="m-mk" aria-hidden="true"><svg class="ic no"><use href="#i-x"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><span class="k">Atualização</span><span class="v" data-t="Perda anual de 22% a 35% de precisão cadastral." data-n="Atualização diária e máxima completude cadastral.">Perda anual de 22% a 35% de precisão cadastral.</span></li>
-      <li><span class="m-mk" aria-hidden="true"><svg class="ic no"><use href="#i-x"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><span class="k">Como entrega</span><span class="v" data-t="Venda de pacotes de consultas, sem apoio analítico." data-n="Modelo híbrido: consultoria + APIs diretas.">Venda de pacotes de consultas, sem apoio analítico.</span></li>
-      <li><span class="m-mk" aria-hidden="true"><svg class="ic no"><use href="#i-x"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><span class="k">Para começar</span><span class="v" data-t="Burocracia contratual e semanas para liberar testes." data-n="Menos etapas, menos papelada, mais proximidade.">Burocracia contratual e semanas para liberar testes.</span></li>
+      <li><span class="m-mk" aria-hidden="true"><svg class="ic no"><use href="#i-x"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><span class="k">De onde vem o dado</span><span class="v" data-t="Cadastros reciclados e listas repassadas por terceiros." data-n="Captação e validação direta na fonte oficial e nas operadoras.">Captação e validação direta na fonte oficial e nas operadoras.</span></li>
+      <li><span class="m-mk" aria-hidden="true"><svg class="ic no"><use href="#i-x"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><span class="k">Atualização</span><span class="v" data-t="Perda anual de 22% a 35% de precisão cadastral." data-n="Atualização diária e máxima completude cadastral.">Atualização diária e máxima completude cadastral.</span></li>
+      <li><span class="m-mk" aria-hidden="true"><svg class="ic no"><use href="#i-x"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><span class="k">Como entrega</span><span class="v" data-t="Venda de pacotes de consultas, sem apoio analítico." data-n="Modelo híbrido: consultoria + APIs diretas.">Modelo híbrido: consultoria + APIs diretas.</span></li>
+      <li><span class="m-mk" aria-hidden="true"><svg class="ic no"><use href="#i-x"/></svg><svg class="ic ok"><use href="#i-check"/></svg></span><span class="k">Para começar</span><span class="v" data-t="Burocracia contratual e semanas para liberar testes." data-n="Menos etapas, menos papelada, mais proximidade.">Menos etapas, menos papelada, mais proximidade.</span></li>
     </ul>
-    <button type="button" class="m-dif-go m-r" style="--i:4" data-t="Ver direto da fonte" data-n="Rever o modelo tradicional"><span>Ver direto da fonte</span><svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+    <button type="button" class="m-dif-go m-r" style="--i:4" data-t="Rever direto da fonte" data-n="Ver o modelo tradicional"><span>Ver o modelo tradicional</span><svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
   </section>
 
   <section class="m-sec" id="m-solucoes">
@@ -1937,12 +1942,12 @@ html.m-top-dark .m-logo{--lg-iu:#fff}
       <svg class="m-orbit-ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="49.250" vector-effect="non-scaling-stroke"/></svg>
       <span class="m-orbit-run" aria-hidden="true"><i></i></span>
       <span class="m-orbit-core" aria-hidden="true"><svg viewBox="0 0 186.29 156.38"><use href="#lg-360grupo"/></svg></span>
-      <button type="button" role="tab" style="left:50%;top:12%" aria-selected="true" aria-controls="mEcCard" data-logo="logos/grupo/iu360.svg" data-t="IU360" data-here="1" data-c="Big Data Analytics" data-p="Soluções avançadas em dados, enriquecimento e modelagem, no braço de inteligência do Grupo&nbsp;360.">IU360</button>
-      <button type="button" role="tab" style="left:82.900%;top:31%" aria-selected="false" aria-controls="mEcCard" data-logo="logos/grupo/cative.svg" data-t="Agência Cative" data-c="Marketing de performance" data-p="Agência de performance 360° focada em marketing e previsibilidade.">Cative</button>
-      <button type="button" role="tab" style="left:82.900%;top:69%" aria-selected="false" aria-controls="mEcCard" data-logo="logos/grupo/direct.png" data-t="Direct Smart Data" data-c="Automação multicanal" data-p="Plataforma completa para automação de e-mail, SMS e WhatsApp.">Direct</button>
-      <button type="button" role="tab" style="left:50%;top:88%" aria-selected="false" aria-controls="mEcCard" data-logo="logos/grupo/pesquisa-ativa.png" data-t="Pesquisa Ativa" data-c="Pesquisa de mercado" data-p="Método de pesquisa ultrarrápida com insights em tempo real.">Pesquisa Ativa</button>
-      <button type="button" role="tab" style="left:17.100%;top:69%" aria-selected="false" aria-controls="mEcCard" data-logo="logos/grupo/control-ai.png" data-t="Control.ai" data-c="Bens em garantia" data-p="Solução inovadora para gestão e negociação de bens em garantia.">Control.ai</button>
-      <button type="button" role="tab" style="left:17.100%;top:31%" aria-selected="false" aria-controls="mEcCard" data-logo="logos/grupo/hub3.png" data-t="HUB3" data-c="Estruturação comercial" data-p="Estruturação comercial e expansão para varejo e atacado.">HUB3</button>
+      <button type="button" role="tab" style="left:50%;top:12%" aria-selected="true" aria-controls="mEcCard" data-logo="logos/grupo/cor/iu360.svg" data-t="IU360" data-here="1" data-c="Big Data Analytics" data-p="Soluções avançadas em dados, enriquecimento e modelagem, no braço de inteligência do Grupo&nbsp;360.">IU360</button>
+      <button type="button" role="tab" style="left:82.900%;top:31%" aria-selected="false" aria-controls="mEcCard" data-logo="logos/grupo/cor/cative.png" data-t="Agência Cative" data-c="Marketing de performance" data-p="Agência de performance 360° focada em marketing e previsibilidade.">Cative</button>
+      <button type="button" role="tab" style="left:82.900%;top:69%" aria-selected="false" aria-controls="mEcCard" data-logo="logos/grupo/cor/direct.png" data-t="Direct Smart Data" data-c="Automação multicanal" data-p="Plataforma completa para automação de e-mail, SMS e WhatsApp.">Direct</button>
+      <button type="button" role="tab" style="left:50%;top:88%" aria-selected="false" aria-controls="mEcCard" data-logo="logos/grupo/cor/pesquisa-ativa.png" data-t="Pesquisa Ativa" data-c="Pesquisa de mercado" data-p="Método de pesquisa ultrarrápida com insights em tempo real.">Pesquisa Ativa</button>
+      <button type="button" role="tab" style="left:17.100%;top:69%" aria-selected="false" aria-controls="mEcCard" data-logo="logos/grupo/cor/control-ai.png" data-t="Control.ai" data-c="Bens em garantia" data-p="Solução inovadora para gestão e negociação de bens em garantia.">Control.ai</button>
+      <button type="button" role="tab" style="left:17.100%;top:31%" aria-selected="false" aria-controls="mEcCard" data-logo="logos/grupo/cor/hub3.png" data-t="HUB3" data-c="Estruturação comercial" data-p="Estruturação comercial e expansão para varejo e atacado.">HUB3</button>
     </div>
     <div class="m-ec-card m-card-w m-r" style="--i:2" id="mEcCard" role="tabpanel" aria-live="polite">
       <span class="m-ec-cat">Big Data Analytics</span>
@@ -2163,7 +2168,7 @@ html.m-top-dark .m-logo{--lg-iu:#fff}
 
     const lost = [3, 47, 91, 28, 66, 12, 75, 39, 84, 55, 7, 96, 21, 62, 33, 79, 44, 17, 88, 51, 70, 25], maybe = [9, 58, 36, 93, 14, 72, 41, 81, 5, 64, 30, 99, 48];
     box.innerHTML = '<i></i>'.repeat(100); const dots = [...box.children];
-    let side = 't', timer = 0, seen = false;
+    let side = 'n', timer = 0, seen = false;
     const paint = m => { const L = Math.round(22 * m / 12), Q = Math.round(13 * m / 12);
       dots.forEach(d => { d.className = ''; });
       if (side === 't') { lost.slice(0, L).forEach(i => dots[i].className = 'l'); maybe.slice(0, Q).forEach(i => dots[i].className = 'q'); }
