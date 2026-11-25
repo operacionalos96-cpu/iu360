@@ -1773,6 +1773,14 @@ html.m-top-dark .m-logo{--lg-iu:#fff}
 html.m-gated .m-top,html.m-gated .m-bar{visibility:hidden}
 .m-form-in{--ink:#3F3F3F;--ink-2:#606060;--ink-3:#606060E1;--line:rgba(63,63,63,.09);--line-2:rgba(63,63,63,.16);padding:20px 18px;border-radius:24px;background:var(--bg);color:var(--ink);box-shadow:0 30px 50px -34px rgba(0,0,0,.6)}
 .m-form-in .m-lead{color:var(--ink-2)}
+.m-dims{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.m-dims li{display:grid;gap:6px;padding:18px 18px 16px;border-radius:22px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1)}
+.m-dims .n{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange)}
+.m-dims h3{font-size:19px;font-weight:500;letter-spacing:-.025em;line-height:1.2}
+.m-dims p{font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+.m-dims .m-dim-f{display:grid;gap:2px;margin-top:6px;padding-top:11px;border-top:1px solid var(--line)}
+.m-dims .m-dim-f b{font-size:19px;font-weight:600;letter-spacing:-.02em;color:var(--orange)}
+.m-dims .m-dim-f span{font-size:12.5px;line-height:1.4;color:var(--ink-3)}
 </style>
 </head>
 <body>
@@ -1870,6 +1878,19 @@ html.m-gated .m-top,html.m-gated .m-bar{visibility:hidden}
       </div>
     </div>
     <p class="m-cue m-r" style="--i:4" aria-hidden="true">Role para explorar <svg class="ic"><use href="#i-down"/></svg></p>
+  </section>
+
+  <section class="m-sec m-dark" id="m-dimensoes">
+    <div class="m-hd m-r">
+      <p class="m-kick">Como funciona</p>
+      <h2>O dado em <em>4 dimensões</em></h2>
+    </div>
+    <ol class="m-dims m-r" style="--i:1">
+      <li><span class="n">01 · Fonte</span><h3>Tudo começa na origem.</h3><p>Captação e validação direta na fonte oficial e nas operadoras, sem cadastros reciclados de terceiros.</p><p class="m-dim-f"><b>+255M e +70M</b><span>perfis de pessoas físicas e empresas mapeadas continuamente</span></p></li>
+      <li><span class="n">02 · Qualidade</span><h3>Do ruído à ordem.</h3><p>Padronização, higienização e enriquecimento que eliminam duplicidades e garantem confiabilidade à sua base.</p><p class="m-dim-f"><b>22–35%</b><span>é a perda anual de precisão cadastral no modelo tradicional</span></p></li>
+      <li><span class="n">03 · Inteligência</span><h3>Padrões que viram decisão.</h3><p>Clusters sob medida e scores para venda, cobrança, risco e fraude.</p><p class="m-dim-f"><b>Do cadastro ao score</b><span>soluções em dados para venda, cobrança, risco e fraude</span></p></li>
+      <li><span class="n">04 · Tempo</span><h3>Dado vivo, todos os dias.</h3><p>Atualização diária e máxima completude cadastral.</p><p class="m-dim-f"><b>&lt;180ms</b><span>de tempo de resposta nas consultas via API</span></p></li>
+    </ol>
   </section>
 
   <section class="m-sec" id="m-desafios">
@@ -2116,15 +2137,16 @@ html.m-gated .m-top,html.m-gated .m-bar{visibility:hidden}
       <span class="m-grab" aria-hidden="true"></span>
       <div class="m-sheet-h"><h2>Navegue</h2><button type="button" class="m-x" data-m-close aria-label="Fechar menu"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button></div>
       <nav class="m-nav" aria-label="Seções">
-        <a href="#m-desafios" data-m-go="m-desafios"><span>01</span>Desafios<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
-        <a href="#m-diferenca" data-m-go="m-diferenca"><span>02</span>A diferença<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
-        <a href="#m-solucoes" data-m-go="m-solucoes"><span>03</span>Soluções<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
-        <a href="#m-resultados" data-m-go="m-resultados"><span>04</span>Resultados<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
-        <a href="#m-porque" data-m-go="m-porque"><span>05</span>Por que a IU360<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
-        <a href="#m-grupo" data-m-go="m-grupo"><span>06</span>Grupo 360<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
-        <a href="#m-governanca" data-m-go="m-governanca"><span>07</span>Governança e LGPD<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
-        <a href="#m-contato" data-m-go="m-contato"><span>08</span>Falar com a equipe<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
-        <a href="#m-faq" data-m-go="m-faq"><span>09</span>Dúvidas frequentes<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-dimensoes" data-m-go="m-dimensoes"><span>01</span>O dado em 4 dimensões<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-desafios" data-m-go="m-desafios"><span>02</span>Desafios<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-diferenca" data-m-go="m-diferenca"><span>03</span>A diferença<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-solucoes" data-m-go="m-solucoes"><span>04</span>Soluções<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-resultados" data-m-go="m-resultados"><span>05</span>Resultados<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-porque" data-m-go="m-porque"><span>06</span>Por que a IU360<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-grupo" data-m-go="m-grupo"><span>07</span>Grupo 360<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-governanca" data-m-go="m-governanca"><span>08</span>Governança e LGPD<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-contato" data-m-go="m-contato"><span>09</span>Falar com a equipe<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
+        <a href="#m-faq" data-m-go="m-faq"><span>10</span>Dúvidas frequentes<svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></a>
       </nav>
       <button type="button" class="btn btn-p m-nav-cta" data-m-open="mForm">Agendar diagnóstico <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
     </div>
@@ -2286,7 +2308,7 @@ html.m-gated .m-top,html.m-gated .m-bar{visibility:hidden}
     else closeSheet();
   });
 
-  const MAP = { dimensoes: 'm-diferenca', desafios: 'm-desafios', diferenca: 'm-diferenca', solucoes: 'm-solucoes', resultados: 'm-resultados', ecossistema: 'm-grupo', confianca: 'm-governanca', diferenciais: 'm-porque', faq: 'm-faq', contato: 'm-contato' };
+  const MAP = { dimensoes: 'm-dimensoes', desafios: 'm-desafios', diferenca: 'm-diferenca', solucoes: 'm-solucoes', resultados: 'm-resultados', ecossistema: 'm-grupo', confianca: 'm-governanca', diferenciais: 'm-porque', faq: 'm-faq', contato: 'm-contato' };
   const h0 = location.hash.slice(1), tgt = MAP[h0] || (/^m-/.test(h0) ? h0 : '');
   if (tgt) { let mexeu = false; addEventListener('touchstart', () => { mexeu = true; }, { passive: true, once: true });
     const cai = () => { if (!mexeu) go(tgt, true); };
